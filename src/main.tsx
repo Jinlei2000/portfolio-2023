@@ -3,8 +3,39 @@ import ReactDOM from 'react-dom/client'
 
 import './assets/tailwindcss.css'
 
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+import Home from './routes/Home'
+import SmartGarbage from './routes/projects/SmartGarbage'
+import OnColor from './routes/projects/Oncolor'
+import AnimeApp from './routes/projects/AnimeApp'
+import InteractivePoles from './routes/projects/InteractivePoles'
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />,
+  },
+  {
+    path: '/smart-garbage',
+    element: <SmartGarbage />,
+  },
+  {
+    path: '/oncolor',
+    element: <OnColor />,
+  },
+  {
+    path: '/anime-app',
+    element: <AnimeApp />,
+  },
+  {
+    path: '/interactive-poles',
+    element: <InteractivePoles />,
+  },
+])
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <div className='text-3xl'>Hello World</div>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
