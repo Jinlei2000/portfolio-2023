@@ -2,6 +2,7 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class', // toggle dark mode with class 'dark'
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     colors: {
