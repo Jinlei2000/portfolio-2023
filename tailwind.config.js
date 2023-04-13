@@ -17,7 +17,6 @@ export default {
         'secondary-700': '#4373CC',
         'secondary-800': '#244076',
 
-        // use numbers
         'neutral-0': '#FFFFFF',
         'neutral-50': '#FAFCFF',
         'neutral-100': '#E6EAF2',
@@ -30,6 +29,12 @@ export default {
         'neutral-800': '#212326',
         'neutral-900': '#1C1F24',
       },
+    },
+    // use own border-radius
+    borderRadius: {
+      'own-sm': '0.3125rem', // 5px
+      own: '0.625rem', // 10px
+      'own-md': '1.25rem', // 20px
     },
     extend: {
       // use own poppins font & add default font stack
