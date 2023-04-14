@@ -1,124 +1,112 @@
-import { Download, Menu, Moon, Sun } from 'lucide-react'
+import { Download, Menu, Moon, Sun, X } from 'lucide-react'
 import useColorMode from '../hooks/useColorMode'
 import { HashLink } from 'react-router-hash-link'
+import NavLink from './NavLink'
+import { motion } from 'framer-motion'
+import { useRef, useState } from 'react'
+import NavItems from './NavItems'
 
-export default () => {
-  // TODO: Add a dark mode toggle
+const sidebar = {
+  open: (height = 1000) => ({
+    clipPath: `circle(${height * 2 + 400}px at calc(100% - 40px) 40px)`,
+    transition: {
+      type: 'spring',
+      stiffness: 20,
+      restDelta: 2,
+    },
+  }),
+  closed: {
+    clipPath: 'circle(0px at calc(100% - 30px) 26px)',
+    transition: {
+      delay: 0.5,
+      type: 'spring',
+      stiffness: 400,
+      damping: 40,
+    },
+  },
+}
+
+export default ({ selectedSection, setSelectedSection }: any) => {
   // TODO: Add a menu toggle
   // TODO: when scrolling down, navbar has blur effect and height is smaller
-  const { toggleColorMode, colorMode } = useColorMode()
-
-  // const scrollWithOffset = el => {
-  //   const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset
-  //   const yOffset = -80
-  //   window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' })
-  // }
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <nav className="sticky top-0 z-[9999] bg-white px-4 py-2.5 dark:bg-own-neutral-900 md:px-6">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
         {/* Logo */}
         <HashLink
+          onClick={() => {
+            setSelectedSection('about')
+          }}
           className="flex rounded-own-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600"
           smooth
-          to={'/'}
+          to={'/#about'}
         >
-          <svg className="h-8 md:h-14" viewBox="0 0 32 32">
-            <g transform="translate(-484 -329)">
-              <g transform="translate(488.8 333.8)">
-                <path
-                  d="M11,0a11,11,0,0,0,0,22h1A11,11,0,0,0,12,0H11m0-2h1A13,13,0,0,1,25,11,13,13,0,0,1,12,24H11A13,13,0,0,1-2,11,13,13,0,0,1,11-2Z"
-                  transform="translate(0.2 0.2)"
-                  className="fill-own-neutral-700 dark:fill-own-neutral-200"
-                />
-                <text
-                  transform="translate(3.7 17.2)"
-                  className="fill-own-neutral-700 text-[15px] font-black dark:fill-own-neutral-200"
-                >
-                  LJ
-                </text>
-              </g>
-            </g>
-          </svg>
+          <span className="text-xl font-black text-own-neutral-700 dark:text-own-neutral-200 md:text-2xl lg:text-4xl">
+            LJ
+          </span>
         </HashLink>
+
+        {/* Desktop Menu */}
+        <div className="hidden w-full lg:block lg:w-auto">
+          <NavItems
+            selectedSection={selectedSection}
+            setSelectedSection={setSelectedSection}
+          />
+        </div>
+
         {/* Hamburger Menu */}
-        <button
+        {/* <button
           data-collapse-toggle="mobile-menu"
           type="button"
           className="rounded-own-sm p-1 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600 lg:hidden"
           aria-controls="mobile-menu"
           aria-expanded="false"
           onClick={() => {
-            console.log('clicked menu')
+            console.log('clicked')
           }}
         >
           <span className="sr-only">Open main menu</span>
           <Menu className="h-6 w-6 stroke-own-neutral-900 dark:stroke-own-neutral-200" />
+        </button> */}
+
+        {/* Mobile Menu */}
+        <motion.div
+          className="fixed right-0 top-0 z-50 h-full w-full bg-own-neutral-900 dark:bg-own-neutral-100 lg:hidden "
+          variants={sidebar}
+          initial="closed"
+          animate={isOpen ? 'open' : 'closed'}
+          custom={500}
+        >
+          <motion.div
+            className="fixed right-0 top-0 z-50 h-full w-full lg:hidden"
+            variants={sidebar}
+            initial="closed"
+            animate={isOpen ? 'open' : 'closed'}
+            custom={500}
+          >
+            <NavItems
+              selectedSection={selectedSection}
+              setSelectedSection={setSelectedSection}
+              setSidebarOpen={setIsOpen}
+              isMobile={true}
+            />
+          </motion.div>
+        </motion.div>
+        {/* Mobile Menu Toggle */}
+        <button
+          type="button"
+          className=" z-[100] rounded-own-sm p-1 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600 lg:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span className="sr-only">Open main menu</span>
+          {isOpen ? (
+            <X className="h-6 w-6 stroke-own-neutral-200 dark:stroke-own-neutral-900" />
+          ) : (
+            <Menu className="h-6 w-6 stroke-own-neutral-900 dark:stroke-own-neutral-200" />
+          )}
         </button>
-        {/* Menu Items */}
-        <div className="hidden w-full lg:block lg:w-auto">
-          <ul className=" mt-0 flex flex-row items-center space-x-4 text-xl font-semibold text-neutral-500">
-            <li>
-              <HashLink
-                // scroll={el => scrollWithOffset(el)}
-                smooth
-                to={'/#about'}
-                className="rounded-own-sm px-3 py-1 hover:text-own-alpha focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:hover:text-own-alpha-light  dark:focus-visible:ring-own-neutral-600"
-              >
-                About
-              </HashLink>
-            </li>
-            <li>
-              <HashLink
-                smooth
-                to={'/#skills'}
-                className="rounded-own-sm px-3 py-1 hover:text-own-alpha focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:hover:text-own-alpha-light  dark:focus-visible:ring-own-neutral-600"
-              >
-                Skills
-              </HashLink>
-            </li>
-            <li>
-              <HashLink
-                smooth
-                to={'/#projects'}
-                className="rounded-own-sm px-3 py-1 hover:text-own-alpha focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:hover:text-own-alpha-light  dark:focus-visible:ring-own-neutral-600"
-              >
-                Projects
-              </HashLink>
-            </li>
-            <li>
-              <HashLink
-                smooth
-                to={'/#contact'}
-                className="rounded-own-sm px-3 py-1 hover:text-own-alpha focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:hover:text-own-alpha-light  dark:focus-visible:ring-own-neutral-600"
-              >
-                Contact
-              </HashLink>
-            </li>
-            <li>
-              <a
-                href="/docs/LJ-Resume.pdf"
-                download
-                className="mx-3 flex items-center gap-2 rounded-own bg-own-alpha py-3 pl-3 pr-4 font-medium leading-none text-own-neutral-50 hover:bg-own-alpha-dark dark:bg-own-alpha-light dark:text-own-neutral-200 dark:hover:bg-own-alpha-dark"
-              >
-                <Download className="stroke-own-neutral-50 dark:stroke-own-neutral-200" />
-                Resume
-              </a>
-            </li>
-            <li>
-              <button
-                onClick={() => toggleColorMode()}
-                className="group ml-1.5 block rounded-own-sm p-1 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600"
-              >
-                {colorMode === 'dark' ? (
-                  <Sun className="stroke-own-neutral-200 group-hover:stroke-own-alpha dark:group-hover:stroke-own-alpha-light" />
-                ) : (
-                  <Moon className="stroke-own-neutral-900 group-hover:stroke-own-alpha dark:group-hover:stroke-own-alpha-light" />
-                )}
-              </button>
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
   )
