@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Download, Menu, Moon, Sun } from 'lucide-react'
 import useColorMode from '../hooks/useColorMode'
+import { HashLink } from 'react-router-hash-link'
 
 export default () => {
   // TODO: Add a dark mode toggle
@@ -8,11 +9,21 @@ export default () => {
   // TODO: when scrolling down, navbar has blur effect and height is smaller
   const { toggleColorMode, colorMode } = useColorMode()
 
+  // const scrollWithOffset = el => {
+  //   const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset
+  //   const yOffset = -80
+  //   window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' })
+  // }
+
   return (
-    <nav className={`bg-white px-4 py-2.5 dark:bg-own-neutral-900 md:px-6 `}>
+    <nav className=" bg-white bg-opacity-30 px-4 py-2.5 dark:bg-own-neutral-900 md:px-6">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
         {/* Logo */}
-        <Link className="flex" to={'/'}>
+        <HashLink
+          className="flex rounded-own-sm p-1 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600"
+          smooth
+          to={'/#top'}
+        >
           <svg className="h-8 md:h-10" viewBox="0 0 32 32">
             <g transform="translate(-484 -329)">
               <g transform="translate(488.8 333.8)">
@@ -30,12 +41,12 @@ export default () => {
               </g>
             </g>
           </svg>
-        </Link>
+        </HashLink>
         {/* Menu */}
         <button
           data-collapse-toggle="mobile-menu"
           type="button"
-          className="text-gray-500 rounded-lg hover:bg-gray-100 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-3 inline-flex items-center p-2 text-sm focus:outline-none focus:ring-2 md:hidden"
+          className="rounded-own-sm p-1 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600 lg:hidden"
           aria-controls="mobile-menu"
           aria-expanded="false"
           onClick={() => {
@@ -43,45 +54,50 @@ export default () => {
           }}
         >
           <span className="sr-only">Open main menu</span>
-          <Menu className="h-6 w-6" />
+          <Menu className="h-6 w-6 stroke-own-neutral-900 dark:stroke-own-neutral-200" />
         </button>
         {/* Menu Items */}
-        <div className="hidden w-full md:block md:w-auto">
-          <ul className="mt-4 flex flex-col items-center md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium">
+        <div className="hidden w-full lg:block lg:w-auto">
+          <ul className=" mt-0 flex flex-row items-center space-x-4 text-xl font-semibold text-neutral-500">
             <li>
-              <a
-                href="#"
-                className="text-gray-700 border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-blue-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 block border-b py-2 pl-3 pr-4 md:border-0 md:p-0"
+              <HashLink
+                // scroll={el => scrollWithOffset(el)}
+                smooth
+                to={'/#about'}
+                className="rounded-own-sm px-3 py-1 hover:text-own-alpha focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:hover:text-own-alpha-light  dark:focus-visible:ring-own-neutral-600"
               >
                 About
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-gray-700 border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-blue-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 block border-b py-2 pl-3 pr-4 md:border-0 md:p-0"
+              <HashLink
+                smooth
+                to={'/#skills'}
+                className="rounded-own-sm px-3 py-1 hover:text-own-alpha focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:hover:text-own-alpha-light  dark:focus-visible:ring-own-neutral-600"
               >
                 Skills
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-gray-700 border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-blue-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 block border-b py-2 pl-3 pr-4 md:border-0 md:p-0"
+              <HashLink
+                smooth
+                to={'/#projects'}
+                className="rounded-own-sm px-3 py-1 hover:text-own-alpha focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:hover:text-own-alpha-light  dark:focus-visible:ring-own-neutral-600"
               >
                 Projects
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-blue-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent block py-2 pl-3 pr-4 md:border-0 md:p-0"
+              <HashLink
+                smooth
+                to={'/#contact'}
+                className="rounded-own-sm px-3 py-1 hover:text-own-alpha focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:hover:text-own-alpha-light  dark:focus-visible:ring-own-neutral-600"
               >
                 Contact
-              </a>
+              </HashLink>
             </li>
             <li>
-              <button className="text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-blue-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent block py-2 pl-3 pr-4 md:border-0 md:p-0">
+              <button className="block">
                 <Download />
                 Resume
               </button>
@@ -89,9 +105,13 @@ export default () => {
             <li>
               <button
                 onClick={() => toggleColorMode()}
-                className="text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-blue-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent block py-2 pl-3 pr-4 md:border-0 md:p-0"
+                className="group block rounded-own-sm p-1 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600"
               >
-                {colorMode === 'dark' ? <Sun /> : <Moon />}
+                {colorMode === 'dark' ? (
+                  <Sun className="stroke-own-neutral-200 group-hover:stroke-own-alpha dark:group-hover:stroke-own-alpha-light" />
+                ) : (
+                  <Moon className="stroke-own-neutral-900 group-hover:stroke-own-alpha dark:group-hover:stroke-own-alpha-light" />
+                )}
               </button>
             </li>
           </ul>
