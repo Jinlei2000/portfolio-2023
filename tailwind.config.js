@@ -5,12 +5,6 @@ export default {
   darkMode: 'class', // toggle dark mode with class 'dark'
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
-    // use own border-radius
-    borderRadius: {
-      'own-sm': '0.3125rem', // 5px
-      own: '0.625rem', // 10px
-      'own-md': '1.25rem', // 20px
-    },
     extend: {
       // use own poppins font & add default font stack
       fontFamily: {
@@ -43,7 +37,15 @@ export default {
           'neutral-900': '#1C1F24',
         },
       },
+      // use own border-radius
+      borderRadius: {
+        'own-sm': '0.3125rem', // 5px
+        own: '0.625rem', // 10px
+        'own-md': '1.25rem', // 20px
+      },
     },
   },
   plugins: [],
 }
+
+

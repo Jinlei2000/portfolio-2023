@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { Download, Menu, Moon, Sun } from 'lucide-react'
 import useColorMode from '../hooks/useColorMode'
 import { HashLink } from 'react-router-hash-link'
@@ -16,13 +15,13 @@ export default () => {
   // }
 
   return (
-    <nav className=" bg-white px-4 py-2.5 dark:bg-own-neutral-900 md:px-6">
+    <nav className="sticky top-0 z-[9999] bg-white px-4 py-2.5 dark:bg-own-neutral-900 md:px-6">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
         {/* Logo */}
         <HashLink
-          className="flex rounded-own-sm p-1 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600"
+          className="flex rounded-own-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600"
           smooth
-          to={'/#top'}
+          to={'/'}
         >
           <svg className="h-8 md:h-14" viewBox="0 0 32 32">
             <g transform="translate(-484 -329)">
