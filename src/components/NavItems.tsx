@@ -3,7 +3,7 @@ import NavLink from './NavLink'
 import useColorMode from '../hooks/useColorMode'
 import { motion } from 'framer-motion'
 
-const AnimationMenuItem = {
+const animationMenuItem = {
   open: {
     y: 0,
     opacity: 1,
@@ -20,7 +20,7 @@ const AnimationMenuItem = {
   },
 }
 
-const AnimationMenuItems = {
+const animationMenuItems = {
   open: {
     transition: { staggerChildren: 0.07, delayChildren: 0.3 },
   },
@@ -44,7 +44,7 @@ const Navigation = ({
   const navItems = ['About', 'Skills', 'Projects', 'Contact']
 
   const downloadButton = (
-    <motion.li variants={AnimationMenuItem} whileTap={{ scale: 0.95 }}>
+    <motion.li variants={animationMenuItem} whileTap={{ scale: 0.95 }}>
       <a
         href="/docs/LJ-Resume.pdf"
         download
@@ -78,7 +78,7 @@ const Navigation = ({
 
   const toggleButton = (
     <motion.li
-      variants={AnimationMenuItem}
+      variants={animationMenuItem}
       whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 0.95 }}
     >
@@ -97,7 +97,7 @@ const Navigation = ({
 
   const navLinks = navItems.map(item => (
     <motion.li
-      variants={AnimationMenuItem}
+      variants={animationMenuItem}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       key={item}
@@ -114,7 +114,7 @@ const Navigation = ({
 
   return (
     <motion.ul
-      variants={AnimationMenuItems}
+      variants={animationMenuItems}
       className={`flex ${
         isMobile
           ? 'h-screen flex-col items-center justify-center space-y-10 text-2xl font-semibold text-own-neutral-500'

@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import NavItems from './NavItems'
 
 // animation for sidebar
-const sidebar = {
+const animationSidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 400}px at calc(100% - 40px) 40px)`,
     transition: {
@@ -80,7 +80,7 @@ export default ({ selectedSection, setSelectedSection }: any) => {
         {/* Mobile Menu */}
         <motion.div
           className="fixed right-0 top-0 z-50 h-full w-full bg-own-neutral-900 dark:bg-own-neutral-100 lg:hidden "
-          variants={sidebar}
+          variants={animationSidebar}
           initial="closed"
           animate={isOpen ? 'open' : 'closed'}
           custom={800}
