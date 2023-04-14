@@ -16,7 +16,7 @@ export default () => {
   // }
 
   return (
-    <nav className=" bg-white bg-opacity-30 px-4 py-2.5 dark:bg-own-neutral-900 md:px-6">
+    <nav className=" bg-white px-4 py-2.5 dark:bg-own-neutral-900 md:px-6">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
         {/* Logo */}
         <HashLink
@@ -24,7 +24,7 @@ export default () => {
           smooth
           to={'/#top'}
         >
-          <svg className="h-8 md:h-10" viewBox="0 0 32 32">
+          <svg className="h-8 md:h-14" viewBox="0 0 32 32">
             <g transform="translate(-484 -329)">
               <g transform="translate(488.8 333.8)">
                 <path
@@ -42,7 +42,7 @@ export default () => {
             </g>
           </svg>
         </HashLink>
-        {/* Menu */}
+        {/* Hamburger Menu */}
         <button
           data-collapse-toggle="mobile-menu"
           type="button"
@@ -97,15 +97,19 @@ export default () => {
               </HashLink>
             </li>
             <li>
-              <button className="block">
-                <Download />
+              <a
+                href="/docs/LJ-Resume.pdf"
+                download
+                className="mx-3 flex items-center gap-2 rounded-own bg-own-alpha py-3 pl-3 pr-4 font-medium leading-none text-own-neutral-50 hover:bg-own-alpha-dark dark:bg-own-alpha-light dark:text-own-neutral-200 dark:hover:bg-own-alpha-dark"
+              >
+                <Download className="stroke-own-neutral-50 dark:stroke-own-neutral-200" />
                 Resume
-              </button>
+              </a>
             </li>
             <li>
               <button
                 onClick={() => toggleColorMode()}
-                className="group block rounded-own-sm p-1 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600"
+                className="group ml-1.5 block rounded-own-sm p-1 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600"
               >
                 {colorMode === 'dark' ? (
                   <Sun className="stroke-own-neutral-200 group-hover:stroke-own-alpha dark:group-hover:stroke-own-alpha-light" />
