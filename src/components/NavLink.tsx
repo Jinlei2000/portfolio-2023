@@ -37,7 +37,7 @@ export default ({
         selectedSection === lowerCasePage
           ? 'text-own-alpha-light dark:text-own-alpha'
           : ''
-      } light:focus-visible:ring-own-neutral-600 rounded-own-sm px-3 py-1 hover:text-own-alpha-dark focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:hover:text-own-alpha
+      } light:focus-visible:ring-own-neutral-600 rounded-own-sm px-3 py-1 hover:text-own-alpha-light focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:hover:text-own-alpha
       `
       }
     >

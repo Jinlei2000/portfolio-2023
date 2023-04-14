@@ -1,11 +1,10 @@
-import { Download, Menu, Moon, Sun, X } from 'lucide-react'
-import useColorMode from '../hooks/useColorMode'
+import { Menu, X } from 'lucide-react'
 import { HashLink } from 'react-router-hash-link'
-import NavLink from './NavLink'
 import { motion } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import NavItems from './NavItems'
 
+// animation for sidebar
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 400}px at calc(100% - 40px) 40px)`,
@@ -27,9 +26,31 @@ const sidebar = {
 }
 
 export default ({ selectedSection, setSelectedSection }: any) => {
-  // TODO: Add a menu toggle
-  // TODO: when scrolling down, navbar has blur effect and height is smaller
   const [isOpen, setIsOpen] = useState(false)
+
+  // no scroll when sidebar is open
+  useEffect(() => {
+    // Set timeout to prevent body overflow from being set to hidden when sidebar is closed
+    const time = !isOpen ? 500 : 0
+
+    const timeoutId = setTimeout(() => {
+      // Set body overflow to hidden when sidebar is open
+      document.body.style.overflow = isOpen ? 'hidden' : 'auto'
+
+      // Add event listener to handle scrolling when sidebar is open
+      const handleScroll = () => isOpen && window.scrollTo(0, 0)
+      window.addEventListener('scroll', handleScroll)
+
+      // Remove event listener and set body overflow back to auto when component is unmounted
+      return () => {
+        window.removeEventListener('scroll', handleScroll)
+        document.body.style.overflow = 'auto'
+      }
+    }, time)
+
+    // Clean up the timeout when the component unmounts
+    return () => clearTimeout(timeoutId)
+  }, [isOpen])
 
   return (
     <nav className="sticky top-0 z-[9999] bg-white px-4 py-2.5 dark:bg-own-neutral-900 md:px-6">
@@ -56,43 +77,20 @@ export default ({ selectedSection, setSelectedSection }: any) => {
           />
         </div>
 
-        {/* Hamburger Menu */}
-        {/* <button
-          data-collapse-toggle="mobile-menu"
-          type="button"
-          className="rounded-own-sm p-1 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600 lg:hidden"
-          aria-controls="mobile-menu"
-          aria-expanded="false"
-          onClick={() => {
-            console.log('clicked')
-          }}
-        >
-          <span className="sr-only">Open main menu</span>
-          <Menu className="h-6 w-6 stroke-own-neutral-900 dark:stroke-own-neutral-200" />
-        </button> */}
-
         {/* Mobile Menu */}
         <motion.div
           className="fixed right-0 top-0 z-50 h-full w-full bg-own-neutral-900 dark:bg-own-neutral-100 lg:hidden "
           variants={sidebar}
           initial="closed"
           animate={isOpen ? 'open' : 'closed'}
-          custom={500}
+          custom={800}
         >
-          <motion.div
-            className="fixed right-0 top-0 z-50 h-full w-full lg:hidden"
-            variants={sidebar}
-            initial="closed"
-            animate={isOpen ? 'open' : 'closed'}
-            custom={500}
-          >
-            <NavItems
-              selectedSection={selectedSection}
-              setSelectedSection={setSelectedSection}
-              setSidebarOpen={setIsOpen}
-              isMobile={true}
-            />
-          </motion.div>
+          <NavItems
+            selectedSection={selectedSection}
+            setSelectedSection={setSelectedSection}
+            setSidebarOpen={setIsOpen}
+            isMobile={true}
+          />
         </motion.div>
         {/* Mobile Menu Toggle */}
         <button

@@ -126,7 +126,7 @@ export default () => {
             {/* Text */}
             <div className="max-w-md text-center md:max-w-lg lg:text-left">
               <h1 className="text-3xl font-bold text-own-neutral-900 dark:text-own-neutral-200 md:mb-1 md:text-5xl xl:text-6xl">
-                Hello, I'm <span className="text-own-secondary">Lei Jin</span>
+                Hello, I'm <span className="text-own-secondary">Skills</span>
               </h1>
 
               <h2 className="mb-3 text-xl font-semibold  text-own-neutral-900 dark:text-own-neutral-200 md:text-2xl xl:text-3xl">
@@ -186,7 +186,7 @@ export default () => {
             {/* Text */}
             <div className="max-w-md text-center md:max-w-lg lg:text-left">
               <h1 className="text-3xl font-bold text-own-neutral-900 dark:text-own-neutral-200 md:mb-1 md:text-5xl xl:text-6xl">
-                Hello, I'm <span className="text-own-secondary">Lei Jin</span>
+                Hello, I'm <span className="text-own-secondary">Projects</span>
               </h1>
 
               <h2 className="mb-3 text-xl font-semibold  text-own-neutral-900 dark:text-own-neutral-200 md:text-2xl xl:text-3xl">
@@ -246,7 +246,7 @@ export default () => {
             {/* Text */}
             <div className="max-w-md text-center md:max-w-lg lg:text-left">
               <h1 className="text-3xl font-bold text-own-neutral-900 dark:text-own-neutral-200 md:mb-1 md:text-5xl xl:text-6xl">
-                Hello, I'm <span className="text-own-secondary">Lei Jin</span>
+                Hello, I'm <span className="text-own-secondary">Contact</span>
               </h1>
 
               <h2 className="mb-3 text-xl font-semibold  text-own-neutral-900 dark:text-own-neutral-200 md:text-2xl xl:text-3xl">
