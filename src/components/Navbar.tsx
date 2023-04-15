@@ -1,6 +1,6 @@
 import { Menu, X } from 'lucide-react'
 import { HashLink } from 'react-router-hash-link'
-import { motion } from 'framer-motion'
+import { motion, useMotionValue, useTransform } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import NavItems from './NavItems'
 
@@ -60,11 +60,11 @@ export default ({ selectedSection, setSelectedSection }: any) => {
           onClick={() => {
             setSelectedSection('about')
           }}
-          className="flex rounded-own-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600"
+          className="pointer-events-auto flex rounded-own-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600"
           smooth
           to={'/#about'}
         >
-          <span className="text-xl font-black text-own-neutral-700 dark:text-own-neutral-200 md:text-2xl lg:text-4xl">
+          <span className=" font-black text-own-neutral-700 dark:text-own-neutral-200 md:text-2xl lg:text-4xl">
             LJ
           </span>
         </HashLink>

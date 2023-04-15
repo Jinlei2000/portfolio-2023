@@ -1,8 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
-import { motion } from 'framer-motion'
+import { motion, useMotionValue, useTransform } from 'framer-motion'
 import Typewriter from '../components/Typewriter'
 import { useInView } from 'react-intersection-observer'
+
+// TODO: import animations (variants) from a separate file (animations.ts)
 
 export default () => {
   const [selectedSection, setSelectedSection] = useState('about')
@@ -11,6 +13,7 @@ export default () => {
   const [skillsRef, skillsInView] = useInView({ threshold: 0.7 })
   const [projectsRef, projectsInView] = useInView({ threshold: 0.7 })
   const [contactRef, contactInView] = useInView({ threshold: 0.7 })
+
   // scroll to section when selectedSection changes
   useEffect(() => {
     if (aboutInView) setSelectedSection('about')
@@ -21,7 +24,7 @@ export default () => {
 
   return (
     <>
-      <div className=" bg-white dark:bg-own-neutral-900">
+      <div className="bg-white dark:bg-own-neutral-900">
         <Navbar
           selectedSection={selectedSection}
           setSelectedSection={setSelectedSection}
@@ -36,31 +39,64 @@ export default () => {
           >
             {/* Image */}
             <motion.div
-              className="mb-12 h-56 w-56 transform overflow-hidden rounded-full bg-gradient-to-r
-              from-own-secondary to-own-secondary-800 sm:mb-16 sm:h-64 sm:w-64 lg:mb-0 lg:h-80 lg:w-80 xl:h-96 xl:w-96"
-              initial={{ borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' }}
-              animate={{
-                borderRadius: [
-                  '60% 40% 30% 70% / 60% 30% 70% 40%',
-                  '30% 60% 70% 40% / 50% 60% 30% 60%',
-                  '50% 50% 50% 50% / 50% 50% 50% 50%',
-                  '30% 60% 70% 40% / 50% 60% 30% 60%',
-                  '60% 40% 30% 70% / 60% 30% 70% 40%',
-                ],
-              }}
-              transition={{
-                duration: 10,
-                ease: 'easeInOut',
-                repeat: Infinity,
+              initial="initial"
+              animate="animate"
+              variants={{
+                initial: {
+                  opacity: 0,
+                  scale: 0.5,
+                },
+                animate: {
+                  opacity: 1,
+                  scale: 1,
+                  transition: {
+                    delay: 0.5,
+                    duration: 1,
+                    ease: 'backOut',
+                  },
+                },
               }}
             >
-              <div className="absolute inset-0 flex items-center justify-center">
+              <motion.div
+                className=" mb-12 h-56 w-56 transform cursor-pointer overflow-hidden rounded-full
+                  bg-gradient-to-r from-own-secondary to-own-secondary-800 sm:mb-16 sm:h-64 sm:w-64 lg:mb-0 lg:h-80 lg:w-80 xl:h-96 xl:w-96"
+                initial="initial"
+                animate="animate"
+                variants={{
+                  initial: {
+                    borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
+                  },
+                  animate: {
+                    borderRadius: [
+                      '60% 40% 30% 70% / 60% 30% 70% 40%',
+                      '30% 60% 70% 40% / 50% 60% 30% 60%',
+                      '50% 50% 50% 50% / 50% 50% 50% 50%',
+                      '30% 60% 70% 40% / 50% 60% 30% 60%',
+                      '60% 40% 30% 70% / 60% 30% 70% 40%',
+                    ],
+                    transition: {
+                      duration: 10,
+                      ease: 'easeInOut',
+                      repeat: Infinity,
+                    },
+                  },
+                }}
+                drag
+                dragConstraints={{
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                }}
+                dragElastic={0.7}
+              >
                 <img
                   className="object-cover"
+                  draggable="false"
                   src="/img/lei.png"
                   alt="Lei Jin"
                 />
-              </div>
+              </motion.div>
             </motion.div>
 
             {/* Text */}
