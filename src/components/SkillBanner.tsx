@@ -10,8 +10,11 @@ export default ({
   children: React.ReactNode
   reverseScroll?: boolean
 }) => {
+  // Reverse scroll direction if user scrolls up
   const [reverse, setReverse] = useState(reverseScroll)
+  const [windowWidth] = useState(window.innerWidth)
 
+  // Get scrollY value from Framer Motion
   const { scrollY }: { scrollY: MotionValue<number> } = useScroll()
   const prevScrollY = useRef(scrollY.get())
 
@@ -19,10 +22,8 @@ export default ({
     // Detect if user is scrolling up or down
     if (scrollY.get() > prevScrollY.current) {
       setReverse(!reverse)
-      console.log('scrolling down')
     } else if (scrollY.get() < prevScrollY.current) {
       setReverse(!reverse)
-      console.log('scrolling up')
     }
     prevScrollY.current = scrollY.get()
   }, [scrollY.get()])
@@ -46,6 +47,10 @@ export default ({
       extensions={{ AutoScroll }}
     >
       {children}
+      {
+        // if screen is too big, add a duplicate of the first slide
+        windowWidth > 1280 && children
+      }
     </Splide>
   )
 }

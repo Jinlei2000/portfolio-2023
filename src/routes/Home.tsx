@@ -4,49 +4,8 @@ import { motion } from 'framer-motion'
 import Typewriter from '../components/Typewriter'
 import { useInView } from 'react-intersection-observer'
 import useScrollSnap from 'react-use-scroll-snap'
-import {
-  SiAdobeaftereffects,
-  SiAdobexd,
-  SiArduino,
-  SiChartdotjs,
-  SiCsharp,
-  SiCss3,
-  SiDocker,
-  SiDotnet,
-  SiExpo,
-  SiFirebase,
-  SiFlask,
-  SiGit,
-  SiGithub,
-  SiGitkraken,
-  SiGraphql,
-  SiHtml5,
-  SiJavascript,
-  SiJson,
-  SiMicrosoftazure,
-  SiMongodb,
-  SiMysql,
-  SiNetlify,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiNpm,
-  SiPostman,
-  SiPython,
-  SiRaspberrypi,
-  SiReact,
-  SiSass,
-  SiSocketdotio,
-  SiTailwindcss,
-  SiTypescript,
-  SiVite,
-  SiXamarin,
-} from '@icons-pack/react-simple-icons'
-import SkillItem from '../components/SkillItem'
-import Parallax from '../components/Parallax'
-import { AutoScroll } from '@splidejs/splide-extension-auto-scroll'
-import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
-import SkillBanner from '../components/SkillBanner'
+import Skills from '../components/Skills'
 
 // TODO: import animations (variants) from a separate file (animations.ts)
 
@@ -69,26 +28,6 @@ export default () => {
   // scroll snap
   const scrollRef = useRef(null)
   // useScrollSnap({ ref: scrollRef, duration: 50, delay: 0.5 })
-
-  // const options = {
-  //   drag: 'free',
-  //   arrows: false,
-  //   pagination: false,
-  //   type: 'loop',
-  //   autoplay: true,
-  //   // speed: 1000,
-  //   gap: '1rem',
-  //   autoWidth: true,
-  //   focus: 'center',
-  //   rewind: true,
-  //   perMove: 2,
-  //   perPage: 2,
-  //   AutoScroll: true,
-  //   pauseOnHover: false,
-  //   pauseOnFocus: false,
-  //   // waitForTransition: false,
-  //   // interval: 500,
-  // }
 
   return (
     <>
@@ -185,9 +124,9 @@ export default () => {
 
           {/* Skills Section */}
           <div id="skills" ref={skillsRef} className="pt-[52px] lg:pt-[68px]">
-            <section className="flex flex-col items-center space-y-6 bg-own-neutral-50 py-12 dark:bg-own-neutral-800 md:py-16 lg:py-20">
+            <section className="flex flex-col items-center md:space-y-10 space-y-6 bg-own-neutral-50 py-12 dark:bg-own-neutral-800 md:py-16 lg:py-20">
               {/* Header */}
-              <header className="flex flex-col text-center md:space-y-4 lg:space-y-6">
+              <header className="flex flex-col text-center md:space-y-2 lg:space-y-4">
                 <motion.h2
                   className="text-3xl font-bold text-own-neutral-900 dark:text-own-neutral-200 md:text-5xl xl:text-6xl"
                   initial={{ opacity: 0, y: -20 }}
@@ -218,59 +157,7 @@ export default () => {
                 </motion.h3>
               </header>
               {/* Skills */}
-              {/* use a horizontal scroll */}
-              <div className="flex w-full flex-col space-y-6">
-                <SkillBanner>
-                  <SkillItem icon={SiPython} title="Python" />
-                  <SkillItem icon={SiHtml5} title="HTML" />
-                  <SkillItem icon={SiCss3} title="CSS" />
-                  <SkillItem icon={SiJavascript} title="JavaScript" />
-                  <SkillItem icon={SiMysql} title="MySQL" />
-                  <SkillItem icon={SiGithub} title="GitHub" />
-                  <SkillItem icon={SiGit} title="Git" />
-                </SkillBanner>
-
-                <SkillBanner reverseScroll={true}>
-                  <SkillItem icon={SiFlask} title="Flask" />
-                  <SkillItem icon={SiJson} title="JSON" />
-                  <SkillItem icon={SiAdobexd} title="Adobe XD" />
-                  <SkillItem icon={SiArduino} title="Arduino" />
-                  <SkillItem title="UI/UX" />
-                  <SkillItem icon={SiChartdotjs} title="Chart.js" />
-                  <SkillItem icon={SiDotnet} title=".NET" />
-                </SkillBanner>
-
-                <SkillBanner>
-                  <SkillItem icon={SiMicrosoftazure} title="Azure" />
-                  <SkillItem icon={SiXamarin} title="Xamarin" />
-                  <SkillItem icon={SiRaspberrypi} title="Raspberry Pi" />
-                  <SkillItem icon={SiSocketdotio} title="Socket.io" />
-                  <SkillItem icon={SiPostman} title="Postman" />
-                  <SkillItem icon={SiAdobeaftereffects} title="After Effects" />
-                  <SkillItem icon={SiNetlify} title="Netlify" />
-                </SkillBanner>
-
-                <SkillBanner reverseScroll={true}>
-                  <SkillItem icon={SiReact} title="React" />
-                  <SkillItem icon={SiGitkraken} title="GitKraken" />
-                  <SkillItem icon={SiExpo} title="Expo" />
-                  <SkillItem icon={SiSass} title="Sass" />
-                  <SkillItem icon={SiReact} title="React Native" />
-                  <SkillItem icon={SiTailwindcss} title="Tailwind CSS" />
-                  <SkillItem icon={SiVite} title="Vite" />
-                </SkillBanner>
-
-                <SkillBanner>
-                  <SkillItem icon={SiDocker} title="Docker" />
-                  <SkillItem icon={SiGraphql} title="GraphQL" />
-                  <SkillItem icon={SiMongodb} title="MongoDB" />
-                  <SkillItem icon={SiTypescript} title="TypeScript" />
-                  <SkillItem icon={SiCsharp} title="C#" />
-                  <SkillItem icon={SiNodedotjs} title="Node.js" />
-                  <SkillItem icon={SiNpm} title="NPM" />
-                  <SkillItem icon={SiFirebase} title="Firebase" />
-                </SkillBanner>
-              </div>
+              <Skills />
             </section>
           </div>
 
