@@ -1,6 +1,6 @@
 import { Menu, X } from 'lucide-react'
 import { HashLink } from 'react-router-hash-link'
-import { motion, useMotionValue, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import NavItems from './NavItems'
 
@@ -44,7 +44,7 @@ export default ({ selectedSection, setSelectedSection }: any) => {
   }, [isOpen])
 
   return (
-    <nav className="sticky top-0 z-[9999] bg-white px-4 py-2.5 dark:bg-own-neutral-900 md:px-6">
+    <nav className="fixed left-0 right-0 top-0 z-[9999] bg-white px-4 py-2.5 dark:bg-own-neutral-900 md:px-6">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
         {/* Logo */}
         <HashLink
