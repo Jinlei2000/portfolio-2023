@@ -24,11 +24,17 @@ export default () => {
   return (
     <>
       <motion.div
-        className="flex w-full flex-col space-y-6"
+        className="relative w-full"
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        whileInView={{
+          opacity: 1,
+          transition: { duration: 0.5, delay: 0.5 },
+        }}
       >
-        {skillBanners}
+        <div className="flex flex-col space-y-6">{skillBanners}</div>
+        {/* Gradient to hide the overflow */}
+        <div className="absolute left-0 top-0 z-10 h-full w-10 bg-gradient-to-r from-own-neutral-50 to-transparent  md:w-28 lg:w-36 xl:w-60"></div>
+        <div className="absolute right-0 top-0 z-10 h-full w-10 bg-gradient-to-l from-own-neutral-50 to-transparent  md:w-28 lg:w-36 xl:w-60"></div>
       </motion.div>
     </>
   )
