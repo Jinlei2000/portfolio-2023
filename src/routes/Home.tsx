@@ -42,6 +42,11 @@ import {
   SiXamarin,
 } from '@icons-pack/react-simple-icons'
 import SkillItem from '../components/SkillItem'
+import Parallax from '../components/Parallax'
+import { AutoScroll } from '@splidejs/splide-extension-auto-scroll'
+import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide'
+import '@splidejs/react-splide/css'
+import SkillBanner from '../components/SkillBanner'
 
 // TODO: import animations (variants) from a separate file (animations.ts)
 
@@ -64,6 +69,26 @@ export default () => {
   // scroll snap
   const scrollRef = useRef(null)
   // useScrollSnap({ ref: scrollRef, duration: 50, delay: 0.5 })
+
+  // const options = {
+  //   drag: 'free',
+  //   arrows: false,
+  //   pagination: false,
+  //   type: 'loop',
+  //   autoplay: true,
+  //   // speed: 1000,
+  //   gap: '1rem',
+  //   autoWidth: true,
+  //   focus: 'center',
+  //   rewind: true,
+  //   perMove: 2,
+  //   perPage: 2,
+  //   AutoScroll: true,
+  //   pauseOnHover: false,
+  //   pauseOnFocus: false,
+  //   // waitForTransition: false,
+  //   // interval: 500,
+  // }
 
   return (
     <>
@@ -193,8 +218,9 @@ export default () => {
                 </motion.h3>
               </header>
               {/* Skills */}
-              <div className="">
-                <ul className="flex ">
+              {/* use a horizontal scroll */}
+              <div className="flex w-full flex-col space-y-6">
+                <SkillBanner>
                   <SkillItem icon={SiPython} title="Python" />
                   <SkillItem icon={SiHtml5} title="HTML" />
                   <SkillItem icon={SiCss3} title="CSS" />
@@ -202,15 +228,19 @@ export default () => {
                   <SkillItem icon={SiMysql} title="MySQL" />
                   <SkillItem icon={SiGithub} title="GitHub" />
                   <SkillItem icon={SiGit} title="Git" />
+                </SkillBanner>
+
+                <SkillBanner reverseScroll={true}>
                   <SkillItem icon={SiFlask} title="Flask" />
                   <SkillItem icon={SiJson} title="JSON" />
                   <SkillItem icon={SiAdobexd} title="Adobe XD" />
-                </ul>
-                <ul className="flex">
                   <SkillItem icon={SiArduino} title="Arduino" />
                   <SkillItem title="UI/UX" />
                   <SkillItem icon={SiChartdotjs} title="Chart.js" />
                   <SkillItem icon={SiDotnet} title=".NET" />
+                </SkillBanner>
+
+                <SkillBanner>
                   <SkillItem icon={SiMicrosoftazure} title="Azure" />
                   <SkillItem icon={SiXamarin} title="Xamarin" />
                   <SkillItem icon={SiRaspberrypi} title="Raspberry Pi" />
@@ -218,8 +248,9 @@ export default () => {
                   <SkillItem icon={SiPostman} title="Postman" />
                   <SkillItem icon={SiAdobeaftereffects} title="After Effects" />
                   <SkillItem icon={SiNetlify} title="Netlify" />
-                </ul>
-                <ul className="flex">
+                </SkillBanner>
+
+                <SkillBanner reverseScroll={true}>
                   <SkillItem icon={SiReact} title="React" />
                   <SkillItem icon={SiGitkraken} title="GitKraken" />
                   <SkillItem icon={SiExpo} title="Expo" />
@@ -227,6 +258,9 @@ export default () => {
                   <SkillItem icon={SiReact} title="React Native" />
                   <SkillItem icon={SiTailwindcss} title="Tailwind CSS" />
                   <SkillItem icon={SiVite} title="Vite" />
+                </SkillBanner>
+
+                <SkillBanner>
                   <SkillItem icon={SiDocker} title="Docker" />
                   <SkillItem icon={SiGraphql} title="GraphQL" />
                   <SkillItem icon={SiMongodb} title="MongoDB" />
@@ -235,7 +269,7 @@ export default () => {
                   <SkillItem icon={SiNodedotjs} title="Node.js" />
                   <SkillItem icon={SiNpm} title="NPM" />
                   <SkillItem icon={SiFirebase} title="Firebase" />
-                </ul>
+                </SkillBanner>
               </div>
             </section>
           </div>
