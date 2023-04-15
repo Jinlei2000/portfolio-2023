@@ -74,7 +74,7 @@ const Navigation = ({
 
   const btnModeStyle = isMobile
     ? 'stroke-own-neutral-200 dark:stroke-own-neutral-500 group-hover:stroke-own-alpha dark:group-hover:stroke-own-alpha-light'
-    : 'stroke-own-neutral-200 group-hover:stroke-own-alpha dark:group-hover:stroke-own-alpha-light'
+    : 'stroke-own-neutral-500 group-hover:stroke-own-alpha dark:group-hover:stroke-own-alpha-light'
 
   const toggleButton = (
     <motion.li

@@ -28,28 +28,19 @@ const animationSidebar = {
 export default ({ selectedSection, setSelectedSection }: any) => {
   const [isOpen, setIsOpen] = useState(false)
 
-  // no scroll when sidebar is open
   useEffect(() => {
-    // Set timeout to prevent body overflow from being set to hidden when sidebar is closed
-    const time = !isOpen ? 500 : 0
+    // Set body overflow to hidden when sidebar is open
+    document.body.style.overflow = isOpen ? 'hidden' : 'auto'
 
-    const timeoutId = setTimeout(() => {
-      // Set body overflow to hidden when sidebar is open
-      document.body.style.overflow = isOpen ? 'hidden' : 'auto'
+    // Add event listener to handle scrolling when sidebar is open
+    const handleScroll = () => isOpen && window.scrollTo(0, 0)
+    window.addEventListener('scroll', handleScroll)
 
-      // Add event listener to handle scrolling when sidebar is open
-      const handleScroll = () => isOpen && window.scrollTo(0, 0)
-      window.addEventListener('scroll', handleScroll)
-
-      // Remove event listener and set body overflow back to auto when component is unmounted
-      return () => {
-        window.removeEventListener('scroll', handleScroll)
-        document.body.style.overflow = 'auto'
-      }
-    }, time)
-
-    // Clean up the timeout when the component unmounts
-    return () => clearTimeout(timeoutId)
+    // Remove event listener and set body overflow back to auto when component is unmounted
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      document.body.style.overflow = 'auto'
+    }
   }, [isOpen])
 
   return (
