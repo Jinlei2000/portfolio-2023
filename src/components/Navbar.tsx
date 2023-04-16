@@ -55,9 +55,16 @@ export default ({ selectedSection, setSelectedSection }: any) => {
           smooth
           to={'/#about'}
         >
-          <span className=" font-black text-own-neutral-700 dark:text-own-neutral-200 md:text-2xl lg:text-4xl">
+          <motion.span
+            whileHover={{ scale: 1.2, color: '#4780EB' }}
+            whileTap={{ scale: 0.95 }}
+            transition={{
+              ease: [0.165, 0.84, 0.44, 1],
+            }}
+            className=" font-black text-own-neutral-700 dark:text-own-neutral-200 md:text-2xl lg:text-4xl"
+          >
             LJ
-          </span>
+          </motion.span>
         </HashLink>
 
         {/* Desktop Menu */}
