@@ -42,6 +42,7 @@ export default {
         'own-sm': '0.3125rem', // 5px
         own: '0.625rem', // 10px
         'own-md': '1.25rem', // 20px
+        'own-lg':  '1.875rem', // 30px
       },
     },
   },

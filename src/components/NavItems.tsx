@@ -100,6 +100,7 @@ const Navigation = ({
       variants={animationMenuItem}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
+      transition={{ ease: 'easeInOut', duration: 0.1 }}
       key={item}
     >
       <NavLink

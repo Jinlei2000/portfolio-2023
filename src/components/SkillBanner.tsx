@@ -40,7 +40,6 @@ export default ({
           options={{
             autoWidth: true,
             type: 'loop',
-            gap: '24px',
             drag: 'free',
             arrows: false,
             pagination: false,
