@@ -2,6 +2,9 @@ import { Splide } from '@splidejs/react-splide'
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll'
 import { useEffect, useState } from 'react'
 import useScrollDirection from '../hooks/useScrollDirection'
+import { motion } from 'framer-motion'
+import { skillBar } from '../animation/animation'
+import { useInView } from 'react-intersection-observer'
 
 export default ({
   children,
@@ -21,27 +24,40 @@ export default ({
     setReverseDir(scrollDir === 'down' ? reverseScroll : !reverseScroll)
   }, [scrollDir])
 
+  // Use Intersection Observer to detect when the component is in view
+  const [ref, isInView] = useInView()
+
   return (
-    <Splide
-      options={{
-        autoWidth: true,
-        type: 'loop',
-        gap: '24px',
-        drag: 'free',
-        arrows: false,
-        pagination: false,
-        easing: 'ease',
-        autoScroll: {
-          speed: reverseDir ? -0.25 : 0.25,
-          pauseOnHover: false,
-          pauseOnFocus: false,
-        },
-      }}
-      extensions={{ AutoScroll }}
+    <motion.div
+      ref={ref}
+      initial="initial"
+      whileInView="animation"
+      variants={skillBar}
     >
-      {children}
-      {/* to make it loop */}
-      {children}
-    </Splide>
+      {/* Only render the slider when the component is in view */}
+      {isInView && (
+        <Splide
+          options={{
+            autoWidth: true,
+            type: 'loop',
+            gap: '24px',
+            drag: 'free',
+            arrows: false,
+            pagination: false,
+            easing: 'ease',
+            autoScroll: {
+              speed: reverseDir ? -0.25 : 0.25,
+              pauseOnHover: false,
+              pauseOnFocus: false,
+            },
+          }}
+          extensions={{ AutoScroll }}
+        >
+          {children}
+          {/* to make it loop */}
+          {children}
+        </Splide>
+      )}
+    </motion.div>
   )
 }

@@ -8,6 +8,7 @@ import '@splidejs/react-splide/css'
 import Skills from '../components/Skills'
 import HeaderSection from '../components/HeaderSection'
 import BlobImage from '../components/BlobImage'
+import { textFadeInSlideDown } from '../animation/animation'
 
 // TODO: import animations (variants) from a separate file (animations.ts)
 
@@ -40,23 +41,39 @@ export default () => {
         />
         <main className="" ref={scrollRef}>
           {/* About Section */}
-          <div
+          <section
             id="about"
             ref={aboutRef}
             className="mx-auto max-w-screen-xl px-4 md:px-6"
           >
-            <section className="flex h-screen flex-col items-center justify-center lg:flex-row-reverse lg:justify-between lg:px-20">
+            <div className="flex h-screen flex-col items-center justify-center lg:flex-row-reverse lg:justify-between lg:px-20">
               {/* Image */}
               <BlobImage src="/img/lei.png" alt="Lei Jin" />
               {/* Text */}
               <div className="max-w-md text-center md:max-w-lg lg:text-left">
-                <h1 className="text-3xl font-bold text-own-neutral-900 dark:text-own-neutral-200 md:mb-1 md:text-5xl xl:text-6xl">
+                <motion.h1
+                  initial="initial"
+                  whileInView="animation"
+                  variants={textFadeInSlideDown}
+                  className="text-3xl font-bold text-own-neutral-900 dark:text-own-neutral-200 md:mb-1 md:text-5xl xl:text-6xl"
+                >
                   Hello, I'm <Typewriter text="Lei Jin" />
-                </h1>
-                <h2 className="mb-3 text-xl font-semibold  text-own-neutral-900 dark:text-own-neutral-200 md:text-2xl xl:text-3xl">
+                </motion.h1>
+
+                <motion.h2
+                  initial="initial"
+                  whileInView="animation"
+                  variants={textFadeInSlideDown}
+                  className="mb-3 text-xl font-semibold  text-own-neutral-900 dark:text-own-neutral-200 md:text-2xl xl:text-3xl"
+                >
                   Junior Full Stack Developer
-                </h2>
-                <p className="text-md text-own-neutral-700 dark:text-own-neutral-300 md:text-lg xl:text-xl">
+                </motion.h2>
+                <motion.p
+                  initial="initial"
+                  whileInView="animation"
+                  variants={textFadeInSlideDown}
+                  className="text-md text-own-neutral-700 dark:text-own-neutral-300 md:text-lg xl:text-xl"
+                >
                   I am currently studying Multimedia & Creative Technologies (
                   <a
                     href="https://mct.be/"
@@ -68,20 +85,24 @@ export default () => {
                   </a>
                   ) in Howest, Belgium. As a specialization, I have chosen Next
                   Webdeveloper.
-                </p>
+                </motion.p>
               </div>
-            </section>
-          </div>
+            </div>
+          </section>
 
           {/* Skills Section */}
-          <div id="skills" ref={skillsRef} className="pt-[52px] lg:pt-[68px]">
-            <section className="flex flex-col items-center space-y-6 bg-own-neutral-50 py-12 dark:bg-own-neutral-800 md:space-y-10 md:py-16 lg:py-20">
+          <section
+            id="skills"
+            ref={skillsRef}
+            className="pt-[52px] lg:pt-[68px]"
+          >
+            <div className="flex flex-col items-center space-y-6 bg-own-neutral-50 py-12 dark:bg-own-neutral-800 md:space-y-10 md:py-16 lg:py-20">
               {/* Header */}
               <HeaderSection title="Skills" subtitle="What I can do" />
               {/* Skills */}
               <Skills />
-            </section>
-          </div>
+            </div>
+          </section>
 
           {/* Projects Section */}
           <section

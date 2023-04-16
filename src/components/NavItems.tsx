@@ -52,7 +52,7 @@ const Navigation = ({
       mx-3 flex items-center gap-2 rounded-own bg-own-alpha py-3 pl-3 pr-4 font-medium leading-none
       ${
         isMobile
-          ? 'bg-own-alpha-light text-own-neutral-50 hover:bg-own-alpha-dark dark:text-own-neutral-200 dark:hover:bg-own-alpha-dark'
+          ? 'bg-own-alpha-light text-own-neutral-50 hover:bg-own-alpha-dark dark:text-own-neutral-50 dark:hover:bg-own-alpha-dark'
           : 'text-own-neutral-50 hover:bg-own-alpha-dark dark:bg-own-alpha-light dark:text-own-neutral-200 dark:hover:bg-own-alpha-dark'
       }
      

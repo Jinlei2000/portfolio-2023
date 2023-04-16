@@ -1,7 +1,6 @@
 import SkillBanner from './SkillBanner'
 import SkillItem from './SkillItem'
 import { skillsData } from '../data/skillsData'
-import { motion } from 'framer-motion'
 
 export default () => {
   const skillsPerBanner = 6
@@ -23,19 +22,12 @@ export default () => {
   }
   return (
     <>
-      <motion.div
-        className="relative w-full"
-        initial={{ opacity: 0 }}
-        whileInView={{
-          opacity: 1,
-          transition: { duration: 0.5, delay: 0.5 },
-        }}
-      >
+      <div className="relative w-full">
         <div className="flex flex-col space-y-6">{skillBanners}</div>
         {/* Gradient to hide the overflow */}
         <div className="absolute left-0 top-0 z-10 h-full w-10 bg-gradient-to-r from-own-neutral-50 to-transparent  md:w-28 lg:w-36 xl:w-60"></div>
         <div className="absolute right-0 top-0 z-10 h-full w-10 bg-gradient-to-l from-own-neutral-50 to-transparent  md:w-28 lg:w-36 xl:w-60"></div>
-      </motion.div>
+      </div>
     </>
   )
 }
