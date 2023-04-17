@@ -1,5 +1,5 @@
-import { IconType } from '@icons-pack/react-simple-icons'
 import { SplideSlide } from '@splidejs/react-splide'
+import { IconType } from 'react-icons/lib'
 
 export default ({
   icon: Icon,
