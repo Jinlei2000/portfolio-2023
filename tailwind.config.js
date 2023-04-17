@@ -14,11 +14,10 @@ export default {
       // use own colors
       colors: {
         own: {
-          alpha: '#6766FF',
-          'alpha-light': '#9E9DF2',
-          'alpha-dark': '#5E5DD9',
-          'alpha-transparent-700': '#6766FF40',
-          'alpha-transparent-800': '#5E5DD94D',
+          'primary-400': '#D0BDF8',
+          'primary-450': '#A17CF0',
+          'primary-500': '#7B47EB',
+          'primary-600': '#5F20E6',
 
           secondary: '#4780EB',
           'secondary-700': '#4373CC',
@@ -42,7 +41,7 @@ export default {
         'own-sm': '0.3125rem', // 5px
         own: '0.625rem', // 10px
         'own-md': '1.25rem', // 20px
-        'own-lg':  '1.875rem', // 30px
+        'own-lg': '1.875rem', // 30px
       },
     },
   },

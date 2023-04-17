@@ -49,22 +49,18 @@ const Navigation = ({
         href="/docs/LJ-Resume.pdf"
         download
         className={`
-      mx-3 flex items-center gap-2 rounded-own bg-own-alpha py-3 pl-3 pr-4 font-medium leading-none
+      bg-own-alpha mx-3 flex items-center gap-2 rounded-own py-3 pl-3 pr-4 font-medium leading-none
       ${
         isMobile
-          ? 'bg-own-alpha-light text-own-neutral-50 hover:bg-own-alpha-dark dark:text-own-neutral-50 dark:hover:bg-own-alpha-dark'
-          : 'text-own-neutral-50 hover:bg-own-alpha-dark dark:bg-own-alpha-light dark:text-own-neutral-200 dark:hover:bg-own-alpha-dark'
+          ? 'bg-own-primary-450 text-own-neutral-50 hover:bg-own-primary-500 dark:bg-own-primary-500 dark:text-own-neutral-50 dark:hover:bg-own-primary-600'
+          : 'bg-own-primary-500 text-own-neutral-50 hover:bg-own-primary-600 dark:bg-own-primary-450 dark:text-own-neutral-50 dark:hover:bg-own-primary-500'
       }
      
     `}
       >
         <Download
           className={`
-      ${
-        isMobile
-          ? 'stroke-own-neutral-50'
-          : 'stroke-own-neutral-50 dark:stroke-own-neutral-200'
-      }
+      ${isMobile ? 'stroke-own-neutral-50' : ''}
       `}
         />
         Resume
@@ -73,8 +69,8 @@ const Navigation = ({
   )
 
   const btnModeStyle = isMobile
-    ? 'stroke-own-neutral-200 dark:stroke-own-neutral-500 group-hover:stroke-own-alpha dark:group-hover:stroke-own-alpha-light'
-    : 'stroke-own-neutral-500 group-hover:stroke-own-alpha dark:group-hover:stroke-own-alpha-light'
+    ? 'stroke-own-neutral-200 dark:stroke-own-neutral-500 group-hover:stroke-own-primary-400 dark:group-hover:stroke-own-primary-500'
+    : 'stroke-own-neutral-500 dark:stroke-own-neutral-200 group-hover:stroke-own-primary-500 dark:group-hover:stroke-own-primary-400'
 
   const toggleButton = (
     <motion.li

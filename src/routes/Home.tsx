@@ -77,7 +77,7 @@ export default () => {
                   I am currently studying Multimedia & Creative Technologies (
                   <a
                     href="https://mct.be/"
-                    className="text-own-alpha hover:text-own-alpha-dark dark:hover:text-own-alpha-light"
+                    className="text-own-primary-500 hover:text-own-primary-600 dark:text-own-primary-400 dark:hover:text-own-primary-500"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -108,33 +108,16 @@ export default () => {
           <section
             ref={projectsRef}
             id="projects"
-            className="flex h-screen flex-col items-center justify-center  lg:flex-row-reverse lg:justify-between lg:px-20"
+            className="mx-auto max-w-screen-xl px-4 pt-[52px] md:px-6 lg:pt-[68px]"
           >
-            {/* Image */}
-            <BlobImage src="/img/lei.png" alt="Lei Jin" />
-
-            {/* Text */}
-            <div className="max-w-md text-center md:max-w-lg lg:text-left">
-              <h1 className="text-3xl font-bold text-own-neutral-900 dark:text-own-neutral-200 md:mb-1 md:text-5xl xl:text-6xl">
-                Hello, I'm <span className="text-own-secondary">Projects</span>
-              </h1>
-
-              <h2 className="mb-3 text-xl font-semibold  text-own-neutral-900 dark:text-own-neutral-200 md:text-2xl xl:text-3xl">
-                Junior Full Stack Developer
-              </h2>
-              <p className="text-md text-own-neutral-700 dark:text-own-neutral-300 md:text-lg xl:text-xl">
-                I am currently studying Multimedia & Creative Technologies (
-                <a
-                  href="https://mct.be/"
-                  className="text-own-alpha dark:text-own-alpha-light"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  MCT
-                </a>
-                ) in Howest, Belgium. As a specialization, I have chosen Next
-                Webdeveloper.
-              </p>
+            <div className="flex flex-col space-y-6 py-12 md:space-y-10 md:py-16 lg:py-20">
+              {/* Header */}
+              <HeaderSection
+                title="Projects"
+                subtitle="What I've done"
+                textAlignment="left"
+              />
+              {/* Projects */}
             </div>
           </section>
 
