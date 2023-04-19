@@ -11,6 +11,7 @@ import OnColor from './routes/projects/Oncolor'
 import AnimeApp from './routes/projects/AnimeApp'
 import InteractivePoles from './routes/projects/InteractivePoles'
 import DarkModeManager from './components/DarkModeManager'
+import Redirect from './components/Redirect'
 
 const router = createBrowserRouter([
   {
@@ -18,19 +19,19 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: '/smart-garbage',
+    path: '/projects/smart-garbage',
     element: <SmartGarbage />,
   },
   {
-    path: '/oncolor',
+    path: '/projects/oncolor',
     element: <OnColor />,
   },
   {
-    path: '/anime-app',
+    path: '/projects/anime-app',
     element: <AnimeApp />,
   },
   {
-    path: '/interactive-poles',
+    path: '/projects/interactive-poles',
     element: <InteractivePoles />,
   },
 ])
