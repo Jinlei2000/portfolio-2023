@@ -3,14 +3,13 @@ import Navbar from '../components/Navbar'
 import { motion } from 'framer-motion'
 import Typewriter from '../components/Typewriter'
 import { useInView } from 'react-intersection-observer'
-import useScrollSnap from 'react-use-scroll-snap'
 import '@splidejs/react-splide/css'
 import Skills from '../components/Skills'
 import HeaderSection from '../components/HeaderSection'
 import BlobImage from '../components/BlobImage'
 import { textFadeInSlideDown } from '../animation/animation'
-
-// TODO: import animations (variants) from a separate file (animations.ts)
+import { Splide, SplideSlide } from '@splidejs/react-splide'
+import ProjectCard from '../components/ProjectCard'
 
 export default () => {
   const [selectedSection, setSelectedSection] = useState('about')
@@ -28,10 +27,6 @@ export default () => {
     if (contactInView) setSelectedSection('contact')
   }, [aboutInView, skillsInView, projectsInView, contactInView])
 
-  // scroll snap
-  const scrollRef = useRef(null)
-  // useScrollSnap({ ref: scrollRef, duration: 50, delay: 0.5 })
-
   return (
     <>
       <div className="bg-white dark:bg-own-neutral-900">
@@ -39,7 +34,7 @@ export default () => {
           selectedSection={selectedSection}
           setSelectedSection={setSelectedSection}
         />
-        <main className="" ref={scrollRef}>
+        <main>
           {/* About Section */}
           <section
             id="about"
@@ -114,10 +109,78 @@ export default () => {
               {/* Header */}
               <HeaderSection
                 title="Projects"
-                subtitle="What I've done"
+                subtitle="Featured Projects"
                 textAlignment="left"
               />
-              {/* Projects */}
+              {/* Recent Projects */}
+              <div className="grid grid-cols-6 gap-6">
+                <div className="col-span-full flex justify-center sm:col-span-3 sm:row-span-2 md:col-span-2 md:row-span-2">
+                  <ProjectCard />
+                </div>
+                <div className="col-span-full flex justify-center sm:col-span-3 sm:row-span-6 md:col-span-2 md:row-span-4">
+                  <ProjectCard />
+                </div>
+                <div className="col-span-full flex justify-center sm:col-span-3 sm:row-span-4 md:col-span-2 md:row-span-6">
+                  <ProjectCard />
+                </div>
+              </div>
+              {/* More Projects */}
+              <h3 className="text-xl font-semibold text-own-neutral-900 dark:text-own-neutral-200 md:text-2xl xl:text-3xl">
+                More of what I've done
+              </h3>
+              <Splide>
+                <SplideSlide>
+                  <div className="flex flex-col items-center justify-center space-y-4">
+                    <div className=" overflow-hidden rounded-lg shadow-lg">
+                      <img
+                        src="/img/interactive-poles-1.png"
+                        alt="Placeholder"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold text-own-neutral-900 dark:text-own-neutral-200 md:text-2xl xl:text-3xl">
+                      Team Project
+                    </h3>
+                    <p className="text-md text-own-neutral-700 dark:text-own-neutral-300 md:text-lg xl:text-xl">
+                      Interactive Bollards
+                    </p>
+                  </div>
+                </SplideSlide>
+                <SplideSlide>
+                  <div className="flex flex-col items-center justify-center space-y-4">
+                    <div className=" overflow-hidden rounded-lg shadow-lg">
+                      <img
+                        src="/img/oncolor-1.png"
+                        alt="Placeholder"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold text-own-neutral-900 dark:text-own-neutral-200 md:text-2xl xl:text-3xl">
+                      Interaction Design
+                    </h3>
+                    <p className="text-md text-own-neutral-700 dark:text-own-neutral-300 md:text-lg xl:text-xl">
+                      OnColor
+                    </p>
+                  </div>
+                </SplideSlide>
+                <SplideSlide>
+                  <div className="flex flex-col items-center justify-center space-y-4">
+                    <div className=" overflow-hidden rounded-lg shadow-lg">
+                      <img
+                        src="/img/smart-garbage-1.png"
+                        alt="Placeholder"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold text-own-neutral-900 dark:text-own-neutral-200 md:text-2xl xl:text-3xl">
+                      Project One
+                    </h3>
+                    <p className="text-md text-own-neutral-700 dark:text-own-neutral-300 md:text-lg xl:text-xl">
+                      Smart Garbage
+                    </p>
+                  </div>
+                </SplideSlide>
+              </Splide>
             </div>
           </section>
 

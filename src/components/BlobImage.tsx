@@ -9,7 +9,7 @@ export default ({ src: srcImg, alt: altImg }: { src: string; alt: string }) => {
       variants={blobFadeInGrow}
     >
       <motion.div
-        className=" mb-12 h-56 w-56 transform cursor-pointer overflow-hidden rounded-full
+        className="mb-12 h-56 w-56 cursor-pointer overflow-hidden rounded-full
                         bg-gradient-to-r from-own-secondary to-own-secondary-800 sm:mb-16 sm:h-64 sm:w-64 lg:mb-0 lg:h-80 lg:w-80 xl:h-96 xl:w-96"
         initial="initial"
         whileInView="animation"
