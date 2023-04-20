@@ -61,7 +61,7 @@ export default ({ selectedSection, setSelectedSection }: any) => {
             transition={{
               ease: [0.165, 0.84, 0.44, 1],
             }}
-            className=" font-black text-own-neutral-700 dark:text-own-neutral-200 md:text-2xl lg:text-4xl"
+            className="px-1 font-black text-own-neutral-700 dark:text-own-neutral-200 md:text-2xl lg:text-4xl"
           >
             LJ
           </motion.span>

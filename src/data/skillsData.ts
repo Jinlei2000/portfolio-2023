@@ -33,7 +33,7 @@ import {
   SiTypescript,
   SiVite,
   SiXamarin,
-} from '@icons-pack/react-simple-icons'
+} from 'react-icons/si'
 
 export const skillsData = [
   { icon: SiPython, title: 'Python', color: '#3776AB' },
@@ -79,4 +79,5 @@ export const skillsData = [
   { icon: SiFirebase, title: 'Firebase', color: '#FFCA28' },
 
   // { icon: SiFirebase, title: 'Dapr', color: '#0D2192' },
+  // { icon: SiNextdotjs, title: 'Next.js', color: '#000000' },
 ]
