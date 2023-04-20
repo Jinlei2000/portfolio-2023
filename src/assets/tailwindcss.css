@@ -35,7 +35,7 @@
 
 
 /* SplideJS has there own css file i can not add tailwind classes to it */
-@layer base {
+@layer components {
     .splide__slide-carousel {
         transition: opacity 400ms;
         opacity: .3;
@@ -79,8 +79,5 @@
         opacity: 1;
 
     }
-
-   
-
 
 }

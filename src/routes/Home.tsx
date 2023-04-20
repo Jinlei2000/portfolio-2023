@@ -8,16 +8,8 @@ import Skills from '../components/Skills'
 import HeaderSection from '../components/HeaderSection'
 import BlobImage from '../components/BlobImage'
 import { textFadeInSlideDown } from '../animation/animation'
-import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide'
 import { projectsData } from '../data/projectsData'
 import FeaturedProjects from '../components/FeaturedProjects'
-import { Link } from 'react-router-dom'
-import {
-  ChevronLeft,
-  ChevronLeftIcon,
-  ChevronRight,
-  ChevronRightIcon,
-} from 'lucide-react'
 import CarouselProjects from '../components/CarouselProjects'
 
 export default () => {
@@ -200,6 +192,9 @@ export default () => {
               </p>
             </div>
           </section>
+
+          {/* Footer */}
+          
         </main>
       </div>
     </>
