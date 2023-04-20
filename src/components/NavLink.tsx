@@ -21,7 +21,7 @@ export default ({
         setSelectedSection(lowerCasePage)
         setSidebarOpen && setSidebarOpen(false)
       }}
-      smooth
+      // smooth
       to={'/#' + lowerCasePage}
       className={
         !reverse

@@ -1,16 +1,16 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import { motion } from 'framer-motion'
 import Typewriter from '../components/Typewriter'
 import { useInView } from 'react-intersection-observer'
-import useScrollSnap from 'react-use-scroll-snap'
 import '@splidejs/react-splide/css'
 import Skills from '../components/Skills'
 import HeaderSection from '../components/HeaderSection'
 import BlobImage from '../components/BlobImage'
 import { textFadeInSlideDown } from '../animation/animation'
-
-// TODO: import animations (variants) from a separate file (animations.ts)
+import { projectsData } from '../data/projectsData'
+import FeaturedProjects from '../components/FeaturedProjects'
+import CarouselProjects from '../components/CarouselProjects'
 
 export default () => {
   const [selectedSection, setSelectedSection] = useState('about')
@@ -22,15 +22,12 @@ export default () => {
 
   // scroll to section when selectedSection changes
   useEffect(() => {
+    // only when the scroll is not triggered by the user
     if (aboutInView) setSelectedSection('about')
     if (skillsInView) setSelectedSection('skills')
     if (projectsInView) setSelectedSection('projects')
     if (contactInView) setSelectedSection('contact')
   }, [aboutInView, skillsInView, projectsInView, contactInView])
-
-  // scroll snap
-  const scrollRef = useRef(null)
-  // useScrollSnap({ ref: scrollRef, duration: 50, delay: 0.5 })
 
   return (
     <>
@@ -39,7 +36,7 @@ export default () => {
           selectedSection={selectedSection}
           setSelectedSection={setSelectedSection}
         />
-        <main className="" ref={scrollRef}>
+        <main>
           {/* About Section */}
           <section
             id="about"
@@ -96,7 +93,7 @@ export default () => {
             ref={skillsRef}
             className="pt-[52px] lg:pt-[68px]"
           >
-            <div className="flex flex-col items-center space-y-6 bg-own-neutral-50 py-12 dark:bg-own-neutral-800 md:space-y-10 md:py-16 lg:py-20">
+            <div className="flex flex-col items-center space-y-6 bg-own-neutral-50 py-8 dark:bg-own-neutral-800 md:space-y-10 md:py-12 lg:py-16">
               {/* Header */}
               <HeaderSection title="Skills" subtitle="What I can do" />
               {/* Skills */}
@@ -110,14 +107,29 @@ export default () => {
             id="projects"
             className="mx-auto max-w-screen-xl px-4 pt-[52px] md:px-6 lg:pt-[68px]"
           >
-            <div className="flex flex-col space-y-6 py-12 md:space-y-10 md:py-16 lg:py-20">
+            <div className="flex flex-col space-y-6 py-8 md:space-y-10 md:py-12 lg:py-16">
               {/* Header */}
               <HeaderSection
                 title="Projects"
-                subtitle="What I've done"
+                subtitle="Featured Projects"
                 textAlignment="left"
               />
-              {/* Projects */}
+              {/* Featured Projects */}
+              <FeaturedProjects
+                projects={projectsData.filter(
+                  project => project.featured !== undefined,
+                )}
+              />
+              {/* More Projects */}
+              <h3 className="text-xl font-semibold text-own-neutral-900 dark:text-own-neutral-200 md:text-2xl xl:text-3xl">
+                More of what I've done
+              </h3>
+              <CarouselProjects
+                // projects={projectsData.filter(
+                //   project => project.featured === undefined,
+                // )}
+                projects={projectsData}
+              />
             </div>
           </section>
 
@@ -180,6 +192,9 @@ export default () => {
               </p>
             </div>
           </section>
+
+          {/* Footer */}
+          
         </main>
       </div>
     </>
