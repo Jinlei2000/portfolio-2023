@@ -33,3 +33,29 @@
     src: url("/fonts/Poppins-Black.ttf") format("truetype");
 }
 
+
+/* SplideJS has there own css file i can not add tailwind classes to it */
+@layer base {
+    .splide__slide-carousel {
+        opacity: 0.5;
+    }
+
+    .splide__slide-carousel.is-active {
+        opacity: 1;
+    }
+
+
+    .splide__slide-carousel img {
+        display: block;
+        width: 100%;
+        border-radius: 8px;
+        transition: transform 400ms;
+        transform: scale(.6);
+        transform-origin: center center;
+    }
+
+
+    .splide__slide-carousel.is-active img {
+        transform: scale(1);
+    }
+}
