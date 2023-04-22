@@ -1,7 +1,12 @@
+import Navbar from '../../components/Navbar'
+
 export default () => {
   return (
-    <div>
-      <h1>SmartGarbage</h1>
+    <div className="bg-white dark:bg-own-neutral-900">
+      <Navbar />
+      <main>
+        
+      </main>
     </div>
   )
 }
