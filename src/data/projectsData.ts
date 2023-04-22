@@ -36,4 +36,24 @@ export const projectsData: Project[] = [
     featured: true,
     date: '2023-01-01',
   },
+
+  {
+    id: 5,
+    name: 'Movie Zone',
+    tag: 'Smart App Development',
+    image: '/img/movie-zone-1.jpg',
+    link: '/projects/movie-zone',
+    date: '2023-05-01',
+  },
+
+  // {
+  //   id: 6,
+  //   name: 'Portfolio',
+  //   tag: 'Frontend Development',
+  //   image: '/img/portfolio-1.jpg',
+  //   link: '/projects/portfolio',
+  //   date: '2023-05-01',
+  // },
+
+
 ]

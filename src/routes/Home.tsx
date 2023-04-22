@@ -11,9 +11,11 @@ import { textFadeInSlideDown } from '../animation/animation'
 import { projectsData } from '../data/projectsData'
 import FeaturedProjects from '../components/FeaturedProjects'
 import CarouselProjects from '../components/CarouselProjects'
+import { Github, Linkedin, Mail } from 'lucide-react'
 
 export default () => {
   const [selectedSection, setSelectedSection] = useState('about')
+  const [isLargerThan1024, setIsLargerThan1024] = useState(true)
 
   const [aboutRef, aboutInView] = useInView({ threshold: 0.5 })
   const [skillsRef, skillsInView] = useInView({ threshold: 0.5 })
@@ -28,6 +30,17 @@ export default () => {
     if (projectsInView) setSelectedSection('projects')
     if (contactInView) setSelectedSection('contact')
   }, [aboutInView, skillsInView, projectsInView, contactInView])
+
+  // set isLargerThan1024 when window size changes
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1024) setIsLargerThan1024(true)
+      else setIsLargerThan1024(false)
+    }
+    window.addEventListener('resize', handleResize)
+    handleResize()
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   return (
     <>
@@ -137,64 +150,48 @@ export default () => {
           <section
             ref={contactRef}
             id="contact"
-            className="flex h-screen flex-col items-center justify-center  lg:flex-row-reverse lg:justify-between lg:px-20"
+            className="rounded-t-own-lg bg-own-neutral-50 px-4 pt-6 dark:bg-own-neutral-800 sm:pt-[52px] md:rounded-t-[40px] md:px-6 lg:rounded-t-[60px] lg:pt-[68px] xl:rounded-t-[80px]"
           >
-            {/* Image */}
-            <motion.div
-              className="linea mb-12 h-56 w-56 transform overflow-hidden rounded-full
-              bg-gradient-to-r from-own-secondary to-own-secondary-800 sm:h-64 sm:w-64 lg:mb-0 lg:h-80 lg:w-80 xl:h-96 xl:w-96"
-              initial={{ borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' }}
-              animate={{
-                borderRadius: [
-                  '60% 40% 30% 70% / 60% 30% 70% 40%',
-                  '30% 60% 70% 40% / 50% 60% 30% 60%',
-                  '50% 50% 50% 50% / 50% 50% 50% 50%',
-                  '30% 60% 70% 40% / 50% 60% 30% 60%',
-                  '60% 40% 30% 70% / 60% 30% 70% 40%',
-                ],
-              }}
-              transition={{
-                duration: 10,
-                ease: 'easeInOut',
-                repeat: Infinity,
-              }}
-            >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <img
-                  className="object-cover"
-                  src="/img/lei.png"
-                  alt="Lei Jin"
-                />
-              </div>
-            </motion.div>
+            <div className="mx-auto flex max-w-screen-xl flex-col items-center space-y-10 py-8 md:py-12 lg:flex-row lg:justify-between lg:space-y-0 lg:px-28 lg:py-16">
+              {/* Header */}
+              <HeaderSection
+                title="Contact Me"
+                subtitle="Get in touch"
+                textAlignment={isLargerThan1024 ? 'left' : 'center'}
+              />
 
-            {/* Text */}
-            <div className="max-w-md text-center md:max-w-lg lg:text-left">
-              <h1 className="text-3xl font-bold text-own-neutral-900 dark:text-own-neutral-200 md:mb-1 md:text-5xl xl:text-6xl">
-                Hello, I'm <span className="text-own-secondary">Contact</span>
-              </h1>
-
-              <h2 className="mb-3 text-xl font-semibold  text-own-neutral-900 dark:text-own-neutral-200 md:text-2xl xl:text-3xl">
-                Junior Full Stack Developer
-              </h2>
-              <p className="text-md text-own-neutral-700 dark:text-own-neutral-300 md:text-lg xl:text-xl">
-                I am currently studying Multimedia & Creative Technologies (
+              {/* Contact Links */}
+              <div className="grid grid-flow-col gap-4 md:gap-6 lg:grid-cols-2 lg:grid-rows-2 lg:gap-4 ">
+                {/* Mail, LinkedIn, GitHub */}
                 <a
-                  href="https://mct.be/"
-                  className="text-own-alpha dark:text-own-alpha-light"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="mailto:jinleix3@hotmail.com"
+                  className="rounded-own-sm bg-own-neutral-200 p-2 ring-2 ring-own-neutral-200 hover:bg-own-neutral-300 focus-visible:outline-none focus-visible:ring-own-neutral-300 dark:bg-own-neutral-700 dark:ring-own-neutral-700 dark:hover:bg-own-neutral-600 dark:focus-visible:ring-own-neutral-600 sm:p-3 md:p-4 lg:rounded-2xl lg:p-8"
                 >
-                  MCT
+                  <span className="sr-only">Email</span>
+                  <Mail className="h-6 w-6 stroke-own-neutral-900 dark:stroke-own-neutral-300 sm:h-7 sm:w-7 md:h-8 md:w-8 lg:h-10 lg:w-10" />
                 </a>
-                ) in Howest, Belgium. As a specialization, I have chosen Next
-                Webdeveloper.
-              </p>
+                <a
+                  href="https://www.linkedin.com/in/lei-jin-08838b108/?originalSubdomain=be"
+                  target="_blank"
+                  className="rounded-own-sm bg-own-neutral-200 p-2 ring-2 ring-own-neutral-200 hover:bg-own-neutral-300 focus-visible:outline-none focus-visible:ring-own-neutral-300 dark:bg-own-neutral-700 dark:ring-own-neutral-700 dark:hover:bg-own-neutral-600 dark:focus-visible:ring-own-neutral-600 sm:p-3 md:p-4 lg:rounded-2xl lg:p-8"
+                >
+                  <span className="sr-only">LinkedIn</span>
+                  <Linkedin className="h-6 w-6 stroke-own-neutral-900 dark:stroke-own-neutral-300 sm:h-7 sm:w-7 md:h-8 md:w-8 lg:h-10 lg:w-10" />
+                </a>
+                <a
+                  href="https://github.com/Jinlei2000"
+                  target="_blank"
+                  className="rounded-own-sm bg-own-neutral-200 p-2 ring-2 ring-own-neutral-200 hover:bg-own-neutral-300 focus-visible:outline-none focus-visible:ring-own-neutral-300 dark:bg-own-neutral-700 dark:ring-own-neutral-700 dark:hover:bg-own-neutral-600 dark:focus-visible:ring-own-neutral-600 sm:p-3 md:p-4 lg:rounded-2xl lg:p-8"
+                >
+                  <span className="sr-only">GitHub</span>
+                  <Github className="h-6 w-6 stroke-own-neutral-900 dark:stroke-own-neutral-300 sm:h-7 sm:w-7 md:h-8 md:w-8 lg:h-10 lg:w-10" />
+                </a>
+              </div>
             </div>
           </section>
 
           {/* Footer */}
-          
+          <footer className="bg-own-neutral-50 dark:bg-own-neutral-800"></footer>
         </main>
       </div>
     </>

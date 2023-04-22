@@ -79,11 +79,11 @@ export default ({ projects }: { projects: Project[] }) => {
           {/* Carousel Arrows */}
           <div className="splide__arrows absolute bottom-1/2 left-0 right-0 z-50 flex justify-center">
             <div className="flex w-full -translate-y-[12px] justify-between px-2 sm:w-4/5">
-              <button className="splide__arrow--prev rounded-full bg-own-neutral-900 p-2 opacity-60 shadow-lg dark:bg-own-neutral-200">
+              <button className="splide__arrow--prev rounded-full bg-own-neutral-800 p-2 opacity-60 shadow-lg dark:bg-own-neutral-200">
                 <ChevronRightIcon className="stroke-own-neutral-100 dark:stroke-slate-900" />
               </button>
-              <button className="splide__arrow--next rounded-full bg-own-neutral-900 p-2 opacity-60 shadow-lg dark:bg-own-neutral-200">
-                <ChevronRightIcon className="stroke-own-neutral-1 dark:stroke-slate-900" />
+              <button className="splide__arrow--next rounded-full bg-own-neutral-800 p-2 opacity-60 shadow-lg dark:bg-own-neutral-200">
+                <ChevronRightIcon className="stroke-own-neutral-100 dark:stroke-slate-900" />
               </button>
             </div>
           </div>
