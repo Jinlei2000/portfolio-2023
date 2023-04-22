@@ -81,4 +81,13 @@ export const projectsData: Project[] = [
   //   link: '/projects/expo',
   //   date: '2023-05-01',
   // },
+
+  {
+    id: 999,
+    name: 'Coming Soon',
+    tag: 'More',
+    image: '/img/more.jpg',
+    link: '/',
+    date: '2100-05-01',
+  },
 ]
