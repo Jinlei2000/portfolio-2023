@@ -41,7 +41,10 @@ export default ({ projects }: { projects: Project[] }) => {
             {/* use map to render the rest of the projects */}
             {projects.map((project, index) => {
               return (
-                <SplideSlide key={index} className="splide__slide-carousel">
+                <SplideSlide
+                  key={index}
+                  className="splide__slide-carousel"
+                >
                   <Link
                     to={project.link}
                     className="group/card focus:outline-none"

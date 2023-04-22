@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import Typewriter from '../components/Typewriter'
 import { useInView } from 'react-intersection-observer'
 import '@splidejs/react-splide/css'
@@ -16,6 +16,7 @@ import { Github, Linkedin, Mail } from 'lucide-react'
 export default () => {
   const [selectedSection, setSelectedSection] = useState('about')
   const [isLargerThan1024, setIsLargerThan1024] = useState(true)
+  const shouldReduceMotion = useReducedMotion()
 
   const [aboutRef, aboutInView] = useInView({ threshold: 0.5 })
   const [skillsRef, skillsInView] = useInView({ threshold: 0.5 })
@@ -62,8 +63,8 @@ export default () => {
               {/* Text */}
               <div className="max-w-md text-center md:max-w-lg lg:text-left">
                 <motion.h1
-                  initial="initial"
-                  whileInView="animation"
+                  initial={shouldReduceMotion ? 'visible' : 'initial'}
+                  whileInView={shouldReduceMotion ? 'visible' : 'animation'}
                   variants={textFadeInSlideDown}
                   className="text-3xl font-bold text-own-neutral-900 dark:text-own-neutral-200 md:mb-1 md:text-5xl xl:text-6xl"
                 >
@@ -71,16 +72,16 @@ export default () => {
                 </motion.h1>
 
                 <motion.h2
-                  initial="initial"
-                  whileInView="animation"
+                  initial={shouldReduceMotion ? 'visible' : 'initial'}
+                  whileInView={shouldReduceMotion ? 'visible' : 'animation'}
                   variants={textFadeInSlideDown}
                   className="mb-3 text-xl font-semibold  text-own-neutral-900 dark:text-own-neutral-200 md:text-2xl xl:text-3xl"
                 >
                   Junior Full Stack Developer
                 </motion.h2>
                 <motion.p
-                  initial="initial"
-                  whileInView="animation"
+                  initial={shouldReduceMotion ? 'visible' : 'initial'}
+                  whileInView={shouldReduceMotion ? 'visible' : 'animation'}
                   variants={textFadeInSlideDown}
                   className="text-md text-own-neutral-700 dark:text-own-neutral-300 md:text-lg xl:text-xl"
                 >
@@ -137,10 +138,9 @@ export default () => {
                 More of what I've done
               </h3>
               <CarouselProjects
-                // projects={projectsData.filter(
-                //   project => project.featured === undefined,
-                // )}
-                projects={projectsData}
+                projects={projectsData.filter(
+                  project => project.featured === undefined,
+                )}
               />
             </div>
           </section>
