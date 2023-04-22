@@ -39,6 +39,7 @@
     .splide__slide-carousel {
         transition: opacity 400ms;
         opacity: .3;
+        padding-bottom: 16px;
     }
 
     .splide__slide-carousel.is-active {
