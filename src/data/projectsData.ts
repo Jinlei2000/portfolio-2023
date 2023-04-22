@@ -55,5 +55,30 @@ export const projectsData: Project[] = [
   //   date: '2023-05-01',
   // },
 
+  // {
+  //   id: 7,
+  //   name: 'Trello Animation',
+  //   tag: 'Motion Design',
+  //   image: '/img/trello-1.jpg',
+  //   link: '/projects/trello',
+  //   date: '2023-05-01',
+  // },
 
+  // {
+  //   id: 8,
+  //   name: 'Slack Onboarding',
+  //   tag: 'Motion Design',
+  //   image: '/img/slack-1.jpg',
+  //   link: '/projects/slack',
+  //   date: '2023-05-01',
+  // },
+
+  // {
+  //   id: 9,
+  //   name: 'Expo 50 Years E17',
+  //   tag: 'Industry Project',
+  //   image: '/img/expo-1.jpg',
+  //   link: '/projects/expo',
+  //   date: '2023-05-01',
+  // },
 ]

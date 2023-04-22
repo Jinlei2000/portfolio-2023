@@ -5,7 +5,7 @@ export default ({ project }: { project: Project }) => {
   return (
     <>
       <Link to={project.link} className="group/card focus:outline-none">
-        <div className="flex flex-col justify-center gap-2 rounded-lg group-focus-visible/card:border-2 group-focus-visible/card:border-opacity-100">
+        <div className="flex flex-col justify-center gap-2 rounded-lg group-focus-visible/card:ring-2 group-focus-visible/card:ring-slate-100 dark:group-focus-visible/card:ring-slate-600">
           <div className="group/img relative overflow-hidden rounded-lg">
             <img
               src={project.image}

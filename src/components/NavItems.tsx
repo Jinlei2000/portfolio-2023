@@ -52,8 +52,8 @@ const Navigation = ({
       bg-own-alpha mx-3 flex items-center gap-2 rounded-own py-3 pl-3 pr-4 font-medium leading-none
       ${
         isMobile
-          ? 'bg-own-primary-450 text-own-neutral-50 hover:bg-own-primary-500 dark:bg-own-primary-500 dark:text-own-neutral-50 dark:hover:bg-own-primary-600'
-          : 'bg-own-primary-500 text-own-neutral-50 hover:bg-own-primary-600 dark:bg-own-primary-450 dark:text-own-neutral-50 dark:hover:bg-own-primary-500'
+          ? 'bg-own-primary-450 text-own-neutral-50 hover:bg-own-primary-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-own-primary-500 dark:bg-own-primary-500 dark:text-own-neutral-50 dark:hover:bg-own-primary-600 dark:focus-visible:ring-own-primary-400'
+          : 'bg-own-primary-500 text-own-neutral-50 hover:bg-own-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-own-primary-400 dark:bg-own-primary-450 dark:text-own-neutral-50 dark:hover:bg-own-primary-500 dark:focus-visible:ring-own-primary-500'
       }
      
     `}
@@ -76,7 +76,7 @@ const Navigation = ({
     <motion.li variants={animationMenuItem} whileHover={{ scale: 1.2 }}>
       <button
         onClick={toggleColorMode}
-        className="group ml-1.5 block rounded-own-sm p-1 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600"
+        className="group ml-1.5 block rounded-own-sm p-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600"
       >
         {colorMode === 'dark' ? (
           <Sun className={btnModeStyle} />

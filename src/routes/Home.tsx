@@ -87,9 +87,8 @@ export default () => {
                   I am currently studying Multimedia & Creative Technologies (
                   <a
                     href="https://mct.be/"
-                    className="text-own-primary-500 hover:text-own-primary-600 dark:text-own-primary-400 dark:hover:text-own-primary-500"
+                    className="text-own-primary-500 hover:text-own-primary-600 dark:text-own-primary-400 dark:ring-own-neutral-200 dark:hover:text-own-primary-500"
                     target="_blank"
-                    rel="noopener noreferrer"
                   >
                     MCT
                   </a>

@@ -51,7 +51,7 @@ export default ({ selectedSection, setSelectedSection }: any) => {
           onClick={() => {
             setSelectedSection('about')
           }}
-          className="pointer-events-auto flex rounded-own-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600"
+          className="pointer-events-auto flex rounded-own-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600"
           smooth
           to={'/#about'}
         >
