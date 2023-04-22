@@ -36,4 +36,49 @@ export const projectsData: Project[] = [
     featured: true,
     date: '2023-01-01',
   },
+
+  {
+    id: 5,
+    name: 'Movie Zone',
+    tag: 'Smart App Development',
+    image: '/img/movie-zone-1.jpg',
+    link: '/projects/movie-zone',
+    date: '2023-05-01',
+  },
+
+  // {
+  //   id: 6,
+  //   name: 'Portfolio',
+  //   tag: 'Frontend Development',
+  //   image: '/img/portfolio-1.jpg',
+  //   link: '/projects/portfolio',
+  //   date: '2023-05-01',
+  // },
+
+  // {
+  //   id: 7,
+  //   name: 'Trello Animation',
+  //   tag: 'Motion Design',
+  //   image: '/img/trello-1.jpg',
+  //   link: '/projects/trello',
+  //   date: '2023-05-01',
+  // },
+
+  // {
+  //   id: 8,
+  //   name: 'Slack Onboarding',
+  //   tag: 'Motion Design',
+  //   image: '/img/slack-1.jpg',
+  //   link: '/projects/slack',
+  //   date: '2023-05-01',
+  // },
+
+  // {
+  //   id: 9,
+  //   name: 'Expo 50 Years E17',
+  //   tag: 'Industry Project',
+  //   image: '/img/expo-1.jpg',
+  //   link: '/projects/expo',
+  //   date: '2023-05-01',
+  // },
 ]

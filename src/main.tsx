@@ -11,7 +11,7 @@ import OnColor from './routes/projects/Oncolor'
 import AnimeApp from './routes/projects/AnimeApp'
 import InteractivePoles from './routes/projects/InteractivePoles'
 import DarkModeManager from './components/DarkModeManager'
-import Redirect from './components/Redirect'
+import MovieZone from './routes/projects/MovieZone'
 
 const router = createBrowserRouter([
   {
@@ -33,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: '/projects/interactive-poles',
     element: <InteractivePoles />,
+  },
+  {
+    path: '/projects/movie-zone',
+    element: <MovieZone />,
   },
 ])
 

@@ -30,14 +30,14 @@ export default ({
         selectedSection === lowerCasePage
           ? 'text-own-primary-500 dark:text-own-primary-400'
           : ''
-      } rounded-own-sm px-3 py-1 hover:text-own-primary-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:hover:text-own-primary-400 dark:focus-visible:ring-own-neutral-600
+      } rounded-own-sm px-3 py-1 hover:text-own-primary-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-own-neutral-100 dark:hover:text-own-primary-400 dark:focus-visible:ring-own-neutral-600
       `
           : `
       ${
         selectedSection === lowerCasePage
           ? 'text-own-primary-400 dark:text-own-primary-500'
           : ''
-      } rounded-own-sm px-3 py-1 hover:text-own-primary-400 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:hover:text-own-primary-500 dark:focus-visible:ring-own-neutral-600
+      } rounded-own-sm px-3 py-1 hover:text-own-primary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-own-neutral-100 dark:hover:text-own-primary-500 dark:focus-visible:ring-own-neutral-600
       `
       }
     >
