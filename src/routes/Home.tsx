@@ -13,6 +13,7 @@ import FeaturedProjects from '../components/FeaturedProjects'
 import CarouselProjects from '../components/CarouselProjects'
 import { Github, Linkedin, Mail } from 'lucide-react'
 import Footer from '../components/Footer'
+import { skillsData } from '../data/skillsData'
 
 export default () => {
   const [selectedSection, setSelectedSection] = useState('about')
@@ -46,7 +47,7 @@ export default () => {
 
   return (
     <>
-      <div className="bg-white dark:bg-own-neutral-900 h-screen">
+      <div className="bg-white dark:bg-own-neutral-900">
         <Navbar
           selectedSection={selectedSection}
           setSelectedSection={setSelectedSection}
@@ -111,7 +112,7 @@ export default () => {
               {/* Header */}
               <HeaderSection title="Skills" subtitle="What I can do" />
               {/* Skills */}
-              <Skills />
+              <Skills skills={skillsData} skillPerRow={6} />
             </div>
           </section>
 

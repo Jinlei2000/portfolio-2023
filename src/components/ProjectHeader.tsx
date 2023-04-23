@@ -3,7 +3,7 @@ import Project from '../interfaces/Project'
 
 export default ({ project }: { project: Project }) => {
   return (
-    <header className="flex flex-col gap-1 md:gap-2 lg:gap-3">
+    <header className="flex flex-col gap-1 pt-8 md:gap-2 md:pt-12 lg:gap-3 lg:pt-16">
       <div className="flex flex-col-reverse">
         <h1 className="text-3xl font-bold text-own-neutral-900 dark:text-own-neutral-200 md:text-5xl xl:text-6xl">
           {project.name}
@@ -17,8 +17,9 @@ export default ({ project }: { project: Project }) => {
           })}
         </p>
       </div>
+
       {/* Tags */}
-      <div className="flex flex-wrap gap-2 md:gap-4">
+      <div className="flex flex-wrap gap-2 md:gap-4 lg:gap-6">
         {/* Study */}
         {project.study && (
           <div className="flex items-center gap-1 md:gap-2">

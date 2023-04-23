@@ -1,4 +1,5 @@
 import Project from '../interfaces/Project'
+import { skillsData } from './skillsData'
 
 export const projectsData: Project[] = [
   {
@@ -8,6 +9,8 @@ export const projectsData: Project[] = [
     image: '/img/more.jpg',
     link: '/',
     date: new Date('2000-01-01'),
+    imgs: [], // No images
+    technologies: [], // No technologies
   },
   {
     id: 1,
@@ -16,6 +19,38 @@ export const projectsData: Project[] = [
     image: '/img/smart-garbage-1.jpg',
     link: '/projects/smart-garbage',
     date: new Date('2022-06-01'),
+    imgs: [
+      {
+        src: '/img/smart-garbage-2.jpg',
+        alt: 'Smart Garbage',
+      },
+      {
+        src: '/img/smart-garbage-3.jpg',
+        alt: 'Flyer Smart Garbage',
+      },
+      {
+        src: '/img/smart-garbage-4.jpg',
+        alt: 'Design wireframes',
+      },
+      {
+        src: '/img/smart-garbage-5.jpg',
+        alt: 'Design wireframes',
+      },
+    ],
+    technologies: [
+      skillsData[0],
+      skillsData[1],
+      skillsData[2],
+      skillsData[3],
+      skillsData[4],
+      skillsData[5],
+      skillsData[6],
+      skillsData[7],
+      skillsData[8],
+      skillsData[9],
+      skillsData[16],
+      skillsData[17],
+    ],
 
     study: 'MCT',
     school: 'Howest Kortrijk',
@@ -28,6 +63,21 @@ export const projectsData: Project[] = [
     link: '/projects/oncolor',
     featured: true,
     date: new Date('2022-08-01'),
+    imgs: [
+      {
+        src: '/img/smart-garbage-2.jpg',
+        alt: 'Smart Garbage',
+      },
+      {
+        src: '/img/smart-garbage-3.jpg',
+        alt: 'Flyer Smart Garbage',
+      },
+      {
+        src: '/img/smart-garbage-4.jpg',
+        alt: 'Design wireframes',
+      },
+    ],
+    technologies: [],
 
     study: 'MCT',
     school: 'Howest Kortrijk',
@@ -40,7 +90,21 @@ export const projectsData: Project[] = [
     link: '/projects/anime-app',
     featured: true,
     date: new Date('2022-10-01'),
-
+    imgs: [
+      {
+        src: '/img/smart-garbage-2.jpg',
+        alt: 'Smart Garbage',
+      },
+      {
+        src: '/img/smart-garbage-3.jpg',
+        alt: 'Flyer Smart Garbage',
+      },
+      {
+        src: '/img/smart-garbage-4.jpg',
+        alt: 'Design wireframes',
+      },
+    ],
+    technologies: [],
     study: 'MCT',
     school: 'Howest Kortrijk',
   },
@@ -52,7 +116,21 @@ export const projectsData: Project[] = [
     link: '/projects/interactive-poles',
     featured: true,
     date: new Date('2023-01-01'),
-
+    imgs: [
+      {
+        src: '/img/smart-garbage-2.jpg',
+        alt: 'Smart Garbage',
+      },
+      {
+        src: '/img/smart-garbage-3.jpg',
+        alt: 'Flyer Smart Garbage',
+      },
+      {
+        src: '/img/smart-garbage-4.jpg',
+        alt: 'Design wireframes',
+      },
+    ],
+    technologies: [],
     study: 'MCT',
     school: 'Howest Kortrijk',
     client: 'Sports innovation campus',
@@ -65,7 +143,21 @@ export const projectsData: Project[] = [
     image: '/img/movie-zone-1.jpg',
     link: '/projects/movie-zone',
     date: new Date('2023-05-01'),
-
+    imgs: [
+      {
+        src: '/img/smart-garbage-2.jpg',
+        alt: 'Smart Garbage',
+      },
+      {
+        src: '/img/smart-garbage-3.jpg',
+        alt: 'Flyer Smart Garbage',
+      },
+      {
+        src: '/img/smart-garbage-4.jpg',
+        alt: 'Design wireframes',
+      },
+    ],
+    technologies: [],
     study: 'MCT',
     school: 'Howest Kortrijk',
   },
