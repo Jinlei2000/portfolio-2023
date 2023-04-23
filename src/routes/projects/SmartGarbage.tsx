@@ -1,4 +1,3 @@
-import { GraduationCap, MapPin, User } from 'lucide-react'
 import Navbar from '../../components/Navbar'
 import { projectsData } from '../../data/projectsData'
 import Project from '../../interfaces/Project'
@@ -22,6 +21,8 @@ export default () => {
           {/* Images */}
           <div className=""></div>
           {/* Technologies */}
+          <div className=""></div>
+          {/* Links */}
           <div className=""></div>
         </div>
       </main>
