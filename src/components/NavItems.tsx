@@ -106,7 +106,7 @@ const Navigation = ({
         selectedSection={selectedSection}
         setSelectedSection={setSelectedSection}
         setSidebarOpen={setSidebarOpen}
-        reverse={isMobile}
+        isMobile={isMobile}
       />
     </motion.li>
   ))

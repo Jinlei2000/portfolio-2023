@@ -4,7 +4,7 @@ export default interface Project {
   tag: string
   description?: string
   image: string
-  date: string
+  date: Date
   link: string
   github?: string
   featured?: boolean

@@ -22,7 +22,7 @@ export default ({ project }: { project: Project }) => {
             </div>
           </div>
           <div className="flex flex-col">
-            <h3 className="text-xl font-semibold text-own-neutral-900 dark:text-own-neutral-200 sm:text-lg md:text-xl xl:text-xl">
+            <h3 className="text-lg font-semibold text-own-neutral-900 dark:text-own-neutral-200 sm:text-lg md:text-xl xl:text-xl">
               {project.name}
             </h3>
             <p className="text-md font-medium text-own-neutral-400 dark:text-own-neutral-300 sm:text-base md:text-lg xl:text-lg">

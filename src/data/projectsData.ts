@@ -2,12 +2,20 @@ import Project from '../interfaces/Project'
 
 export const projectsData: Project[] = [
   {
+    id: 999,
+    name: 'Coming Soon',
+    tag: 'More',
+    image: '/img/more.jpg',
+    link: '/',
+    date: new Date('2000-01-01'),
+  },
+  {
     id: 1,
     name: 'Smart Garbage',
     tag: 'Project One',
     image: '/img/smart-garbage-1.jpg',
     link: '/projects/smart-garbage',
-    date: '2022-06-01',
+    date: new Date('2022-06-01'),
   },
   {
     id: 2,
@@ -16,7 +24,7 @@ export const projectsData: Project[] = [
     image: '/img/oncolor-1.jpg',
     link: '/projects/oncolor',
     featured: true,
-    date: '2022-10-01',
+    date: new Date('2022-08-01'),
   },
   {
     id: 3,
@@ -25,7 +33,7 @@ export const projectsData: Project[] = [
     image: '/img/anime-app-1.jpg',
     link: '/projects/anime-app',
     featured: true,
-    date: '2022-10-01',
+    date: new Date('2022-10-01'),
   },
   {
     id: 4,
@@ -34,7 +42,7 @@ export const projectsData: Project[] = [
     image: '/img/interactive-poles-1.jpg',
     link: '/projects/interactive-poles',
     featured: true,
-    date: '2023-01-01',
+    date: new Date('2023-01-01'),
   },
 
   {
@@ -43,7 +51,7 @@ export const projectsData: Project[] = [
     tag: 'Smart App Development',
     image: '/img/movie-zone-1.jpg',
     link: '/projects/movie-zone',
-    date: '2023-05-01',
+    date: new Date('2023-05-01'),
   },
 
   // {
@@ -81,13 +89,4 @@ export const projectsData: Project[] = [
   //   link: '/projects/expo',
   //   date: '2023-05-01',
   // },
-
-  {
-    id: 999,
-    name: 'Coming Soon',
-    tag: 'More',
-    image: '/img/more.jpg',
-    link: '/',
-    date: '2100-05-01',
-  },
 ]

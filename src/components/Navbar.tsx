@@ -4,8 +4,6 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import NavItems from './NavItems'
 
-
-
 export default ({ selectedSection, setSelectedSection }: any) => {
   const [isOpen, setIsOpen] = useState(false)
 
