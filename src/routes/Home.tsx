@@ -12,6 +12,7 @@ import { projectsData } from '../data/projectsData'
 import FeaturedProjects from '../components/FeaturedProjects'
 import CarouselProjects from '../components/CarouselProjects'
 import { Github, Linkedin, Mail } from 'lucide-react'
+import Footer from '../components/Footer'
 
 export default () => {
   const [selectedSection, setSelectedSection] = useState('about')
@@ -45,7 +46,7 @@ export default () => {
 
   return (
     <>
-      <div className="bg-white dark:bg-own-neutral-900">
+      <div className="bg-white dark:bg-own-neutral-900 h-screen">
         <Navbar
           selectedSection={selectedSection}
           setSelectedSection={setSelectedSection}
@@ -149,7 +150,7 @@ export default () => {
           <section
             ref={contactRef}
             id="contact"
-            className="rounded-t-own-lg bg-own-neutral-50 px-4 pt-6 dark:bg-own-neutral-800 sm:pt-[52px] md:rounded-t-[40px] md:px-6 lg:rounded-t-[60px] lg:pt-[68px] xl:rounded-t-[80px]"
+            className="rounded-t-own-lg bg-own-neutral-50 px-4 pt-6 dark:bg-own-neutral-800 sm:py-[52px] md:rounded-t-[40px] md:px-6 lg:rounded-t-[60px] lg:py-[68px] xl:rounded-t-[80px]"
           >
             <div className="mx-auto flex max-w-screen-xl flex-col items-center space-y-10 py-8 md:py-12 lg:flex-row lg:justify-between lg:space-y-0 lg:px-28 lg:py-16">
               {/* Header */}
@@ -190,19 +191,7 @@ export default () => {
           </section>
 
           {/* Footer */}
-          <footer className="bg-own-neutral-50 px-4 pt-[52px] dark:bg-own-neutral-800 md:px-6 lg:pt-[68px]">
-            <div className="mx-auto max-w-screen-xl py-2">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                <p className="md:text-1xl transform px-1 text-center text-lg font-black text-own-neutral-600 dark:text-own-neutral-400 lg:text-3xl">
-                  LJ
-                </p>
-                <p className=" text-center text-sm font-medium text-own-neutral-700 dark:text-own-neutral-300 md:text-right md:text-base ">
-                  &copy; {new Date().getFullYear()} Lei Jin - All rights
-                  reserved
-                </p>
-              </div>
-            </div>
-          </footer>
+          <Footer />
         </main>
       </div>
     </>
