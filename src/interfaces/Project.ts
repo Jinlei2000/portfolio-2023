@@ -8,4 +8,9 @@ export default interface Project {
   link: string
   github?: string
   featured?: boolean
+
+  // Project specific
+  study?: string
+  school?: string
+  client?: string
 }

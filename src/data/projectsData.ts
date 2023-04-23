@@ -16,6 +16,9 @@ export const projectsData: Project[] = [
     image: '/img/smart-garbage-1.jpg',
     link: '/projects/smart-garbage',
     date: new Date('2022-06-01'),
+
+    study: 'MCT',
+    school: 'Howest Kortrijk',
   },
   {
     id: 2,
@@ -25,6 +28,9 @@ export const projectsData: Project[] = [
     link: '/projects/oncolor',
     featured: true,
     date: new Date('2022-08-01'),
+
+    study: 'MCT',
+    school: 'Howest Kortrijk',
   },
   {
     id: 3,
@@ -34,6 +40,9 @@ export const projectsData: Project[] = [
     link: '/projects/anime-app',
     featured: true,
     date: new Date('2022-10-01'),
+
+    study: 'MCT',
+    school: 'Howest Kortrijk',
   },
   {
     id: 4,
@@ -43,6 +52,10 @@ export const projectsData: Project[] = [
     link: '/projects/interactive-poles',
     featured: true,
     date: new Date('2023-01-01'),
+
+    study: 'MCT',
+    school: 'Howest Kortrijk',
+    client: 'Sports innovation campus',
   },
 
   {
@@ -52,6 +65,9 @@ export const projectsData: Project[] = [
     image: '/img/movie-zone-1.jpg',
     link: '/projects/movie-zone',
     date: new Date('2023-05-01'),
+
+    study: 'MCT',
+    school: 'Howest Kortrijk',
   },
 
   // {
