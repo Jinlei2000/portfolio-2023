@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import Typewriter from '../components/Typewriter'
 import { useInView } from 'react-intersection-observer'
 import '@splidejs/react-splide/css'
@@ -12,10 +12,13 @@ import { projectsData } from '../data/projectsData'
 import FeaturedProjects from '../components/FeaturedProjects'
 import CarouselProjects from '../components/CarouselProjects'
 import { Github, Linkedin, Mail } from 'lucide-react'
+import Footer from '../components/Footer'
+import { skillsData } from '../data/skillsData'
 
 export default () => {
   const [selectedSection, setSelectedSection] = useState('about')
   const [isLargerThan1024, setIsLargerThan1024] = useState(true)
+  const shouldReduceMotion = useReducedMotion()
 
   const [aboutRef, aboutInView] = useInView({ threshold: 0.5 })
   const [skillsRef, skillsInView] = useInView({ threshold: 0.5 })
@@ -62,8 +65,8 @@ export default () => {
               {/* Text */}
               <div className="max-w-md text-center md:max-w-lg lg:text-left">
                 <motion.h1
-                  initial="initial"
-                  whileInView="animation"
+                  initial={shouldReduceMotion ? 'visible' : 'initial'}
+                  whileInView={shouldReduceMotion ? 'visible' : 'animation'}
                   variants={textFadeInSlideDown}
                   className="text-3xl font-bold text-own-neutral-900 dark:text-own-neutral-200 md:mb-1 md:text-5xl xl:text-6xl"
                 >
@@ -71,16 +74,16 @@ export default () => {
                 </motion.h1>
 
                 <motion.h2
-                  initial="initial"
-                  whileInView="animation"
+                  initial={shouldReduceMotion ? 'visible' : 'initial'}
+                  whileInView={shouldReduceMotion ? 'visible' : 'animation'}
                   variants={textFadeInSlideDown}
                   className="mb-3 text-xl font-semibold  text-own-neutral-900 dark:text-own-neutral-200 md:text-2xl xl:text-3xl"
                 >
                   Junior Full Stack Developer
                 </motion.h2>
                 <motion.p
-                  initial="initial"
-                  whileInView="animation"
+                  initial={shouldReduceMotion ? 'visible' : 'initial'}
+                  whileInView={shouldReduceMotion ? 'visible' : 'animation'}
                   variants={textFadeInSlideDown}
                   className="text-md text-own-neutral-700 dark:text-own-neutral-300 md:text-lg xl:text-xl"
                 >
@@ -109,7 +112,7 @@ export default () => {
               {/* Header */}
               <HeaderSection title="Skills" subtitle="What I can do" />
               {/* Skills */}
-              <Skills />
+              <Skills skills={skillsData} skillPerRow={6} />
             </div>
           </section>
 
@@ -137,10 +140,9 @@ export default () => {
                 More of what I've done
               </h3>
               <CarouselProjects
-                // projects={projectsData.filter(
-                //   project => project.featured === undefined,
-                // )}
-                projects={projectsData}
+                projects={projectsData.filter(
+                  project => project.featured === undefined,
+                )}
               />
             </div>
           </section>
@@ -149,7 +151,7 @@ export default () => {
           <section
             ref={contactRef}
             id="contact"
-            className="rounded-t-own-lg bg-own-neutral-50 px-4 pt-6 dark:bg-own-neutral-800 sm:pt-[52px] md:rounded-t-[40px] md:px-6 lg:rounded-t-[60px] lg:pt-[68px] xl:rounded-t-[80px]"
+            className="rounded-t-own-lg bg-own-neutral-50 px-4 pt-6 dark:bg-own-neutral-800 sm:py-[52px] md:rounded-t-[40px] md:px-6 lg:rounded-t-[60px] lg:py-[68px] xl:rounded-t-[80px]"
           >
             <div className="mx-auto flex max-w-screen-xl flex-col items-center space-y-10 py-8 md:py-12 lg:flex-row lg:justify-between lg:space-y-0 lg:px-28 lg:py-16">
               {/* Header */}
@@ -171,6 +173,7 @@ export default () => {
                 </a>
                 <a
                   href="https://www.linkedin.com/in/lei-jin-08838b108/?originalSubdomain=be"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="rounded-own-sm bg-own-neutral-200 p-2 ring-2 ring-own-neutral-200 hover:bg-own-neutral-300 focus-visible:outline-none focus-visible:ring-own-neutral-300 dark:bg-own-neutral-700 dark:ring-own-neutral-700 dark:hover:bg-own-neutral-600 dark:focus-visible:ring-own-neutral-600 sm:p-3 md:p-4 lg:rounded-2xl lg:p-8"
                 >
@@ -179,6 +182,7 @@ export default () => {
                 </a>
                 <a
                   href="https://github.com/Jinlei2000"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="rounded-own-sm bg-own-neutral-200 p-2 ring-2 ring-own-neutral-200 hover:bg-own-neutral-300 focus-visible:outline-none focus-visible:ring-own-neutral-300 dark:bg-own-neutral-700 dark:ring-own-neutral-700 dark:hover:bg-own-neutral-600 dark:focus-visible:ring-own-neutral-600 sm:p-3 md:p-4 lg:rounded-2xl lg:p-8"
                 >
@@ -190,19 +194,7 @@ export default () => {
           </section>
 
           {/* Footer */}
-          <footer className="bg-own-neutral-50 px-4 pt-[52px] dark:bg-own-neutral-800 md:px-6 lg:pt-[68px]">
-            <div className="mx-auto max-w-screen-xl py-2">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                <p className="md:text-1xl transform px-1 text-center text-lg font-black text-own-neutral-600 dark:text-own-neutral-400 lg:text-3xl">
-                  LJ
-                </p>
-                <p className=" text-center text-sm font-medium text-own-neutral-700 dark:text-own-neutral-300 md:text-right md:text-base ">
-                  &copy; {new Date().getFullYear()} Lei Jin - All rights
-                  reserved
-                </p>
-              </div>
-            </div>
-          </footer>
+          <Footer />
         </main>
       </div>
     </>

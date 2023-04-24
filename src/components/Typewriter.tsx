@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 
 export default ({ text }: any) => {
   const [visibleText, setVisibleText] = useState('')
+
+  const shouldReduceMotion = useReducedMotion()
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -22,11 +24,13 @@ export default ({ text }: any) => {
 
   return (
     <motion.span
-      animate={{ opacity: 1 }}
-      initial={{ opacity: 0 }}
+      animate={shouldReduceMotion ? 'visible' : { opacity: 1 }}
+      initial={shouldReduceMotion ? 'visible' : { opacity: 0 }}
       transition={{ duration: 1 }}
     >
-      <span className="text-own-secondary">{visibleText}</span>
+      <span className="text-own-secondary">
+        {shouldReduceMotion ? text : visibleText}
+      </span>
     </motion.span>
   )
 }

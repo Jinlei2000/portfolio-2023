@@ -77,12 +77,14 @@ export default ({ projects }: { projects: Project[] }) => {
           </SplideTrack>
 
           {/* Carousel Arrows */}
-          <div className="splide__arrows absolute bottom-1/2 left-0 right-0 z-50 flex justify-center">
-            <div className="flex w-full -translate-y-[12px] justify-between px-2 sm:w-4/5">
-              <button className="splide__arrow--prev rounded-full bg-own-neutral-800 p-2 opacity-60 shadow-lg ring-own-neutral-300 focus:outline-none focus-visible:ring-2 dark:bg-own-neutral-200 dark:ring-white">
+          <div className="splide__arrows absolute bottom-1/2 left-0 right-0 z-50 flex w-full -translate-y-[60px]  justify-center px-2">
+            <div className="absolute left-2 sm:left-14 lg:left-24 xl:left-28">
+              <button className="splide__arrow--prev rounded-full bg-own-neutral-800 p-2  opacity-60 shadow-lg ring-own-neutral-300 focus:outline-none focus-visible:ring-2 dark:bg-own-neutral-200 dark:ring-white ">
                 <ChevronRightIcon className="stroke-own-neutral-100 dark:stroke-slate-900" />
               </button>
-              <button className="splide__arrow--next rounded-full bg-own-neutral-800 p-2 opacity-60 shadow-lg ring-own-neutral-300 focus:outline-none focus-visible:ring-2 dark:bg-own-neutral-200 dark:ring-white">
+            </div>
+            <div className="absolute right-2 sm:right-14 lg:right-24 xl:right-28">
+              <button className="splide__arrow--next rounded-full bg-own-neutral-800 p-2 opacity-60 shadow-lg ring-own-neutral-300 focus:outline-none focus-visible:ring-2 dark:bg-own-neutral-200 dark:ring-white ">
                 <ChevronRightIcon className="stroke-own-neutral-100 dark:stroke-slate-900" />
               </button>
             </div>

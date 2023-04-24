@@ -1,33 +1,7 @@
 import { Download, Moon, Sun } from 'lucide-react'
 import NavLink from './NavLink'
 import useColorMode from '../hooks/useColorMode'
-import { motion } from 'framer-motion'
-
-const animationMenuItem = {
-  open: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      y: { stiffness: 1000, velocity: -100 },
-    },
-  },
-  closed: {
-    y: 50,
-    opacity: 0,
-    transition: {
-      y: { stiffness: 1000 },
-    },
-  },
-}
-
-const animationMenuItems = {
-  open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.3 },
-  },
-  closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
-  },
-}
+import { motion, useReducedMotion } from 'framer-motion'
 
 const Navigation = ({
   selectedSection,
@@ -43,8 +17,41 @@ const Navigation = ({
   const { colorMode, toggleColorMode } = useColorMode()
   const navItems = ['About', 'Skills', 'Projects', 'Contact']
 
+  const shouldReduceMotion = useReducedMotion()
+
+  const animationMenuItem = {
+    open: {
+      y: 0,
+      opacity: 1,
+      transition: shouldReduceMotion
+        ? { duration: 0 }
+        : { y: { stiffness: 1000, velocity: -100 } },
+    },
+    closed: {
+      y: 50,
+      opacity: 0,
+      transition: shouldReduceMotion
+        ? { duration: 0 }
+        : { y: { stiffness: 1000 } },
+    },
+  }
+
+  const animationMenuItems = {
+    open: {
+      transition: shouldReduceMotion ? { staggerChildren: 0.1 } : { staggerChildren: 0.07, delayChildren: 0.2 },
+    },
+    closed: {
+      transition: shouldReduceMotion ? { staggerChildren: 0.1, staggerDirection: -1 } : { staggerChildren: 0.05, staggerDirection: -1 },
+    },
+  }
+
   const downloadButton = (
-    <li>
+    <motion.li
+      variants={animationMenuItem}
+      whileHover={{ scale: 1.05 }}
+      transition={{ ease: 'easeInOut', duration: 0.1 }}
+      key="download"
+    >
       <a
         href="/docs/LJ-Resume.pdf"
         download
@@ -65,7 +72,7 @@ const Navigation = ({
         />
         Resume
       </a>
-    </li>
+    </motion.li>
   )
 
   const btnModeStyle = isMobile
@@ -99,7 +106,7 @@ const Navigation = ({
         selectedSection={selectedSection}
         setSelectedSection={setSelectedSection}
         setSidebarOpen={setSidebarOpen}
-        reverse={isMobile}
+        isMobile={isMobile}
       />
     </motion.li>
   ))
