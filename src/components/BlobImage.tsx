@@ -25,7 +25,7 @@ export default ({ src: srcImg, alt: altImg }: { src: string; alt: string }) => {
         dragElastic={0.7}
       >
         <img
-          className="object-cover"
+          className=""
           draggable="false"
           src={srcImg}
           alt={altImg}

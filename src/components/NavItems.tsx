@@ -38,10 +38,14 @@ const Navigation = ({
 
   const animationMenuItems = {
     open: {
-      transition: shouldReduceMotion ? { staggerChildren: 0.1 } : { staggerChildren: 0.07, delayChildren: 0.2 },
+      transition: shouldReduceMotion
+        ? { staggerChildren: 0.1 }
+        : { staggerChildren: 0.07, delayChildren: 0.2 },
     },
     closed: {
-      transition: shouldReduceMotion ? { staggerChildren: 0.1, staggerDirection: -1 } : { staggerChildren: 0.05, staggerDirection: -1 },
+      transition: shouldReduceMotion
+        ? { staggerChildren: 0.1, staggerDirection: -1 }
+        : { staggerChildren: 0.05, staggerDirection: -1 },
     },
   }
 
@@ -82,6 +86,7 @@ const Navigation = ({
   const toggleButton = (
     <motion.li variants={animationMenuItem} whileHover={{ scale: 1.2 }}>
       <button
+        aria-label="Toggle dark mode"
         onClick={toggleColorMode}
         className="group ml-1.5 block rounded-own-sm p-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600"
       >
