@@ -1,12 +1,12 @@
 import SkillBanner from './SkillBanner'
 import SkillItem from './SkillItem'
-import Skill from '../interfaces/Skill'
+import { ISkill } from '../interfaces/ISkill'
 
 export default ({
   skills,
   skillPerRow = 6,
 }: {
-  skills: Skill[]
+  skills: ISkill[]
   skillPerRow?: number
 }) => {
   const skillsPerBanner = skillPerRow

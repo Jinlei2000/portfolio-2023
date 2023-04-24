@@ -1,6 +1,6 @@
-import Skill from './Skill'
+import { ISkill } from './ISkill'
 
-export default interface Project {
+export interface IProject {
   id: number
   name: string
   tag: string
@@ -9,7 +9,7 @@ export default interface Project {
   link: string
   featured?: boolean
   imgs: { src: string; alt: string }[]
-  technologies: Skill[]
+  technologies: ISkill[]
   externalLinks?: {
     github?: string
     website?: string

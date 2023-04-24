@@ -1,9 +1,10 @@
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide'
 import { ChevronRightIcon } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import Project from '../interfaces/Project'
+import IProject from '../interfaces/IProject'
+import Image from './Image'
 
-export default ({ projects }: { projects: Project[] }) => {
+export default ({ projects }: { projects: IProject[] }) => {
   // Sort the projects by date
   projects.sort((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime()
@@ -46,12 +47,12 @@ export default ({ projects }: { projects: Project[] }) => {
                     to={project.link}
                     className="group/card focus:outline-none"
                   >
-                    <div className="flex flex-col justify-center gap-2 rounded-lg group-focus-visible/card:ring-2 group-focus-visible/card:ring-slate-100 dark:group-focus-visible/card:ring-slate-600">
-                      <div className="group/img relative overflow-hidden rounded-lg">
-                        <img
-                          src={project.image}
+                    <div className="flex flex-col justify-center gap-2 group-focus-visible/card:ring-2 group-focus-visible/card:ring-slate-100 dark:group-focus-visible/card:ring-slate-600">
+                      <div className="group/img relative overflow-hidden rounded-own-md">
+                        <Image
+                          link={project.image}
                           alt={project.name}
-                          className="h-full w-full object-cover"
+                          animate={false}
                         />
                         <div className="img-hover__text absolute inset-0 bg-own-neutral-900 bg-opacity-70 opacity-0 transition duration-500 ease-in-out group-hover/img:opacity-100">
                           <div className="flex h-full flex-col items-center justify-center">

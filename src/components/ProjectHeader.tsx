@@ -1,7 +1,7 @@
 import { GraduationCap, MapPin, User } from 'lucide-react'
-import Project from '../interfaces/Project'
+import IProject from '../interfaces/IProject'
 
-export default ({ project }: { project: Project }) => {
+export default ({ project }: { project: IProject }) => {
   return (
     <header className="flex flex-col gap-1 pt-8 md:gap-2 md:pt-12 lg:gap-3 lg:pt-16">
       <div className="flex flex-col-reverse">
