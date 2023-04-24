@@ -11,6 +11,7 @@ export const projectsData: Project[] = [
     date: new Date('2000-01-01'),
     imgs: [], // No images
     technologies: [], // No technologies
+    externalLinks: {}, // No external links
   },
   {
     id: 1,
@@ -51,6 +52,10 @@ export const projectsData: Project[] = [
       skillsData[16],
       skillsData[17],
     ],
+    externalLinks: {
+      instructables: 'https://www.instructables.com/Making-a-Smart-Garbage/',
+      github: 'https://github.com/howest-mct/2021-2022-projectone-Jinlei2000',
+    },
 
     study: 'MCT',
     school: 'Howest Kortrijk',
@@ -78,6 +83,10 @@ export const projectsData: Project[] = [
       },
     ],
     technologies: [],
+    externalLinks: {
+      github: 'https://github.com/Jinlei2000/ProjectOnColor',
+      website: 'https://oncolor.leijin.be',
+    },
 
     study: 'MCT',
     school: 'Howest Kortrijk',
@@ -105,6 +114,9 @@ export const projectsData: Project[] = [
       },
     ],
     technologies: [],
+    externalLinks: {
+      github: 'https://github.com/Jinlei2000/ProjectOnColor',
+    },
     study: 'MCT',
     school: 'Howest Kortrijk',
   },
@@ -131,6 +143,9 @@ export const projectsData: Project[] = [
       },
     ],
     technologies: [],
+    externalLinks: {
+      github: 'https://github.com/Bart-Roels/teamproject-groep5',
+    },
     study: 'MCT',
     school: 'Howest Kortrijk',
     client: 'Sports innovation campus',
@@ -158,6 +173,10 @@ export const projectsData: Project[] = [
       },
     ],
     technologies: [],
+    externalLinks: {
+      github: '',
+      expo: '',
+    },
     study: 'MCT',
     school: 'Howest Kortrijk',
   },

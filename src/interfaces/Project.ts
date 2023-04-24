@@ -7,10 +7,15 @@ export default interface Project {
   image: string
   date: Date
   link: string
-  github?: string
   featured?: boolean
   imgs: { src: string; alt: string }[]
   technologies: Skill[]
+  externalLinks?: {
+    github?: string
+    website?: string
+    expo?: string
+    instructables?: string
+  }
   // Project specific
   study?: string
   school?: string
