@@ -4,13 +4,13 @@ export default ({
   page,
   selectedSection,
   setSelectedSection,
-  reverse = false,
+  isMobile = false,
   setSidebarOpen,
 }: {
   page: string
   selectedSection: string
   setSelectedSection: (section: string) => void
-  reverse?: boolean
+  isMobile?: boolean
   setSidebarOpen?: (open: boolean) => void
 }) => {
   const lowerCasePage = page.toLowerCase()
@@ -18,13 +18,13 @@ export default ({
   return (
     <HashLink
       onClick={() => {
-        setSelectedSection(lowerCasePage)
+        setSelectedSection && setSelectedSection(lowerCasePage)
         setSidebarOpen && setSidebarOpen(false)
       }}
       // smooth
       to={'/#' + lowerCasePage}
       className={
-        !reverse
+        !isMobile
           ? `
       ${
         selectedSection === lowerCasePage

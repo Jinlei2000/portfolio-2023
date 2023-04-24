@@ -49,10 +49,11 @@
     .splide__slide-carousel img {
         transition: transform 400ms;
         transform: scale(.7) rotate(0deg);
+        /* use reduce motion to disable the animation */
+
         border-radius: 8px;
         will-change: transform;
     }
-
 
     .splide__slide-carousel.is-active img {
         will-change: transform;
@@ -78,7 +79,20 @@
 
     .splide__slide-carousel.is-active .img__text {
         opacity: 1;
+    }
 
+    @media (prefers-reduced-motion: reduce) {
+        .splide__slide-carousel img {
+            transition: none;
+        }
+
+        .splide__slide-carousel .img__text {
+            transition: none;
+        }
+
+        .splide__slide-carousel.is-active .img__text {
+            opacity: 1;
+        }
     }
 
 }

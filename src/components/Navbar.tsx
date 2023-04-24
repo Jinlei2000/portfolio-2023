@@ -1,32 +1,38 @@
 import { Menu, X } from 'lucide-react'
 import { HashLink } from 'react-router-hash-link'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import NavItems from './NavItems'
 
-// animation for sidebar
-const animationSidebar = {
-  open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 400}px at calc(100% - 40px) 40px)`,
-    transition: {
-      type: 'spring',
-      stiffness: 20,
-      restDelta: 2,
-    },
-  }),
-  closed: {
-    clipPath: 'circle(0px at calc(100% - 30px) 26px)',
-    transition: {
-      delay: 0.5,
-      type: 'spring',
-      stiffness: 400,
-      damping: 40,
-    },
-  },
-}
-
 export default ({ selectedSection, setSelectedSection }: any) => {
   const [isOpen, setIsOpen] = useState(false)
+
+  const shouldReduceMotion = useReducedMotion()
+
+  // animation for sidebar
+  const animationSidebar = {
+    open: (height = 1000) => ({
+      clipPath: `circle(${height * 2 + 400}px at calc(100% - 40px) 40px)`,
+      transition: shouldReduceMotion
+        ? { duration: 0 }
+        : {
+            type: 'spring',
+            stiffness: 20,
+            restDelta: 2,
+          },
+    }),
+    closed: {
+      clipPath: 'circle(0px at calc(100% - 30px) 26px)',
+      transition: shouldReduceMotion
+        ? { duration: 0 }
+        : {
+            delay: 0.5,
+            type: 'spring',
+            stiffness: 400,
+            damping: 40,
+          },
+    },
+  }
 
   useEffect(() => {
     // Set body overflow to hidden when sidebar is open
@@ -55,7 +61,7 @@ export default ({ selectedSection, setSelectedSection }: any) => {
           smooth
           to={'/#about'}
         >
-          <span className="transform px-1 font-black text-own-neutral-700 transition duration-300 ease-in-out hover:scale-110 hover:text-own-secondary dark:hover:text-own-secondary dark:text-own-neutral-200 md:text-2xl lg:text-4xl">
+          <span className="transform px-1 font-black text-own-neutral-700 transition duration-300 ease-in-out hover:scale-110 hover:text-own-secondary dark:text-own-neutral-200 dark:hover:text-own-secondary md:text-2xl lg:text-4xl">
             LJ
           </span>
         </HashLink>

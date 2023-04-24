@@ -34,8 +34,9 @@ import {
   SiVite,
   SiXamarin,
 } from 'react-icons/si'
+import Skill from '../interfaces/Skill'
 
-export const skillsData = [
+export const skillsData: Skill[] = [
   { icon: SiPython, title: 'Python', color: '#3776AB' },
   { icon: SiHtml5, title: 'HTML', color: '#E34F26' },
   { icon: SiCss3, title: 'CSS', color: '#1572B6' },
