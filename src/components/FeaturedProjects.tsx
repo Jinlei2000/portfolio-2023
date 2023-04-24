@@ -1,8 +1,8 @@
-import Project from '../interfaces/Project'
+import IProject from '../interfaces/IProject'
 import ProjectCard from './ProjectCard'
 
 // Show the 3 featured projects
-export default ({ projects }: { projects: Project[] }) => {
+export default ({ projects }: { projects: IProject[] }) => {
   // Sort the projects by date
   projects.sort((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime()

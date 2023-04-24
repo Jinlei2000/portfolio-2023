@@ -112,7 +112,7 @@ export default () => {
               {/* Header */}
               <HeaderSection title="Skills" subtitle="What I can do" />
               {/* Skills */}
-              <Skills skills={skillsData} skillPerRow={6} />
+              <Skills skills={skillsData} skillPerRow={7} />
             </div>
           </section>
 

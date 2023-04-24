@@ -1,12 +1,12 @@
-import Project from '../interfaces/Project'
+import {IProject} from '../interfaces/IProject'
 import { skillsData } from './skillsData'
 
-export const projectsData: Project[] = [
+export const projectsData: IProject[] = [
   {
     id: 999,
     name: 'Coming Soon',
     tag: 'More',
-    image: '/img/more.jpg',
+    image: 'more',
     link: '/',
     date: new Date('2000-01-01'),
     imgs: [], // No images
@@ -18,7 +18,7 @@ export const projectsData: Project[] = [
     id: 1,
     name: 'Smart Garbage',
     tag: 'Project One',
-    image: '/img/smart-garbage-1.jpg',
+    image: 'smart-garbage/1',
     link: '/projects/smart-garbage',
     date: new Date('2022-06-01'),
     imgs: [
@@ -65,25 +65,31 @@ export const projectsData: Project[] = [
     id: 2,
     name: 'Oncolor',
     tag: 'Interaction Design',
-    image: '/img/oncolor-1.jpg',
+    image: 'oncolor/1',
     link: '/projects/oncolor',
     featured: true,
     date: new Date('2022-08-01'),
     imgs: [
       {
-        src: '/img/smart-garbage-2.jpg',
-        alt: 'Smart Garbage',
+        src: 'oncolor/2',
+        alt: '2 Mobile Screens Oncolor',
       },
       {
-        src: '/img/smart-garbage-3.jpg',
-        alt: 'Flyer Smart Garbage',
-      },
-      {
-        src: '/img/smart-garbage-4.jpg',
-        alt: 'Design wireframes',
+        src: 'oncolor/3',
+        alt: 'Wireframes Oncolor',
       },
     ],
-    technologies: [],
+    technologies: [
+      skillsData[1],
+      skillsData[2],
+      skillsData[3],
+      skillsData[5],
+      skillsData[6],
+      skillsData[8],
+      skillsData[9],
+      skillsData[11],
+      skillsData[18],
+    ],
     externalLinks: {
       github: 'https://github.com/Jinlei2000/ProjectOnColor',
       website: 'https://oncolor.leijin.be',
@@ -96,25 +102,21 @@ export const projectsData: Project[] = [
     id: 3,
     name: 'Anime/Manga App',
     tag: 'Project One',
-    image: '/img/anime-app-1.jpg',
+    image: 'anime-app/1',
     link: '/projects/anime-app',
     featured: true,
     date: new Date('2022-10-01'),
-    imgs: [
-      {
-        src: '/img/smart-garbage-2.jpg',
-        alt: 'Smart Garbage',
-      },
-      {
-        src: '/img/smart-garbage-3.jpg',
-        alt: 'Flyer Smart Garbage',
-      },
-      {
-        src: '/img/smart-garbage-4.jpg',
-        alt: 'Design wireframes',
-      },
+    imgs: [],
+    technologies: [
+      skillsData[5],
+      skillsData[6],
+      skillsData[8],
+      skillsData[13],
+      skillsData[14],
+      skillsData[15],
+      skillsData[18],
+      skillsData[32],
     ],
-    technologies: [],
     externalLinks: {
       github: 'https://github.com/Jinlei2000/ProjectOnColor',
     },
@@ -125,25 +127,38 @@ export const projectsData: Project[] = [
     id: 4,
     name: 'Interactive Bollards',
     tag: 'Team Project',
-    image: '/img/interactive-poles-1.jpg',
+    image: 'interactive-poles/1',
     link: '/projects/interactive-poles',
     featured: true,
     date: new Date('2023-01-01'),
     imgs: [
       {
-        src: '/img/smart-garbage-2.jpg',
-        alt: 'Smart Garbage',
+        src: 'interactive-poles/2',
+        alt: 'Flyer interactive poles',
       },
       {
-        src: '/img/smart-garbage-3.jpg',
-        alt: 'Flyer Smart Garbage',
+        src: 'interactive-poles/3',
+        alt: 'Photo interactive poles on the field',
       },
       {
-        src: '/img/smart-garbage-4.jpg',
-        alt: 'Design wireframes',
+        src: 'interactive-poles/4',
+        alt: 'Illustration interactive pole',
       },
     ],
-    technologies: [],
+    technologies: [
+      skillsData[0],
+      skillsData[1],
+      skillsData[2],
+      skillsData[3],
+      skillsData[5],
+      skillsData[6],
+      skillsData[7],
+      skillsData[8],
+      skillsData[9],
+      skillsData[10],
+      skillsData[16],
+      skillsData[36],
+    ],
     externalLinks: {
       github: 'https://github.com/Bart-Roels/teamproject-groep5',
     },
@@ -156,22 +171,14 @@ export const projectsData: Project[] = [
     id: 5,
     name: 'Movie Zone',
     tag: 'Smart App Development',
-    image: '/img/movie-zone-1.jpg',
+    image: 'movie-zone/1',
     link: '/projects/movie-zone',
     date: new Date('2023-05-01'),
     imgs: [
-      {
-        src: '/img/smart-garbage-2.jpg',
-        alt: 'Smart Garbage',
-      },
-      {
-        src: '/img/smart-garbage-3.jpg',
-        alt: 'Flyer Smart Garbage',
-      },
-      {
-        src: '/img/smart-garbage-4.jpg',
-        alt: 'Design wireframes',
-      },
+      // {
+      //   src: '/img/smart-garbage-2.jpg',
+      //   alt: 'Smart Garbage',
+      // },
     ],
     technologies: [],
     externalLinks: {
