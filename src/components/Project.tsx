@@ -1,4 +1,3 @@
-import { ReactNode } from 'react'
 import { IProject } from '../interfaces/IProject'
 import Footer from './Footer'
 import Navbar from './Navbar'

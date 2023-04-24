@@ -1,7 +1,7 @@
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide'
 import { ChevronRightIcon } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import IProject from '../interfaces/IProject'
+import {IProject} from '../interfaces/IProject'
 import Image from './Image'
 
 export default ({ projects }: { projects: IProject[] }) => {

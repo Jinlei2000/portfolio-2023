@@ -1,4 +1,4 @@
-import IProject from '../interfaces/IProject'
+import {IProject} from '../interfaces/IProject'
 import { Link } from 'react-router-dom'
 import Image from './Image'
 
