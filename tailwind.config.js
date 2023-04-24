@@ -8,7 +8,8 @@ export default {
     extend: {
       // use own poppins font & add default font stack
       fontFamily: {
-        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+        // sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+        poppins: ['Poppins', 'sans-serif'],
       },
 
       // use own colors

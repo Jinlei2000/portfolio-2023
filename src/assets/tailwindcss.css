@@ -1,38 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* import poppins font */
-@font-face {
-    font-family: 'Poppins';
-    font-weight: 400;
-    src: url("/fonts/Poppins-Regular.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: 'Poppins';
-    font-weight: 500;
-    src: url("/fonts/Poppins-Medium.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: 'Poppins';
-    font-weight: 600;
-    src: url("/fonts/Poppins-SemiBold.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: 'Poppins';
-    font-weight: 700;
-    src: url("/fonts/Poppins-Bold.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: 'Poppins';
-    font-weight: 900;
-    src: url("/fonts/Poppins-Black.ttf") format("truetype");
-}
-
 
 /* SplideJS has there own css file i can not add tailwind classes to it */
 @layer components {

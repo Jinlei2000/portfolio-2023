@@ -1,5 +1,4 @@
 // jotai is a state management library for React
-import { atom } from 'jotai'
 import { atomWithStorage, createJSONStorage } from 'jotai/utils'
 
 let colorMode = 'light'

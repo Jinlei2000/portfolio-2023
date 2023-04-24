@@ -1,5 +1,5 @@
 import { Globe, Github, Smartphone, Link } from 'lucide-react'
-import IProject from '../interfaces/IProject'
+import {IProject} from '../interfaces/IProject'
 
 export default ({ project }: { project: IProject }) => {
   return (

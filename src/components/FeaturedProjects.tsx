@@ -1,4 +1,4 @@
-import IProject from '../interfaces/IProject'
+import {IProject} from '../interfaces/IProject'
 import ProjectCard from './ProjectCard'
 
 // Show the 3 featured projects

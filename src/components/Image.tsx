@@ -1,5 +1,5 @@
 import { Cloudinary } from '@cloudinary/url-gen'
-import { AdvancedImage, responsive, placeholder, lazyload } from '@cloudinary/react'
+import { AdvancedImage, responsive, lazyload } from '@cloudinary/react'
 import { motion, useReducedMotion } from 'framer-motion'
 import useScrollDirection from '../hooks/useScrollDirection'
 
