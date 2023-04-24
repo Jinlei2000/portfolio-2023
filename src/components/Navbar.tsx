@@ -94,6 +94,7 @@ export default ({ selectedSection, setSelectedSection }: any) => {
           type="button"
           className=" z-[100] rounded-own-sm p-1 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600 lg:hidden"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Open main menu"
         >
           <span className="sr-only">Open main menu</span>
           {isOpen ? (
