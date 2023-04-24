@@ -1,6 +1,6 @@
 import { IconType } from 'react-icons'
 
-export default interface Skill {
+export interface ISkill {
   icon?: IconType
   title: string
   color: string

@@ -12,6 +12,7 @@ import AnimeApp from './routes/projects/AnimeApp'
 import InteractivePoles from './routes/projects/InteractivePoles'
 import DarkModeManager from './components/DarkModeManager'
 import MovieZone from './routes/projects/MovieZone'
+import { projectsData } from './data/projectsData'
 
 const router = createBrowserRouter([
   {
@@ -20,23 +21,23 @@ const router = createBrowserRouter([
   },
   {
     path: '/projects/smart-garbage',
-    element: <SmartGarbage />,
+    element: <SmartGarbage project={projectsData[1]} />,
   },
   {
     path: '/projects/oncolor',
-    element: <OnColor />,
+    element: <OnColor project={projectsData[2]} />,
   },
   {
     path: '/projects/anime-app',
-    element: <AnimeApp />,
+    element: <AnimeApp project={projectsData[3]} />,
   },
   {
     path: '/projects/interactive-poles',
-    element: <InteractivePoles />,
+    element: <InteractivePoles project={projectsData[4]} />,
   },
   {
     path: '/projects/movie-zone',
-    element: <MovieZone />,
+    element: <MovieZone project={projectsData[5]} />,
   },
 ])
 

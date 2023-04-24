@@ -51,7 +51,6 @@
         transform: scale(.7) rotate(0deg);
         /* use reduce motion to disable the animation */
 
-        border-radius: 8px;
         will-change: transform;
     }
 
