@@ -13,6 +13,7 @@ export const projectsData: Project[] = [
     technologies: [], // No technologies
     externalLinks: {}, // No external links
   },
+
   {
     id: 1,
     name: 'Smart Garbage',
@@ -22,19 +23,19 @@ export const projectsData: Project[] = [
     date: new Date('2022-06-01'),
     imgs: [
       {
-        src: '/img/smart-garbage-2.jpg',
-        alt: 'Smart Garbage',
+        src: 'smart-garbage/2',
+        alt: 'Smart Garbage Photo',
       },
       {
-        src: '/img/smart-garbage-3.jpg',
+        src: 'smart-garbage/3',
         alt: 'Flyer Smart Garbage',
       },
       {
-        src: '/img/smart-garbage-4.jpg',
+        src: 'smart-garbage/4',
         alt: 'Design wireframes',
       },
       {
-        src: '/img/smart-garbage-5.jpg',
+        src: 'smart-garbage/5',
         alt: 'Design wireframes',
       },
     ],
