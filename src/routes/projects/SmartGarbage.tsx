@@ -4,18 +4,22 @@ import Project from '../../interfaces/Project'
 import Footer from '../../components/Footer'
 import ProjectHeader from '../../components/ProjectHeader'
 import Skills from '../../components/Skills'
-import {
-  Github,
-  Globe,
-  Link,
-  Pencil,
-  Smartphone,
-  WholeWord,
-  Wrench,
-} from 'lucide-react'
+import { Github, Globe, Link, Smartphone } from 'lucide-react'
+import { AdvancedImage } from '@cloudinary/react'
+import { Cloudinary } from '@cloudinary/url-gen'
 
 export default () => {
   const project: Project = projectsData[1]
+
+  // Create and configure your Cloudinary instance.
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: 'dbzx2nao0',
+    },
+  })
+
+  // Use the image with public ID, 'front_face'.
+  const myImage = cld.image('smart-garbage/2')
 
   return (
     <div className="bg-white dark:bg-own-neutral-900">
@@ -58,7 +62,11 @@ export default () => {
               src={project.imgs[0].src}
               alt={project.imgs[0].alt}
             />
-            <img
+            <AdvancedImage
+              className="col-span-6 col-start-7 row-span-3 row-start-2 rounded-own-md lg:col-span-5 lg:col-start-8"
+              cldImg={myImage}
+            />
+            {/* <img
               className="col-span-6 col-start-7 row-span-3 row-start-2 rounded-own-md lg:col-span-5 lg:col-start-8"
               src={project.imgs[1].src}
               alt={project.imgs[1].alt}
@@ -72,7 +80,7 @@ export default () => {
               className="col-span-full rounded-own-md lg:col-span-10 lg:col-start-3"
               src={project.imgs[3].src}
               alt={project.imgs[3].alt}
-            />
+            /> */}
           </div>
 
           {/* Links */}
