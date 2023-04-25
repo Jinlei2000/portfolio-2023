@@ -13,6 +13,7 @@ import InteractivePoles from './routes/projects/InteractivePoles'
 import DarkModeManager from './components/DarkModeManager'
 import MovieZone from './routes/projects/MovieZone'
 import { projectsData } from './data/projectsData'
+import NotFound from './routes/NotFound'
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
   {
     path: '/projects/movie-zone',
     element: <MovieZone project={projectsData[5]} />,
+  },
+  // make not found page
+  {
+    path: '*',
+    element: <NotFound />,
   },
 ])
 

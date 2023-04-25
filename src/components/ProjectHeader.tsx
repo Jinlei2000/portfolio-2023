@@ -5,7 +5,7 @@ export default ({ project }: { project: IProject }) => {
   return (
     <header className="flex flex-col gap-1 pt-8 md:gap-2 md:pt-12 lg:gap-3 lg:pt-16">
       <div className="flex flex-col-reverse">
-        <h1 className="text-3xl font-bold text-own-neutral-900 dark:text-own-neutral-200 md:text-5xl xl:text-6xl">
+        <h1 className="text-3xl font-bold tracking-tight text-own-neutral-900 dark:text-own-neutral-200 md:text-5xl xl:text-6xl">
           {project.name}
         </h1>
         <p className="text-md font-semibold text-own-neutral-500 dark:text-own-neutral-400 md:text-lg xl:text-xl">
