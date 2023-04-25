@@ -17,7 +17,7 @@ export default ({
       text-${textAlignment} md:space-y-2 lg:space-y-4`}
     >
       <motion.h2
-        className="text-3xl font-bold text-own-neutral-900 dark:text-own-neutral-200 md:text-5xl xl:text-6xl"
+        className="text-3xl font-bold tracking-tight text-own-neutral-900 dark:text-own-neutral-200 md:text-5xl xl:text-6xl"
         initial={shouldReduceMotion ? 'visible' : 'initial'}
         whileInView={shouldReduceMotion ? 'visible' : 'animation'}
         variants={textFadeInSlideDown}

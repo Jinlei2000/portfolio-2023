@@ -31,37 +31,39 @@ export default ({
   const shouldReduceMotion = useReducedMotion()
 
   return (
-    <motion.div
-      ref={ref}
-      initial={shouldReduceMotion ? 'visible' : 'initial'}
-      whileInView={shouldReduceMotion ? 'visible' : 'animation'}
-      variants={skillBar}
-    >
-      {/* Only render the slider when the component is in view */}
-      {/* {isInView && ( */}
-      <Splide
-        options={{
-          autoWidth: true,
-          type: 'loop',
-          drag: 'free',
-          arrows: false,
-          pagination: false,
-          easing: 'ease',
-          // Disable animation if user prefers reduced motion
-          autoScroll: {
-            speed: reverseDir ? -0.25 : 0.25,
-            pauseOnHover: false,
-            pauseOnFocus: false,
-            autoStart: shouldReduceMotion ? false : true,
-          },
-        }}
-        extensions={{ AutoScroll }}
+    <>
+      <motion.div
+        ref={ref}
+        initial={shouldReduceMotion ? 'visible' : 'initial'}
+        whileInView={shouldReduceMotion ? 'visible' : 'animation'}
+        variants={skillBar}
       >
-        {children}
-        {/* to make it loop */}
-        {children}
-      </Splide>
-      {/* )} */}
-    </motion.div>
+        {/* Only render the slider when the component is in view */}
+        {/* {isInView && ( */}
+        <Splide
+          options={{
+            autoWidth: true,
+            type: 'loop',
+            drag: 'free',
+            arrows: false,
+            pagination: false,
+            easing: 'ease',
+            // Disable animation if user prefers reduced motion
+            autoScroll: {
+              speed: reverseDir ? -0.25 : 0.25,
+              pauseOnHover: false,
+              pauseOnFocus: false,
+              autoStart: shouldReduceMotion ? false : true,
+            },
+          }}
+          extensions={{ AutoScroll }}
+        >
+          {children}
+          {/* to make it loop */}
+          {/* {children} */}
+        </Splide>
+        {/* )} */}
+      </motion.div>
+    </>
   )
 }
