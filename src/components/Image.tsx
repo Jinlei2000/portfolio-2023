@@ -55,10 +55,7 @@ export default ({
             className="rounded-own-md"
             alt={alt}
             cldImg={myImage}
-            plugins={[
-              responsive(),
-              lazyload(),
-            ]}
+            plugins={[responsive(), lazyload()]}
           />
         </motion.div>
       ) : (
@@ -67,10 +64,8 @@ export default ({
             className="rounded-own-md"
             alt={alt}
             cldImg={myImage}
-            plugins={[
-              responsive(),
-              lazyload(),
-            ]}
+            plugins={[responsive(), lazyload()]}
+            draggable={false}
           />
         </div>
       )}
