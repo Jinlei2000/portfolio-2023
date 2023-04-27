@@ -52,7 +52,7 @@ export default ({
           }}
         >
           <AdvancedImage
-            className="w-full rounded-own-md"
+            className="rounded-own-md"
             alt={alt}
             cldImg={myImage}
             plugins={[
@@ -64,7 +64,7 @@ export default ({
       ) : (
         <div className={className}>
           <AdvancedImage
-            className="w-full rounded-own-md"
+            className="rounded-own-md"
             alt={alt}
             cldImg={myImage}
             plugins={[
