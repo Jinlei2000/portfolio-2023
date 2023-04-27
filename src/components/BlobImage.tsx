@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { blobFadeInGrow, blobMorph } from '../animation/animation'
+import Image from './Image'
 
 export default ({ src: srcImg, alt: altImg }: { src: string; alt: string }) => {
   const shouldReduceMotion = useReducedMotion()
@@ -24,12 +25,7 @@ export default ({ src: srcImg, alt: altImg }: { src: string; alt: string }) => {
         }}
         dragElastic={0.7}
       >
-        <img
-          className=""
-          draggable="false"
-          src={srcImg}
-          alt={altImg}
-        />
+        <Image link={srcImg} alt={altImg} className="" animate={false} />
       </motion.div>
     </motion.div>
   )

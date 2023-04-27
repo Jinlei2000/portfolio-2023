@@ -15,6 +15,7 @@ export interface IProject {
     website?: string
     expo?: string
     instructables?: string
+    tmdb?: string
   }
   // Project specific
   study?: string

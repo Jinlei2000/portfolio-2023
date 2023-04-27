@@ -18,7 +18,7 @@ export default ({
       .slice(i, i + skillsPerBanner)
       .map(skill => (
         <SkillItem
-          key={skill.title}
+          key={`skill-item-${skill.title}-${i}`}
           title={skill.title}
           icon={skill.icon}
           color={skill.color}

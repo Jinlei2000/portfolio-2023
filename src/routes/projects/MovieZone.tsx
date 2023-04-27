@@ -24,9 +24,35 @@ export default ({ project }: { project: IProject }) => {
   }
 
   const imgs = () => {
-    return <>
-    
-    </>
+    return (
+      <>
+        <Image
+          link={project.imgs[0].src}
+          alt={project.imgs[0].alt}
+          className="col-span-6 row-span-3 lg:col-span-5"
+        />
+        <Image
+          link={project.imgs[1].src}
+          alt={project.imgs[1].alt}
+          className="col-span-6 col-start-7 row-span-3 row-start-2 lg:col-span-5 lg:col-start-8"
+        />
+        <Image
+          link={project.imgs[2].src}
+          alt={project.imgs[2].alt}
+          className="col-span-full lg:col-span-10 lg:col-start-1"
+        />
+        <Image
+          link={project.imgs[3].src}
+          alt={project.imgs[3].alt}
+          className="col-span-full lg:col-span-10 lg:col-start-3"
+        />
+        <Image
+          link={project.imgs[4].src}
+          alt={project.imgs[4].alt}
+          className="col-span-full lg:col-span-10 lg:col-start-1"
+        />
+      </>
+    )
   }
   return <Project project={project} texts={texts} imgs={imgs} />
 }

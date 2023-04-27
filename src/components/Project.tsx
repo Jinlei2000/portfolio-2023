@@ -17,7 +17,7 @@ export default ({
   // Calculate the number of skills per row
   const skillPerRow =
     project.technologies.length > 10
-      ? project.technologies.length / 2
+      ? Math.ceil(project.technologies.length / 2)
       : project.technologies.length
 
   // scroll to top on page load
