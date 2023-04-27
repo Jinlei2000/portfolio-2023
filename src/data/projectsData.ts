@@ -17,7 +17,6 @@ import {
   SiMqtt,
   SiRaspberrypi,
   SiJson,
-  SiChartdotjs,
   SiCsharp,
   SiDotnet,
   SiMicrosoftazure,
