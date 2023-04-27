@@ -91,7 +91,8 @@ export const skillsData: ISkill[] = [
   { icon: SiFirebase, title: 'Dapr', color: '#0D2192' },
   { icon: SiNextdotjs, title: 'Next.js', color: '#000000' },
   // for loop good working
-  { icon: SiMqtt, title: 'MQTT', color: '#660066' },
-  { icon: SiFirebase, title: 'Dapr', color: '#0D2192' },
-  { icon: SiNextdotjs, title: 'Next.js', color: '#000000' },
+  { icon: SiMqtt, title: 'MQTT ', color: '#660066' },
+  { icon: SiFirebase, title: 'Dapr ', color: '#0D2192' },
+  { icon: SiNextdotjs, title: 'Next.js ', color: '#000000' },
 ]
+

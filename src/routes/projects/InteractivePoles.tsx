@@ -60,9 +60,14 @@ export default ({ project }: { project: IProject }) => {
           className="col-span-6 col-start-7 row-span-3 row-start-2 lg:col-span-5 lg:col-start-8"
         />
         <Image
+          link={project.imgs[3].src}
+          alt={project.imgs[3].alt}
+          className="col-span-full lg:col-span-10 lg:col-start-1"
+        />
+        <Image
           link={project.imgs[1].src}
           alt={project.imgs[1].alt}
-          className="col-span-full lg:col-span-10 lg:col-start-2"
+          className="col-span-full lg:col-span-10 lg:col-start-4"
         />
       </>
     )

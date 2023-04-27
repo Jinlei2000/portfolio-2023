@@ -61,7 +61,7 @@ export default () => {
           >
             <div className="flex h-screen flex-col items-center justify-center lg:flex-row-reverse lg:justify-between lg:px-20">
               {/* Image */}
-              <BlobImage src="/img/lei.png" alt="Lei Jin" />
+              <BlobImage src="/lei" alt="Lei Jin" />
               {/* Text */}
               <div className="max-w-md text-center md:max-w-lg lg:text-left">
                 <motion.h1
