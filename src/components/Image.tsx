@@ -52,7 +52,7 @@ export default ({
           }}
         >
           <AdvancedImage
-            className="rounded-own-md w-full"
+            className="rounded-own-md"
             alt={alt}
             cldImg={myImage}
             plugins={[responsive(), lazyload()]}
@@ -61,7 +61,7 @@ export default ({
       ) : (
         <div className={className}>
           <AdvancedImage
-            className="rounded-own-md"
+            className="w-full rounded-own-md"
             alt={alt}
             cldImg={myImage}
             plugins={[responsive(), lazyload()]}
