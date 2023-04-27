@@ -1,7 +1,7 @@
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide'
 import { ChevronRightIcon } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import {IProject} from '../interfaces/IProject'
+import { IProject } from '../interfaces/IProject'
 import Image from './Image'
 
 export default ({ projects }: { projects: IProject[] }) => {
@@ -54,13 +54,9 @@ export default ({ projects }: { projects: IProject[] }) => {
                           alt={project.name}
                           animate={false}
                         />
-                        <div className="img-hover__text absolute inset-0 bg-own-neutral-900 bg-opacity-70 opacity-0 transition duration-500 ease-in-out group-hover/img:opacity-100">
-                          <div className="flex h-full flex-col items-center justify-center">
-                            <p className="text-xl font-semibold text-own-neutral-200 dark:text-own-neutral-100 sm:text-lg md:text-xl xl:text-xl">
-                              Read more
-                            </p>
-                          </div>
-                        </div>
+                        <p className="img-hover__text absolute inset-0 flex h-full flex-col items-center justify-center bg-own-neutral-900 bg-opacity-70 text-xl font-semibold text-own-neutral-200 opacity-0 transition duration-500 ease-in-out group-hover/img:opacity-100 dark:text-own-neutral-100 sm:text-lg md:text-xl xl:text-xl">
+                          Read more
+                        </p>
                       </div>
                       <div className="img__text flex flex-col">
                         <h3 className="text-xl font-semibold text-own-neutral-900 dark:text-own-neutral-200 sm:text-lg md:text-xl xl:text-xl">
