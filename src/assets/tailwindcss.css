@@ -33,7 +33,7 @@
     }
 
     .splide__slide-carousel.is-active:hover .img-hover__text {
-        display: block;
+        display: flex;
     }
 
     .splide__slide-carousel .img-hover__text {
