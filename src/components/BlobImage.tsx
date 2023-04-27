@@ -25,7 +25,7 @@ export default ({ src: srcImg, alt: altImg }: { src: string; alt: string }) => {
         }}
         dragElastic={0.7}
       >
-        <Image link={srcImg} alt={altImg} className="" animate={false} />
+        <Image link={srcImg} alt={altImg} animate={false} />
       </motion.div>
     </motion.div>
   )
