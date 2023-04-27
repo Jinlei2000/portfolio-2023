@@ -52,7 +52,7 @@ export default ({
           }}
         >
           <AdvancedImage
-            className="rounded-own-md"
+            className="rounded-own-md w-full"
             alt={alt}
             cldImg={myImage}
             plugins={[responsive(), lazyload()]}
