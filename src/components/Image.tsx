@@ -8,11 +8,13 @@ export default ({
   alt,
   className,
   animate = true,
+  widthFull = false,
 }: {
   link: string
   alt: string
   className?: string
   animate?: boolean
+  widthFull?: boolean
 }) => {
   // Create and configure your Cloudinary instance.
   const cld = new Cloudinary({
@@ -52,7 +54,9 @@ export default ({
           }}
         >
           <AdvancedImage
-            className="rounded-own-md"
+            className={`
+              rounded-own-md ${widthFull ? 'w-full' : ''}
+            `}
             alt={alt}
             cldImg={myImage}
             plugins={[responsive(), lazyload()]}
@@ -61,7 +65,9 @@ export default ({
       ) : (
         <div className={className}>
           <AdvancedImage
-            className="w-full rounded-own-md"
+            className={`
+              rounded-own-md ${widthFull ? 'w-full' : ''}
+            `}
             alt={alt}
             cldImg={myImage}
             plugins={[responsive(), lazyload()]}

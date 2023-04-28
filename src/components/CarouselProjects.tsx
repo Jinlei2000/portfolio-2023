@@ -53,6 +53,7 @@ export default ({ projects }: { projects: IProject[] }) => {
                           link={project.image}
                           alt={project.name}
                           animate={false}
+                          widthFull={true}
                         />
                         <p className="img-hover__text absolute inset-0 flex h-full flex-col items-center justify-center bg-own-neutral-900 bg-opacity-70 text-xl font-semibold text-own-neutral-200 opacity-0 transition duration-500 ease-in-out group-hover/img:opacity-100 dark:text-own-neutral-100 sm:text-lg md:text-xl xl:text-xl">
                           Read more
