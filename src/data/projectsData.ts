@@ -112,7 +112,6 @@ export const projectsData: IProject[] = [
       { icon: SiGithub, title: 'GitHub', color: '#181717' },
       { icon: SiGit, title: 'Git', color: '#F05032' },
       { icon: SiJson, title: 'JSON', color: '#000' },
-      { icon: SiJson, title: 'JSON', color: '#000' },
       { icon: SiAdobexd, title: 'Adobe XD', color: '#FF61F6' },
       { title: 'UI/UX', color: '#000' },
       { icon: SiPostman, title: 'Postman', color: '#FF6C37' },
