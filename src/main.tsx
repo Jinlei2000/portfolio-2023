@@ -15,6 +15,8 @@ import MovieZone from './routes/projects/MovieZone'
 import { projectsData } from './data/projectsData'
 import NotFound from './routes/NotFound'
 
+import robots from '/robots.txt'
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -39,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: '/projects/movie-zone',
     element: <MovieZone project={projectsData[5]} />,
+  },
+  {
+    path: 'robots.txt',
+    element: robots,
   },
   // make not found page
   {
