@@ -47,14 +47,14 @@ const router = createBrowserRouter([
     element: robots,
   },
   // make not found page
-  // {
-  //   path: '*',
-  //   element: <NotFound />,
-  // },
   {
     path: '*',
-    element: <Navigate to="/" replace />,
+    element: <NotFound />,
   },
+  // {
+  //   path: '*',
+  //   element: <Navigate to="/" replace />,
+  // },
 ])
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
