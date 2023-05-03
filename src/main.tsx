@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 
 import './assets/tailwindcss.css'
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 
 import Home from './routes/Home'
 import SmartGarbage from './routes/projects/SmartGarbage'
@@ -47,9 +47,13 @@ const router = createBrowserRouter([
     element: robots,
   },
   // make not found page
+  // {
+  //   path: '*',
+  //   element: <NotFound />,
+  // },
   {
     path: '*',
-    element: <NotFound />,
+    element: <Navigate to="/" replace />,
   },
 ])
 
