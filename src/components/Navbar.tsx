@@ -61,9 +61,25 @@ export default ({ selectedSection, setSelectedSection }: any) => {
           smooth
           to={'/#about'}
         >
-          <span className="transform px-1 font-black text-own-neutral-700 transition duration-300 ease-in-out hover:scale-110 hover:text-own-secondary dark:text-own-neutral-200 dark:hover:text-own-secondary md:text-2xl lg:text-4xl">
+          {/* <span className="transform px-1 font-black text-own-neutral-700 transition duration-300 ease-in-out hover:scale-110 hover:text-own-secondary dark:text-own-neutral-200 dark:hover:text-own-secondary md:text-2xl lg:text-4xl">
             LJ
-          </span>
+          </span> */}
+          <svg
+            className="h-8 w-8 md:h-8 md:w-8 lg:h-10 lg:w-10"
+            viewBox="0 0 512 512"
+          >
+            <g transform="translate(-428 -534)">
+              <text
+                className="font-black text-own-neutral-700 dark:text-own-neutral-200"
+                transform="translate(483 918)"
+                font-size="366"
+              >
+                <tspan className="transition duration-300 ease-in-out hover:scale-110 hover:fill-own-secondary dark:fill-own-neutral-200 dark:hover:fill-own-secondary">
+                  LJ
+                </tspan>
+              </text>
+            </g>
+          </svg>
         </HashLink>
 
         {/* Desktop Menu */}
