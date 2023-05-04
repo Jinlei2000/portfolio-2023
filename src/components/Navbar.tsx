@@ -60,16 +60,18 @@ export default ({ selectedSection, setSelectedSection }: any) => {
           className="pointer-events-auto flex rounded-own-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-own-neutral-100 dark:focus-visible:ring-own-neutral-600"
           smooth
           to={'/#about'}
+          aria-label="Logo"
         >
           {/* <span className="transform px-1 font-black text-own-neutral-700 transition duration-300 ease-in-out hover:scale-110 hover:text-own-secondary dark:text-own-neutral-200 dark:hover:text-own-secondary md:text-2xl lg:text-4xl">
             LJ
           </span> */}
           <svg
-            className="h-8 w-8 md:h-8 md:w-8 lg:h-10 lg:w-10"
+            className="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12"
             viewBox="0 0 512 512"
           >
             <g transform="translate(-428 -534)">
               <text
+
                 className="font-black text-own-neutral-700 dark:text-own-neutral-200"
                 transform="translate(483 918)"
                 font-size="366"
