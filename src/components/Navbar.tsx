@@ -74,7 +74,7 @@ export default ({ selectedSection, setSelectedSection }: any) => {
 
                 className="font-black text-own-neutral-700 dark:text-own-neutral-200"
                 transform="translate(483 918)"
-                font-size="366"
+                fontSize="366"
               >
                 <tspan className="transition duration-300 ease-in-out hover:scale-110 hover:fill-own-secondary dark:fill-own-neutral-200 dark:hover:fill-own-secondary">
                   LJ
