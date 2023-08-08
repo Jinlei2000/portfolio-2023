@@ -16,6 +16,8 @@ import { projectsData } from './data/projectsData'
 import NotFound from './routes/NotFound'
 
 import robots from '/robots.txt'
+import E17 from './routes/projects/E17'
+import Portfolio from './routes/projects/Portfolio'
 
 const router = createBrowserRouter([
   {
@@ -42,6 +44,15 @@ const router = createBrowserRouter([
     path: '/projects/movie-zone',
     element: <MovieZone project={projectsData[5]} />,
   },
+  {
+    path: '/projects/portfolio',
+    element: <Portfolio project={projectsData[6]} />,
+  },
+  {
+    path: '/projects/e17',
+    element: <E17 project={projectsData[7]} />,
+  },
+
   {
     path: 'robots.txt',
     element: robots,
