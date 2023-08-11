@@ -7,32 +7,10 @@ export default ({ project }: { project: IProject }) => {
     return (
       <>
         <p>
-          Check out the Xamarin-based{' '}
-          <span className="font-semibold">Android app</span> using the{' '}
-          <a
-            className="font-semibold text-own-primary-500 hover:text-own-primary-600 dark:text-own-primary-400 dark:ring-own-neutral-200 dark:hover:text-own-primary-500"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://kitsu.docs.apiary.io/"
-          >
-            Kitsu API
-          </a>{' '}
-          for all your <span className="font-semibold">anime and manga</span>{' '}
-          needs on-the-go.
-        </p>
-        <p>
-          My <span className="font-semibold">goals</span> are to learn{' '}
-          <span className="font-semibold">C#</span>,{' '}
-          <span className="font-semibold">object-oriented programming</span>,
-          and the use of <span className="font-semibold">async/await</span> for
-          efficient programming, as well as mastering the use of{' '}
-          <span className="font-semibold">APIs</span> for seamless integration
-          of data into my projects.
-        </p>
-
-        <p>
-          I've crafted a stunning portfolio for my Frontend Development class
-          using React. The website is live on{' '}
+          I've crafted a stunning portfolio for my{' '}
+          <span className="font-semibold">Frontend Development</span> class
+          using <span className="font-semibold">React</span>. The website is
+          live on{' '}
           <a
             className="font-semibold text-own-primary-500 hover:text-own-primary-600 dark:text-own-primary-400 dark:ring-own-neutral-200 dark:hover:text-own-primary-500"
             target="_blank"
@@ -50,7 +28,8 @@ export default ({ project }: { project: IProject }) => {
           >
             GoDaddy
           </a>
-          . To ensure optimal performance, all my images are hosted on{' '}
+          . To ensure optimal performance, all my{' '}
+          <span className="font-semibold">images</span> are hosted on{' '}
           <a
             className="font-semibold text-own-primary-500 hover:text-own-primary-600 dark:text-own-primary-400 dark:ring-own-neutral-200 dark:hover:text-own-primary-500"
             target="_blank"
