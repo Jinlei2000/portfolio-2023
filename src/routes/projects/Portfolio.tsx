@@ -1,6 +1,6 @@
 import Image from '../../components/Image'
 import Project from '../../components/Project'
-import {IProject} from '../../interfaces/IProject'
+import { IProject } from '../../interfaces/IProject'
 
 export default ({ project }: { project: IProject }) => {
   const texts = () => {
@@ -28,6 +28,38 @@ export default ({ project }: { project: IProject }) => {
           efficient programming, as well as mastering the use of{' '}
           <span className="font-semibold">APIs</span> for seamless integration
           of data into my projects.
+        </p>
+
+        <p>
+          I've crafted a stunning portfolio for my Frontend Development class
+          using React. The website is live on{' '}
+          <a
+            className="font-semibold text-own-primary-500 hover:text-own-primary-600 dark:text-own-primary-400 dark:ring-own-neutral-200 dark:hover:text-own-primary-500"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://app.netlify.com/"
+          >
+            Netlify
+          </a>
+          , complemented by a sleek domain name from{' '}
+          <a
+            className="font-semibold text-own-primary-500 hover:text-own-primary-600 dark:text-own-primary-400 dark:ring-own-neutral-200 dark:hover:text-own-primary-500"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.godaddy.com/nl-be"
+          >
+            GoDaddy
+          </a>
+          . To ensure optimal performance, all my images are hosted on{' '}
+          <a
+            className="font-semibold text-own-primary-500 hover:text-own-primary-600 dark:text-own-primary-400 dark:ring-own-neutral-200 dark:hover:text-own-primary-500"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://cloudinary.com/"
+          >
+            Cloudinary
+          </a>
+          . Exciting journey in the world of web development!
         </p>
       </>
     )

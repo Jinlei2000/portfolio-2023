@@ -27,6 +27,7 @@ import {
   SiTailwindcss,
   SiFirebase,
   SiNextdotjs,
+  SiVite,
 } from 'react-icons/si'
 import { IProject } from '../interfaces/IProject'
 
@@ -271,6 +272,7 @@ export const projectsData: IProject[] = [
       { icon: SiTypescript, title: 'TypeScript', color: '#3178C6' },
       { icon: SiNpm, title: 'NPM', color: '#CB3837' },
       { icon: SiGitkraken, title: 'GitKraken', color: '#179287' },
+      { icon: SiVite, title: 'Vite', color: '#646CFF' },
     ],
 
     externalLinks: {
@@ -305,7 +307,7 @@ export const projectsData: IProject[] = [
     image: 'e17/1',
     featured: true,
     link: '/projects/e17',
-    date: new Date('2023-05-01'),
+    date: new Date('2023-05-02'),
     imgs: [],
     technologies: [
       { icon: SiHtml5, title: 'HTML', color: '#E34F26' },
