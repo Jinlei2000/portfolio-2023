@@ -1,33 +1,29 @@
 import Image from '../../components/Image'
 import Project from '../../components/Project'
-import {IProject} from '../../interfaces/IProject'
+import { IProject } from '../../interfaces/IProject'
 
 export default ({ project }: { project: IProject }) => {
   const texts = () => {
     return (
       <>
         <p>
-          Check out the Xamarin-based{' '}
-          <span className="font-semibold">Android app</span> using the{' '}
+          Join us on an exciting journey at the "50 jaar E17" Expo by{' '}
           <a
             className="font-semibold text-own-primary-500 hover:text-own-primary-600 dark:text-own-primary-400 dark:ring-own-neutral-200 dark:hover:text-own-primary-500"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://kitsu.docs.apiary.io/"
+            href="https://www.leiedal.be/"
           >
-            Kitsu API
-          </a>{' '}
-          for all your <span className="font-semibold">anime and manga</span>{' '}
-          needs on-the-go.
+            Leiedal
+          </a>
+          . Our project empowers visitors to envision the{' '}
+          <span className="font-semibold">future of E17</span> using AI-altered
+          images.
         </p>
         <p>
-          My <span className="font-semibold">goals</span> are to learn{' '}
-          <span className="font-semibold">C#</span>,{' '}
-          <span className="font-semibold">object-oriented programming</span>,
-          and the use of <span className="font-semibold">async/await</span> for
-          efficient programming, as well as mastering the use of{' '}
-          <span className="font-semibold">APIs</span> for seamless integration
-          of data into my projects.
+          From <span className="font-semibold">utopian to dystopian</span>,
+          desert to waterworld - all at your fingertips. Simply pick a tag on a
+          tablet, watch your vision unfold.
         </p>
       </>
     )
