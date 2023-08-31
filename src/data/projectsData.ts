@@ -23,6 +23,11 @@ import {
   SiPostman,
   SiXamarin,
   SiSocketdotio,
+  SiNetlify,
+  SiTailwindcss,
+  SiFirebase,
+  SiNextdotjs,
+  SiVite,
 } from 'react-icons/si'
 import { IProject } from '../interfaces/IProject'
 
@@ -93,7 +98,6 @@ export const projectsData: IProject[] = [
     tag: 'Interaction Design',
     image: 'oncolor/1',
     link: '/projects/oncolor',
-    featured: true,
     date: new Date('2022-08-01'),
     imgs: [
       {
@@ -195,7 +199,6 @@ export const projectsData: IProject[] = [
     school: 'Howest Kortrijk',
     client: 'Sports innovation campus',
   },
-
   {
     id: 5,
     name: 'Movie Zone',
@@ -247,15 +250,37 @@ export const projectsData: IProject[] = [
     study: 'MCT',
     school: 'Howest Kortrijk',
   },
+  {
+    id: 6,
+    name: 'Portfolio',
+    tag: 'Frontend Development',
+    image: 'portfolio/1',
+    link: '/projects/portfolio',
+    date: new Date('2023-05-01'),
+    imgs: [],
+    technologies: [
+      { icon: SiHtml5, title: 'HTML', color: '#E34F26' },
+      { icon: SiCss3, title: 'CSS', color: '#1572B6' },
+      { icon: SiJavascript, title: 'JavaScript', color: '#F7DF1E' },
+      { icon: SiGithub, title: 'GitHub', color: '#181717' },
+      { icon: SiGit, title: 'Git', color: '#F05032' },
+      { icon: SiAdobexd, title: 'Adobe XD', color: '#FF61F6' },
+      { title: 'UI/UX', color: '#000' },
+      { icon: SiNetlify, title: 'Netlify', color: '#00C7B7' },
+      { icon: SiTailwindcss, title: 'Tailwind CSS', color: '#38B2AC' },
+      { icon: SiReact, title: 'React Native', color: '#61DAFB' },
+      { icon: SiTypescript, title: 'TypeScript', color: '#3178C6' },
+      { icon: SiNpm, title: 'NPM', color: '#CB3837' },
+      { icon: SiGitkraken, title: 'GitKraken', color: '#179287' },
+      { icon: SiVite, title: 'Vite', color: '#646CFF' },
+    ],
 
-  // {
-  //   id: 6,
-  //   name: 'Portfolio',
-  //   tag: 'Frontend Development',
-  //   image: '/img/portfolio-1.jpg',
-  //   link: '/projects/portfolio',
-  //   date: '2023-05-01',
-  // },
+    externalLinks: {
+      github: 'https://github.com/Jinlei2000/portfolio-2023',
+    },
+    study: 'MCT',
+    school: 'Howest Kortrijk',
+  },
 
   // {
   //   id: 7,
@@ -275,12 +300,35 @@ export const projectsData: IProject[] = [
   //   date: '2023-05-01',
   // },
 
-  // {
-  //   id: 9,
-  //   name: 'Expo 50 Years E17',
-  //   tag: 'Industry Project',
-  //   image: '/img/expo-1.jpg',
-  //   link: '/projects/expo',
-  //   date: '2023-05-01',
-  // },
+  {
+    id: 9,
+    name: 'Expo 50 Years E17',
+    tag: 'Industry Project',
+    image: 'e17/1',
+    featured: true,
+    link: '/projects/e17',
+    date: new Date('2023-05-02'),
+    imgs: [],
+    technologies: [
+      { icon: SiHtml5, title: 'HTML', color: '#E34F26' },
+      { icon: SiCss3, title: 'CSS', color: '#1572B6' },
+      { icon: SiJavascript, title: 'JavaScript', color: '#F7DF1E' },
+      { icon: SiGithub, title: 'GitHub', color: '#181717' },
+      { icon: SiGit, title: 'Git', color: '#F05032' },
+      { icon: SiAdobexd, title: 'Adobe XD', color: '#FF61F6' },
+      { title: 'UI/UX', color: '#000' },
+      { icon: SiTailwindcss, title: 'Tailwind CSS', color: '#38B2AC' },
+      { icon: SiTypescript, title: 'TypeScript', color: '#3178C6' },
+      { icon: SiNpm, title: 'NPM', color: '#CB3837' },
+      { icon: SiGitkraken, title: 'GitKraken', color: '#179287' },
+      { icon: SiFirebase, title: 'Firebase', color: '#FFCA28' },
+      { icon: SiNextdotjs, title: 'Next.js', color: '#000000' },
+    ],
+    externalLinks: {
+      website: 'https://mct-industry-project-e17.vercel.app/',
+    },
+    study: 'MCT',
+    school: 'Howest Kortrijk',
+    client: 'Leiedal',
+  },
 ]
