@@ -47,6 +47,20 @@ import {
 } from 'react-icons/si'
 import { ISkill } from '../interfaces/ISkill'
 
+// Make a list of skills from a list of skill titles
+export const getSkills = (skills: string[]): ISkill[] => {
+  const skillsList: ISkill[] = []
+  skills.forEach(skill => {
+    const foundSkill = skillsData.find(skillData => skillData.title === skill)
+    if (foundSkill) {
+      skillsList.push(foundSkill)
+    } else {
+      throw new Error(`Skill not found: ${skill}`)
+    }
+  })
+  return skillsList
+}
+
 export const skillsData: ISkill[] = [
   { icon: SiPython, title: 'Python', color: '#3776AB' },
   { icon: SiHtml5, title: 'HTML', color: '#E34F26' },

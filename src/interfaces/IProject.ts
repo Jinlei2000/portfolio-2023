@@ -9,7 +9,8 @@ export interface IProject {
   link: string
   featured?: boolean
   imgs: { src: string; alt: string }[]
-  technologies: ISkill[]
+  // technologies: ISkill[]
+  technologies: string[]
   externalLinks?: {
     github?: string
     website?: string

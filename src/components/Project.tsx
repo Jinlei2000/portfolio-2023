@@ -1,3 +1,4 @@
+import { getSkills } from '../data/skillsData'
 import { IProject } from '../interfaces/IProject'
 import Footer from './Footer'
 import Navbar from './Navbar'
@@ -19,6 +20,9 @@ export default ({
     project.technologies.length > 10
       ? Math.ceil(project.technologies.length / 2)
       : project.technologies.length
+
+  // Calculate how many banners are needed
+  const amountOfBanners = Math.ceil(project.technologies.length / skillPerRow)
 
   // scroll to top on page load
   window.scrollTo(0, 0)
@@ -49,7 +53,10 @@ export default ({
             “Behind the scenes: a glimpse at the tools and technologies used to
             bring the project to life.”
           </blockquote>
-          <Skills skills={project.technologies} skillPerRow={skillPerRow} />
+          <Skills
+            skills={getSkills(project.technologies)}
+            amountOfBanners={amountOfBanners}
+          />
         </div>
 
         {/* Footer */}
