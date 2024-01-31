@@ -4,15 +4,15 @@ import { ISkill } from '../interfaces/ISkill'
 
 export default ({
   skills,
-  skillPerRow = 6,
+  amountOfBanners = 6,
 }: {
   skills: ISkill[]
-  skillPerRow?: number
+  amountOfBanners?: number
 }) => {
-  const skillsPerBanner = skillPerRow
+  const skillsPerBanner = skills.length / amountOfBanners // 6
 
   const skillBanners = []
-  // Create a SkillBanner for each 6 skills
+  // Create a SkillBanner
   for (let i = 0; i < skills.length; i += skillsPerBanner) {
     const skillItems = skills
       .slice(i, i + skillsPerBanner)
