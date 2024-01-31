@@ -299,4 +299,40 @@ export const projectsData: IProject[] = [
     school: 'Howest Kortrijk',
     client: 'Leiedal',
   },
+
+  {
+    id: 10,
+    name: 'Tuinbouw',
+    tag: 'Full Stack Development',
+    image: 'more',
+    link: '/projects/tuinbouw',
+    date: new Date('2023-10-01'),
+    imgs: [], // No images
+    technologies: [], // No technologies
+    externalLinks: {}, // No external links
+  },
+
+  {
+    id: 11,
+    name: 'Discord Carplay',
+    tag: 'New Interface Design',
+    image: 'more',
+    link: '/projects/discord-carplay',
+    date: new Date('2023-11-01'),
+    imgs: [], // No images
+    technologies: [], // No technologies
+    externalLinks: {}, // No external links
+  },
+
+  {
+    id: 12,
+    name: 'Pizza AR App',
+    tag: 'Research Project',
+    image: 'more',
+    link: '/projects/pizza-ar',
+    date: new Date('2024-01-08'),
+    imgs: [], // No images
+    technologies: [], // No technologies
+    externalLinks: {}, // No external links
+  },
 ]
