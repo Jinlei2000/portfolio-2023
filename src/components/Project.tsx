@@ -18,8 +18,9 @@ export default ({
   // Calculate how many banners are needed
   const projectSkillsAmount = project.technologies.length
   let amountOfBanners = 1
-  if (projectSkillsAmount < 4) {
-    project.technologies.push(...project.technologies)
+  if (projectSkillsAmount <= 4) {
+    // TODO: fix this when there is no enough skills 1 banner is shown
+    // project.technologies.push(...project.technologies)
   }
   if (projectSkillsAmount >= 18) {
     amountOfBanners = 3

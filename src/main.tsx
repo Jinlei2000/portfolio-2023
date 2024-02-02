@@ -21,7 +21,7 @@ import Portfolio from './routes/projects/Portfolio'
 import PizzaAr from './routes/projects/PizzaAr'
 import Car3D from './routes/projects/Car3D'
 import Tuinbouw from './routes/projects/Tuinbouw'
-import DiscordCarplay from './routes/projects/discordCarplay'
+import DiscordCarplay from './routes/projects/DiscordCarplay'
 
 const router = createBrowserRouter([
   {

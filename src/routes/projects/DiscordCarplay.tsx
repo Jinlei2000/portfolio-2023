@@ -7,27 +7,22 @@ export default ({ project }: { project: IProject }) => {
     return (
       <>
         <p>
-          Delving into the realm of mobile app development, my research question
-          sparked an exciting journey: "
-          <span className="font-semibold">
-            How can I create a delectable pizza app with Flutter, enriched by
-            the immersive world of Augmented Reality?
-          </span>
-          "
+          Elevate your Discord experience with our CarPlay-designed app.{' '}
+          <span className="font-semibold">Seamlessly connect</span> on the go,
+          blending Discord's community features with CarPlay's intuitive
+          interface.
         </p>
         <p>
-          In this Flutter-powered application, I seamlessly integrated the ARKit
-          plugin,{' '}
-          <span className="font-semibold">elevating the user experience</span>,
-          especially tailored for iOS enthusiasts. The app's focal point?
-          Empowering users to customize their pizza by choosing its size and
-          virtually experimenting with various sauces and toppings. This{' '}
-          <span className="font-semibold">
-            dynamic and interactive exploration
-          </span>{' '}
-          allows users to visually savor their selected toppings on the pizza
-          canvas, turning the decision-making process into a delightful, visual
-          feast.
+          Stay engaged effortlessly with{' '}
+          <span className="font-semibold">voice channels</span>, text
+          communication, and server interactions, all optimized for a safe and
+          user-friendly experience. Connect, coordinate, and converse - wherever
+          the road takes you.
+        </p>
+        <p>
+          Enjoy a visually pleasing and safety-centric design, ensuring a{' '}
+          <span className="font-semibold">unique and connected drive</span>.
+          Redefine your journey with our Discord app for CarPlay.
         </p>
       </>
     )
@@ -49,16 +44,6 @@ export default ({ project }: { project: IProject }) => {
         <Image
           link={project.imgs[2].src}
           alt={project.imgs[2].alt}
-          className="col-span-full lg:col-span-10 lg:col-start-1"
-        />
-        <Image
-          link={project.imgs[3].src}
-          alt={project.imgs[3].alt}
-          className="col-span-full lg:col-span-10 lg:col-start-3"
-        />
-        <Image
-          link={project.imgs[4].src}
-          alt={project.imgs[4].alt}
           className="col-span-full lg:col-span-10 lg:col-start-1"
         />
       </>

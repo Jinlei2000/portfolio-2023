@@ -356,11 +356,23 @@ export const projectsData: IProject[] = [
     image: 'discord-carplay/1',
     link: '/projects/discord-carplay',
     date: new Date('2023-11-01'),
-    imgs: [],
+    imgs: [
+      {
+        src: 'discord-carplay/1',
+        alt: 'Discord Carplay',
+      },
+      {
+        src: 'discord-carplay/2',
+        alt: 'Discord Carplay',
+      },
+      {
+        src: 'discord-carplay/3',
+        alt: 'Discord Carplay',
+      },
+    ],
     technologies: ['Adobe XD', 'Figma', 'UI/UX'],
     externalLinks: {
-      // TODO: Add youtube link
-      youtube: '',
+      youtube: 'https://youtu.be/Hejafxpwi3w',
     },
     study: 'MCT',
     school: 'Howest Kortrijk',
