@@ -10,7 +10,6 @@ export default ({
   amountOfBanners?: number
 }) => {
   const skillsPerBanner = skills.length / amountOfBanners // 6
-  console.log(skillsPerBanner)
 
   const skillBanners = []
   // Create a SkillBanner
