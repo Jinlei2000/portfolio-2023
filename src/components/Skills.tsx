@@ -10,6 +10,7 @@ export default ({
   amountOfBanners?: number
 }) => {
   const skillsPerBanner = skills.length / amountOfBanners // 6
+  console.log(skillsPerBanner)
 
   const skillBanners = []
   // Create a SkillBanner
@@ -26,7 +27,11 @@ export default ({
       ))
     const isReverse = (i / skillsPerBanner) % 2 !== 0
     skillBanners.push(
-      <SkillBanner key={`skill-banner-${i}`} reverseScroll={isReverse}>
+      <SkillBanner
+        key={`skill-banner-${i}`}
+        reverseScroll={isReverse}
+        amount={skillsPerBanner}
+      >
         {skillItems}
       </SkillBanner>,
     )
