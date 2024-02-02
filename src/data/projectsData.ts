@@ -345,6 +345,8 @@ export const projectsData: IProject[] = [
       github: 'https://github.com/Jinlei2000/threejs-bun-astro-car-drive',
       website: 'https://3d-car.leijin.be/',
     },
+    study: 'MCT',
+    school: 'Howest Kortrijk',
   },
 
   {
@@ -360,6 +362,8 @@ export const projectsData: IProject[] = [
       // TODO: Add youtube link
       youtube: '',
     },
+    study: 'MCT',
+    school: 'Howest Kortrijk',
   },
 
   {
@@ -402,5 +406,7 @@ export const projectsData: IProject[] = [
       figma:
         'https://www.figma.com/file/Mt8dw28h1CW9aHIVsWnDN8/pizza-flutter-app?type=design&t=h4tjoR5UBJnvsefc-6',
     },
+    study: 'MCT',
+    school: 'Howest Kortrijk',
   },
 ]

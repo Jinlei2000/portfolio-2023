@@ -7,17 +7,27 @@ export default ({ project }: { project: IProject }) => {
     return (
       <>
         <p>
-          Introducing a <span className="font-semibold">movie app</span> that
-          allows you to create a personalized{' '}
-          <span className="font-semibold">watchlist</span> and{' '}
-          <span className="font-semibold">favorites</span> for easy movie{' '}
-          <span className="font-semibold">tracking</span>. Whether you're a
-          casual viewer or an enthusiast, this app is perfect for you.
+          Delving into the realm of mobile app development, my research question
+          sparked an exciting journey: "
+          <span className="font-semibold">
+            How can I create a delectable pizza app with Flutter, enriched by
+            the immersive world of Augmented Reality?
+          </span>
+          "
         </p>
         <p>
-          The best part is that streaming or downloading is not required. The
-          tool manages your movie choices effortlessly. Download the app today
-          and start building your movie library without any hassle.
+          In this Flutter-powered application, I seamlessly integrated the ARKit
+          plugin,{' '}
+          <span className="font-semibold">elevating the user experience</span>,
+          especially tailored for iOS enthusiasts. The app's focal point?
+          Empowering users to customize their pizza by choosing its size and
+          virtually experimenting with various sauces and toppings. This{' '}
+          <span className="font-semibold">
+            dynamic and interactive exploration
+          </span>{' '}
+          allows users to visually savor their selected toppings on the pizza
+          canvas, turning the decision-making process into a delightful, visual
+          feast.
         </p>
       </>
     )
@@ -29,12 +39,12 @@ export default ({ project }: { project: IProject }) => {
         <Image
           link={project.imgs[0].src}
           alt={project.imgs[0].alt}
-          className="col-span-6 row-span-3 lg:col-span-5"
+          className="col-span-full lg:col-span-10 lg:col-start-1"
         />
         <Image
           link={project.imgs[1].src}
           alt={project.imgs[1].alt}
-          className="col-span-6 col-start-7 row-span-3 row-start-2 lg:col-span-5 lg:col-start-8"
+          className="col-span-full lg:col-span-10 lg:col-start-3"
         />
         <Image
           link={project.imgs[2].src}
@@ -49,16 +59,6 @@ export default ({ project }: { project: IProject }) => {
         <Image
           link={project.imgs[4].src}
           alt={project.imgs[4].alt}
-          className="col-span-full lg:col-span-10 lg:col-start-1"
-        />
-        <Image
-          link={project.imgs[5].src}
-          alt={project.imgs[5].alt}
-          className="col-span-full lg:col-span-10 lg:col-start-3"
-        />
-        <Image
-          link={project.imgs[6].src}
-          alt={project.imgs[6].alt}
           className="col-span-full lg:col-span-10 lg:col-start-1"
         />
       </>

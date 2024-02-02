@@ -18,6 +18,7 @@ import NotFound from './routes/NotFound'
 import robots from '/robots.txt'
 import E17 from './routes/projects/E17'
 import Portfolio from './routes/projects/Portfolio'
+import PizzaAr from './routes/projects/PizzaAr'
 
 const router = createBrowserRouter([
   {
@@ -66,7 +67,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/projects/pizza-ar',
-    element: <E17 project={projectsData[11]} />,
+    element: <PizzaAr project={projectsData[11]} />,
   },
 
   {
