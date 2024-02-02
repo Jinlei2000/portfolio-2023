@@ -52,6 +52,22 @@ const router = createBrowserRouter([
     path: '/projects/e17',
     element: <E17 project={projectsData[7]} />,
   },
+  {
+    path: '/projects/tuinbouw',
+    element: <E17 project={projectsData[8]} />,
+  },
+  {
+    path: '/projects/3d-car',
+    element: <E17 project={projectsData[9]} />,
+  },
+  {
+    path: '/projects/discord-carplay',
+    element: <E17 project={projectsData[10]} />,
+  },
+  {
+    path: '/projects/pizza-ar',
+    element: <E17 project={projectsData[11]} />,
+  },
 
   {
     path: 'robots.txt',

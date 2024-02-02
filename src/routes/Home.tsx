@@ -165,7 +165,7 @@ export default () => {
               <div className="grid grid-flow-col gap-4 md:gap-6 lg:grid-cols-2 lg:grid-rows-2 lg:gap-4 ">
                 {/* Mail, LinkedIn, GitHub */}
                 <a
-                  href="mailto:jinleix3@hotmail.com"
+                  href="mailto:contact@leijin.be"
                   className="rounded-own-sm bg-own-neutral-200 p-2 ring-2 ring-own-neutral-200 hover:bg-own-neutral-300 focus-visible:outline-none focus-visible:ring-own-neutral-300 dark:bg-own-neutral-700 dark:ring-own-neutral-700 dark:hover:bg-own-neutral-600 dark:focus-visible:ring-own-neutral-600 sm:p-3 md:p-4 lg:rounded-2xl lg:p-8"
                 >
                   <span className="sr-only">Email</span>

@@ -61,6 +61,7 @@ export const projectsData: IProject[] = [
     study: 'MCT',
     school: 'Howest Kortrijk',
   },
+
   {
     id: 2,
     name: 'Oncolor',
@@ -97,6 +98,7 @@ export const projectsData: IProject[] = [
     study: 'MCT',
     school: 'Howest Kortrijk',
   },
+
   {
     id: 3,
     name: 'Anime/Manga App',
@@ -121,6 +123,7 @@ export const projectsData: IProject[] = [
     study: 'MCT',
     school: 'Howest Kortrijk',
   },
+
   {
     id: 4,
     name: 'Interactive Bollards',
@@ -148,18 +151,18 @@ export const projectsData: IProject[] = [
       },
     ],
     technologies: [
-      'Python',
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'GitHub',
-      'Git',
-      'Flask',
       'Adobe XD',
-      'UI/UX',
-      'Raspberry Pi',
+      'CSS',
+      'Flask',
+      'Git',
+      'GitHub',
       'GitKraken',
+      'HTML',
+      'JavaScript',
       'MQTT',
+      'Python',
+      'Raspberry Pi',
+      'UI/UX',
     ],
     externalLinks: {
       github: 'https://github.com/Bart-Roels/teamproject-groep5',
@@ -168,6 +171,7 @@ export const projectsData: IProject[] = [
     school: 'Howest Kortrijk',
     client: 'Sports innovation campus',
   },
+
   {
     id: 5,
     name: 'Movie Zone',
@@ -199,17 +203,18 @@ export const projectsData: IProject[] = [
       },
     ],
     technologies: [
-      'JavaScript',
-      'GitHub',
-      'Git',
       'Adobe XD',
-      'UI/UX',
-      'React Native',
-      'GitKraken',
       'Expo',
-      'TypeScript',
+      'Git',
+      'GitHub',
+      'GitKraken',
+      'JavaScript',
       'Node.js',
       'NPM',
+      'Prettier',
+      'React Native',
+      'TypeScript',
+      'UI/UX',
     ],
     externalLinks: {
       github: 'https://github.com/Jinlei2000/project-smart-app',
@@ -219,6 +224,7 @@ export const projectsData: IProject[] = [
     study: 'MCT',
     school: 'Howest Kortrijk',
   },
+
   {
     id: 6,
     name: 'Portfolio',
@@ -228,19 +234,17 @@ export const projectsData: IProject[] = [
     date: new Date('2023-05-01'),
     imgs: [],
     technologies: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'GitHub',
-      'Git',
       'Adobe XD',
-      'UI/UX',
-      'Netlify',
-      'Tailwind CSS',
-      'React Native',
-      'TypeScript',
-      'NPM',
+      'Git',
+      'GitHub',
       'GitKraken',
+      'Netlify',
+      'NPM',
+      'Prettier',
+      'React',
+      'Tailwind CSS',
+      'TypeScript',
+      'UI/UX',
       'Vite',
     ],
     externalLinks: {
@@ -250,26 +254,8 @@ export const projectsData: IProject[] = [
     school: 'Howest Kortrijk',
   },
 
-  // {
-  //   id: 7,
-  //   name: 'Trello Animation',
-  //   tag: 'Motion Design',
-  //   image: '/img/trello-1.jpg',
-  //   link: '/projects/trello',
-  //   date: '2023-05-01',
-  // },
-
-  // {
-  //   id: 8,
-  //   name: 'Slack Onboarding',
-  //   tag: 'Motion Design',
-  //   image: '/img/slack-1.jpg',
-  //   link: '/projects/slack',
-  //   date: '2023-05-01',
-  // },
-
   {
-    id: 9,
+    id: 7,
     name: 'Expo 50 Years E17',
     tag: 'Industry Project',
     image: 'e17/1',
@@ -278,19 +264,20 @@ export const projectsData: IProject[] = [
     date: new Date('2023-05-02'),
     imgs: [],
     technologies: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'GitHub',
-      'Git',
       'Adobe XD',
-      'UI/UX',
+      'CSS',
+      'Firebase',
+      'Git',
+      'GitHub',
+      'GitKraken',
+      'HTML',
+      'JavaScript',
+      'Next.js',
+      'NPM',
+      'Prettier',
       'Tailwind CSS',
       'TypeScript',
-      'NPM',
-      'GitKraken',
-      'Firebase',
-      'Next.js',
+      'UI/UX',
     ],
     externalLinks: {
       website: 'https://mct-industry-project-e17.vercel.app/',
@@ -301,38 +288,119 @@ export const projectsData: IProject[] = [
   },
 
   {
-    id: 10,
+    id: 8,
     name: 'Tuinbouw',
     tag: 'Full Stack Development',
-    image: 'more',
+    image: 'tuinbouw/1',
     link: '/projects/tuinbouw',
     date: new Date('2023-10-01'),
-    imgs: [], // No images
-    technologies: [], // No technologies
-    externalLinks: {}, // No external links
+    imgs: [
+      // TODO: Add images
+    ],
+    technologies: [
+      'Azure',
+      'Docker',
+      'Eslint',
+      'Figma',
+      'Firebase',
+      'Git',
+      'GitHub',
+      'GitKraken',
+      'GraphQL',
+      'Jest',
+      'Kubernetes',
+      'Lerna',
+      'MongoDB',
+      'Nest.js',
+      'Netlify',
+      'NPM',
+      'Prettier',
+      'Tailwind CSS',
+      'TypeScript',
+      'UI/UX',
+      'UnoCSS',
+      'Vite',
+      'Vue.js',
+    ],
+    externalLinks: {
+      github: 'https://github.com/Jinlei2000/Lei_Samuel',
+      // TODO: Add youtube link and figma link
+      youtube: '',
+      figma: '',
+    },
+    study: 'MCT',
+    school: 'Howest Kortrijk',
+  },
+
+  {
+    id: 9,
+    name: '3D Car',
+    tag: 'Future Technology',
+    image: '3d-car/1',
+    link: '/projects/3d-car',
+    date: new Date('2023-11-01'),
+    imgs: [],
+    technologies: ['Astro', 'Three.js', 'UI/UX', 'Netlify', 'NPM', 'Prettier'],
+    externalLinks: {
+      github: 'https://github.com/Jinlei2000/threejs-bun-astro-car-drive',
+      website: 'https://3d-car.leijin.be/',
+    },
+  },
+
+  {
+    id: 10,
+    name: 'Discord Carplay',
+    tag: 'New Interface Design',
+    image: 'discord-carplay/1',
+    link: '/projects/discord-carplay',
+    date: new Date('2023-11-01'),
+    imgs: [],
+    technologies: ['Adobe XD', 'Figma', 'UI/UX'],
+    externalLinks: {
+      // TODO: Add youtube link
+      youtube: '',
+    },
   },
 
   {
     id: 11,
-    name: 'Discord Carplay',
-    tag: 'New Interface Design',
-    image: 'more',
-    link: '/projects/discord-carplay',
-    date: new Date('2023-11-01'),
-    imgs: [], // No images
-    technologies: [], // No technologies
-    externalLinks: {}, // No external links
-  },
-
-  {
-    id: 12,
     name: 'Pizza AR App',
     tag: 'Research Project',
-    image: 'more',
+    image: 'pizza-ar/1',
     link: '/projects/pizza-ar',
     date: new Date('2024-01-08'),
-    imgs: [], // No images
-    technologies: [], // No technologies
-    externalLinks: {}, // No external links
+    imgs: [
+      {
+        src: 'pizza-ar/2',
+        alt: 'Pizza AR App',
+      },
+      {
+        src: 'pizza-ar/3',
+        alt: 'Pizza AR App',
+      },
+      {
+        src: 'pizza-ar/4',
+        alt: 'Pizza AR App',
+      },
+      {
+        src: 'pizza-ar/5',
+        alt: 'Pizza AR App',
+      },
+      {
+        src: 'pizza-ar/6',
+        alt: 'Pizza AR App',
+      },
+    ],
+    technologies: ['Figma', 'Flutter', 'Git', 'GitHub', 'GitKraken', 'UI/UX'],
+    externalLinks: {
+      github: 'https://github.com/Jinlei2000/pizza-ar-flutter-2023/tree/main',
+      youtube: 'https://youtu.be/T2qpL45bmXs',
+      medium:
+        'https://medium.com/@jinleix3/how-to-implement-augemented-reality-in-flutter-for-iphone-27ca3cf2ddb5',
+      linkedin:
+        'https://www.linkedin.com/feed/update/urn:li:activity:7155572807601410049/',
+      figma:
+        'https://www.figma.com/file/Mt8dw28h1CW9aHIVsWnDN8/pizza-flutter-app?type=design&t=h4tjoR5UBJnvsefc-6',
+    },
   },
 ]

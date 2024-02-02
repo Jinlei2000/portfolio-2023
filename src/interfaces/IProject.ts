@@ -17,6 +17,10 @@ export interface IProject {
     expo?: string
     instructables?: string
     tmdb?: string
+    youtube?: string
+    medium?: string
+    linkedin?: string
+    figma?: string
   }
   // Project specific
   study?: string

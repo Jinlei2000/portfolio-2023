@@ -15,14 +15,17 @@ export default ({
   texts: React.FC
   imgs: React.FC
 }) => {
-  // Calculate the number of skills per row
-  const skillPerRow =
-    project.technologies.length > 10
-      ? Math.ceil(project.technologies.length / 2)
-      : project.technologies.length
-
   // Calculate how many banners are needed
-  const amountOfBanners = Math.ceil(project.technologies.length / skillPerRow)
+  const projectSkillsAmount = project.technologies.length
+  let amountOfBanners = 1
+  if (projectSkillsAmount < 4) {
+    project.technologies.push(...project.technologies)
+  }
+  if (projectSkillsAmount >= 18) {
+    amountOfBanners = 3
+  } else if (projectSkillsAmount >= 12) {
+    amountOfBanners = 2
+  }
 
   // scroll to top on page load
   window.scrollTo(0, 0)
