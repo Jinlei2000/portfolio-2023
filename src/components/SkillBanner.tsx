@@ -4,13 +4,14 @@ import { useEffect, useState } from 'react'
 import useScrollDirection from '../hooks/useScrollDirection'
 import { motion, useReducedMotion } from 'framer-motion'
 import { skillBar } from '../animation/animation'
-import { useInView } from 'react-intersection-observer'
 
 export default ({
   children,
+  amount,
   reverseScroll = false,
 }: {
   children: React.ReactNode
+  amount: number
   reverseScroll?: boolean
 }) => {
   // Reverse scroll direction if user scrolls up
@@ -24,22 +25,16 @@ export default ({
     setReverseDir(scrollDir === 'down' ? reverseScroll : !reverseScroll)
   }, [scrollDir])
 
-  // Use Intersection Observer to detect when the component is in view
-  const [ref, isInView] = useInView()
-
   // reduce motion if user prefers reduced motion
   const shouldReduceMotion = useReducedMotion()
 
   return (
     <>
       <motion.div
-        ref={ref}
         initial={shouldReduceMotion ? 'visible' : 'initial'}
         whileInView={shouldReduceMotion ? 'visible' : 'animation'}
         variants={skillBar}
       >
-        {/* Only render the slider when the component is in view */}
-        {/* {isInView && ( */}
         <Splide
           options={{
             autoWidth: true,
@@ -59,10 +54,12 @@ export default ({
           extensions={{ AutoScroll }}
         >
           {children}
-          {/* to make it loop */}
-          {/* {children} */}
+
+          {/* Show children if amount is less than or equal to 4. This is
+          to avoid empty slides
+          */}
+          {amount <= 6 && children}
         </Splide>
-        {/* )} */}
       </motion.div>
     </>
   )

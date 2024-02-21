@@ -27,7 +27,7 @@ export default ({ projects }: { projects: IProject[] }) => {
             padding: '5%',
             pagination: false,
             throttle: 300,
-            wheel: true,
+            wheel: false,
             updateOnMove: true,
             breakpoints: {
               640: {
