@@ -333,7 +333,7 @@ export const projectsData: IProject[] = [
   // },
 
   {
-    id: 9,
+    id: 8,
     name: '3D Car',
     tag: 'Future Technology',
     image: '3d-car/1',
@@ -350,7 +350,7 @@ export const projectsData: IProject[] = [
   },
 
   {
-    id: 10,
+    id: 9,
     name: 'Discord Carplay',
     tag: 'New Interface Design',
     image: 'discord-carplay/1',
@@ -379,7 +379,7 @@ export const projectsData: IProject[] = [
   },
 
   {
-    id: 11,
+    id: 10,
     name: 'Pizza AR App',
     tag: 'Research Project',
     featured: true,
