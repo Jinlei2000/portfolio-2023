@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 
 import './assets/tailwindcss.css'
 
-import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Home from './routes/Home'
 import SmartGarbage from './routes/projects/SmartGarbage'
@@ -18,6 +18,10 @@ import NotFound from './routes/NotFound'
 import robots from '/robots.txt'
 import E17 from './routes/projects/E17'
 import Portfolio from './routes/projects/Portfolio'
+import PizzaAr from './routes/projects/PizzaAr'
+import Car3D from './routes/projects/Car3D'
+import Tuinbouw from './routes/projects/Tuinbouw'
+import DiscordCarplay from './routes/projects/DiscordCarplay'
 
 const router = createBrowserRouter([
   {
@@ -51,6 +55,22 @@ const router = createBrowserRouter([
   {
     path: '/projects/e17',
     element: <E17 project={projectsData[7]} />,
+  },
+  {
+    path: '/projects/tuinbouw',
+    element: <Tuinbouw project={projectsData[8]} />,
+  },
+  {
+    path: '/projects/3d-car',
+    element: <Car3D project={projectsData[9]} />,
+  },
+  {
+    path: '/projects/discord-carplay',
+    element: <DiscordCarplay project={projectsData[10]} />,
+  },
+  {
+    path: '/projects/pizza-ar',
+    element: <PizzaAr project={projectsData[11]} />,
   },
 
   {
