@@ -130,7 +130,6 @@ export const projectsData: IProject[] = [
     tag: 'Team Project',
     image: 'interactive-poles/5',
     link: '/projects/interactive-poles',
-    featured: true,
     date: new Date('2023-01-01'),
     imgs: [
       {
@@ -286,52 +285,6 @@ export const projectsData: IProject[] = [
     client: 'Leiedal',
   },
 
-  // {
-  //   id: 8,
-  //   name: 'Tuinbouw',
-  //   tag: 'Full Stack Development',
-  //   // image: 'tuinbouw/1',
-  //   image: 'more',
-  //   link: '/projects/tuinbouw',
-  //   date: new Date('2023-10-01'),
-  //   imgs: [
-  //     // TODO: Add images
-  //   ],
-  //   technologies: [
-  //     'Azure',
-  //     'Docker',
-  //     'Eslint',
-  //     'Figma',
-  //     'Firebase',
-  //     'Git',
-  //     'GitHub',
-  //     'GitKraken',
-  //     'GraphQL',
-  //     'Jest',
-  //     'Kubernetes',
-  //     'Lerna',
-  //     'MongoDB',
-  //     'Nest.js',
-  //     'Netlify',
-  //     'NPM',
-  //     'Prettier',
-  //     'Tailwind CSS',
-  //     'TypeScript',
-  //     'UI/UX',
-  //     'UnoCSS',
-  //     'Vite',
-  //     'Vue.js',
-  //   ],
-  //   externalLinks: {
-  //     github: 'https://github.com/Jinlei2000/Lei_Samuel',
-  //     // TODO: Add youtube link and figma link
-  //     youtube: '',
-  //     figma: '',
-  //   },
-  //   study: 'MCT',
-  //   school: 'Howest Kortrijk',
-  // },
-
   {
     id: 8,
     name: '3D Car',
@@ -380,6 +333,65 @@ export const projectsData: IProject[] = [
 
   {
     id: 10,
+    name: 'Tuinbouw',
+    tag: 'Full Stack Development',
+    image: 'tuinbouw/1',
+    featured: true,
+    link: '/projects/tuinbouw',
+    date: new Date('2023-10-01'),
+    imgs: [
+      {
+        src: 'tuinbouw/2',
+        alt: 'Dashboard employee',
+      },
+      {
+        src: 'tuinbouw/3',
+        alt: 'Calendar employee',
+      },
+      {
+        src: 'tuinbouw/4',
+        alt: 'Client create a appointment',
+      },
+      {
+        src: 'tuinbouw/5',
+        alt: 'Admin user management',
+      },
+    ],
+    technologies: [
+      'Azure',
+      'Docker',
+      'Eslint',
+      'Figma',
+      'Firebase',
+      'Git',
+      'GitHub',
+      'GitKraken',
+      'GraphQL',
+      'Jest',
+      'Kubernetes',
+      'Lerna',
+      'MongoDB',
+      'Nest.js',
+      'Netlify',
+      'NPM',
+      'Prettier',
+      'Tailwind CSS',
+      'TypeScript',
+      'UI/UX',
+      'UnoCSS',
+      'Vite',
+      'Vue.js',
+    ],
+    externalLinks: {
+      github: 'https://github.com/Jinlei2000/Lei_Samuel',
+      youtube: 'https://youtu.be/PGCatT_ZWvo',
+    },
+    study: 'MCT',
+    school: 'Howest Kortrijk',
+  },
+
+  {
+    id: 11,
     name: 'Pizza AR App',
     tag: 'Research Project',
     featured: true,
