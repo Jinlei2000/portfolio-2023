@@ -56,10 +56,6 @@ const router = createBrowserRouter([
     path: '/projects/e17',
     element: <E17 project={projectsData[7]} />,
   },
-  // {
-  //   path: '/projects/tuinbouw',
-  //   element: <Tuinbouw project={projectsData[8]} />,
-  // },
   {
     path: '/projects/3d-car',
     element: <Car3D project={projectsData[8]} />,
@@ -69,8 +65,12 @@ const router = createBrowserRouter([
     element: <DiscordCarplay project={projectsData[9]} />,
   },
   {
+    path: '/projects/tuinbouw',
+    element: <Tuinbouw project={projectsData[10]} />,
+  },
+  {
     path: '/projects/pizza-ar',
-    element: <PizzaAr project={projectsData[10]} />,
+    element: <PizzaAr project={projectsData[11]} />,
   },
 
   {
